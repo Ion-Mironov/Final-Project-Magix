@@ -18,7 +18,11 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-image: url(https://wallpaperaccess.com/full/3288806.jpg);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 95vh;
 }
 * {
     color: orange;
