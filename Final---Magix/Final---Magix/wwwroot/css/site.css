@@ -1,29 +1,53 @@
-html {
-  font-size: 14px;
+a {
+	color: #0077cc;
+	text-decoration: none;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+.bg-container {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	background-image: url('/Images/main_background.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	color: #ffffff;
+	padding: 10px 0;
+	text-align: center;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+h2 {
+	font-size: 2em;
+	margin-bottom: 20px;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+h4 {
+	font-size: 1.5em;
+	margin-top: 30px;
+	margin-bottom: 15px;
+	border-bottom: 1px solid #dddddd;
+	padding-bottom: 10px;
 }
 
-body {
-    margin-bottom: 60px;
-    background-image: url(https://wallpaperaccess.com/full/3288806.jpg);
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    height: 95vh;
+.logo-text-image {
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%, -15%);
 }
-* {
-    color: orange;
+
+p {
+	margin-bottom: 20px;
+}
+
+.privacy-content {
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
