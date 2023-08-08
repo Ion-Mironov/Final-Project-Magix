@@ -34,11 +34,18 @@ h4 {
 	padding-bottom: 10px;
 }
 
+.featured-text-image {
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	transform: translate(-50%, -20%);
+}
+
 .logo-text-image {
 	position: absolute;
 	top: 10%;
 	left: 50%;
-	transform: translate(-50%, -15%);
+	transform: translate(-50%, -10%);
 }
 
 p {
