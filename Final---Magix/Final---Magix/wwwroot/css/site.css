@@ -36,9 +36,9 @@ h4 {
 
 .featured-text-image {
 	position: absolute;
-	top: 20%;
+	top: 40%;
 	left: 50%;
-	transform: translate(-50%, -20%);
+	transform: translate(-50%, -40%);
 }
 
 .logo-text-image {
