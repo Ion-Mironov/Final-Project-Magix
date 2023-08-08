@@ -1,11 +1,21 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Final___Magix.DataContext;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Final___Magix.Controllers
 {
     
     public class CardController : Controller
-    { 
+    {
+
+        private readonly CardContext _context;
+
+        public CardController(CardContext context)
+        {
+            _context = context;
+        }
+
+
 
         // GET: CardController
         public ActionResult Index()
