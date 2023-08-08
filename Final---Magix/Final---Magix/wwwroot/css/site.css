@@ -21,6 +21,19 @@ a {
 	text-align: center;
 }
 
+.featured-image {
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+}
+
+.featured-text-image {
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%, -35%);
+}
+
 h2 {
 	font-size: 2em;
 	margin-bottom: 20px;
@@ -34,13 +47,6 @@ h4 {
 	padding-bottom: 10px;
 }
 
-.featured-text-image {
-	position: absolute;
-	top: 40%;
-	left: 50%;
-	transform: translate(-50%, -40%);
-}
-
 .logo-text-image {
 	position: absolute;
 	top: 10%;
@@ -51,6 +57,20 @@ h4 {
 p {
 	margin-bottom: 20px;
 }
+
+.placeholder-images {
+	width: 500px;
+	padding-top: 350px;
+	display: flex;
+	justify-content: space-between;
+	gap: 40px;
+	margin: 0 auto;
+}
+
+	.placeholder-images img {
+		max-width: calc(50% - 10px);
+		display: block;
+	}
 
 .privacy-content {
 	padding-left: 20px;
