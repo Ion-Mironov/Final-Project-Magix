@@ -1,3 +1,5 @@
+using Final___Magix.DataContext;
+
 namespace Final___Magix
 {
     public class Program
@@ -5,6 +7,7 @@ namespace Final___Magix
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddDbContext<CardContext>();
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
