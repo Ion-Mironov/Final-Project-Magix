@@ -1,28 +1,28 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"]</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"]</title>
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a asp-action="Index" asp-controller="Home">Home</a>
-            <a asp-action="Index" asp-controller="Browse">Browse</a>
-            <a asp-action="Index" asp-controller="TradeIn">Trade-In</a>
-        </nav>
-    </header>
 	@RenderBody()
-    <footer class="footer">
-        Magix © 2023 <a asp-action="Privacy" asp-controller="Home">Privacy Policy</a>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+	<header>
+		<nav>
+			<a id="home-link" class="nav-link" asp-action="Index" asp-controller="Home">Home</a>
+			<a id="browse-link" class="nav-link" asp-action="Index" asp-controller="Browse">Browse</a>
+			<a id="tradein-link" class="nav-link" asp-action="Index" asp-controller="TradeIn">Trade-In</a>
+		</nav>
+	</header>
+	<footer class="footer">
+		Magix © 2023 <a asp-action="Privacy" asp-controller="Home">Privacy Policy</a>
+	</footer>
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/js/site.js" asp-append-version="true"></script>
+	@await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

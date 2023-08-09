@@ -5,54 +5,62 @@ a {
 
 body {
 	display: grid;
-	grid-template-rows: 150px 1fr 100px;
+	grid-template-rows: 40px 1fr 40px;
+	height: 110vh;
 	overflow-y: scroll;
-	height: 95vh;
-}
-
-header {
-	grid-row: 1;
-	border: 2px dashed orange;
-	background-color: var(--bs-gray-400);
-}
-
-nav > ul {
-	display: flex;
-	flex-direction: row;
-	font-size: 40px;
-	color: darkgreen;
-}
-
-ul {
-	gap: 45px;
-}
-
-ul li {
-	text-decoration: none;
 }
 
 .bg-container {
-	position: relative;
-	width: 100vw;
-	height: 100vh;
+	grid-row: 2;
+	display: flex;
+	flex-direction: column;
 	background-image: url('/Images/main_background.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	grid-row: 2;
-	border: 2px dashed green;
+	align-items: center;
+	justify-content: space-between;
+	padding: 50px 0;
 }
 
+.cards-container {
+	display: flex;
+	position: relative;
+	top: 10px;
+	justify-content: center;
+	gap: 10px;
+}
+
+.cards {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+}
+
+	.cards img {
+		width: 100px;
+		transition: transform 0.3s ease;
+	}
+
+		.cards:hover img {
+			transform: scale(1.5);
+		}
+
+		.cards:not(:hover) img {
+			transform: scale(0.8);
+		}
+
 footer {
-	position: absolute;
+	grid-row: 3;
+	position: fixed;
 	bottom: 0;
+	left: 0;
 	width: 100%;
+	height: 40px;
+	background-image: url(/Images/mahogany_wood.jpg);
 	color: #ffffff;
 	padding: 10px 0;
 	text-align: center;
-	grid-row: 3;
-	border: 2px dashed pink;
-	background-color: var(--bs-gray-400);
 }
 
 .featured-image {
@@ -61,12 +69,10 @@ footer {
 	margin: 0 auto;
 }
 
-.featured-text-image {
-	position: absolute;
-	top: 35%;
-	left: 50%;
-	transform: translate(-50%, -35%);
-}
+	.featured-text-image {
+		position: absolute;
+		top: 23%;
+	}
 
 h2 {
 	font-size: 2em;
@@ -81,25 +87,70 @@ h4 {
 	padding-bottom: 10px;
 }
 
-.logo-text-image {
-	position: absolute;
-	top: 10%;
-	left: 50%;
-	transform: translate(-50%, -10%);
+header {
+	grid-row: 1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 55px;
+	background-image: url(/Images/mahogany_wood.jpg);
 }
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	width: 465px;
+	padding-left: 80px;
+	padding-top: 7px;
+}
+
+.nav-link {
+	background-repeat: no-repeat;
+	background-size: contain;
+	text-indent: -9999px;
+}
+
+#home-link {
+	background-image: url('/Images/home_no_hover.png');
+	width: 90px;
+}
+
+	#home-link:hover {
+		background-image: url('/Images/home_hover.png');
+		width: 90px;
+	}
+
+#browse-link {
+	background-image: url('/Images/browse_no_hover.png');
+	width: 116px;
+}
+
+	#browse-link:hover {
+		background-image: url('/Images/browse_hover.png');
+		width: 116px;
+	}
+
+#tradein-link {
+	background-image: url('/Images/tradein_no_hover.png');
+	width: 128px;
+}
+
+	#tradein-link:hover {
+		background-image: url('/Images/tradein_hover.png');
+		width: 128px;
+	}
 
 p {
 	margin-bottom: 20px;
 }
 
 .placeholder-images {
-	width: 500px;
-	padding-top: 350px;
 	display: flex;
+	width: 460px;
+	padding-top: 230px;
 	justify-content: space-between;
-	gap: 40px;
 	margin: 0 auto;
-	border: 2px solid white;
 }
 
 	.placeholder-images img {
@@ -112,4 +163,9 @@ p {
 	padding-right: 20px;
 	padding-top: 20px;
 	padding-bottom: 20px;
+}
+
+.welcome-text-image {
+	position: absolute;
+	top: 3%;
 }
