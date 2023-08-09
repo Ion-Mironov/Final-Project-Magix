@@ -17,11 +17,7 @@ nav > ul {
 	display: flex;
 	flex-direction: row;
 	font-size: 40px;
-	color: darkgreen;
-}
-ul {
-	gap: 45px;
-}
+
 ul li {
 	text-decoration: none;
 }
