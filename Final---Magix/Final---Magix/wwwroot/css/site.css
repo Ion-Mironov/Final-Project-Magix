@@ -2,29 +2,35 @@ a {
 	color: #0077cc;
 	text-decoration: none;
 }
+
 body {
 	display: grid;
 	grid-template-rows: 150px 1fr 100px;
 	overflow-y: scroll;
 	height: 95vh;
 }
+
 header {
 	grid-row: 1;
 	border: 2px dashed orange;
 	background-color: var(--bs-gray-400);
 }
+
 nav > ul {
 	display: flex;
 	flex-direction: row;
 	font-size: 40px;
 	color: darkgreen;
 }
+
 ul {
 	gap: 45px;
 }
+
 ul li {
 	text-decoration: none;
 }
+
 .bg-container {
 	position: relative;
 	width: 100vw;
@@ -36,6 +42,7 @@ ul li {
 	grid-row: 2;
 	border: 2px dashed green;
 }
+
 footer {
 	position: absolute;
 	bottom: 0;
