@@ -9,7 +9,17 @@
 </head>
 
 <body>
+    <header>
+        <nav>
+            <a asp-action="Index" asp-controller="Home">Home</a>
+            <a asp-action="Index" asp-controller="Browse">Browse</a>
+            <a asp-action="Index" asp-controller="TradeIn">Trade-In</a>
+        </nav>
+    </header>
 	@RenderBody()
+    <footer class="footer">
+        Magix © 2023 <a asp-action="Privacy" asp-controller="Home">Privacy Policy</a>
+    </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
