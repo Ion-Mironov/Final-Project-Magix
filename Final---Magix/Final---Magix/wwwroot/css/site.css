@@ -50,6 +50,17 @@ body {
 			transform: scale(0.8);
 		}
 
+.featured-text-image {
+	position: absolute;
+	top: 23%;
+}
+
+	.featured-image {
+		width: 80%;
+		display: block;
+		margin: 0 auto;
+	}
+
 footer {
 	grid-row: 3;
 	position: fixed;
@@ -67,17 +78,6 @@ footer {
 	border-image-source: url(/Images/border_image.png);
 	border-image-slice: 100;
 }
-
-.featured-image {
-	width: 80%;
-	display: block;
-	margin: 0 auto;
-}
-
-	.featured-text-image {
-		position: absolute;
-		top: 23%;
-	}
 
 h2 {
 	font-size: 2em;
@@ -119,6 +119,17 @@ nav {
 	background-size: contain;
 	text-indent: -9999px;
 }
+
+.new-additions-text-image {
+	position: absolute;
+	bottom: 25%;
+}
+
+	.new-additions-image {
+		width: 80%;
+		display: block;
+		margin: 0 auto;
+	}
 
 #home-link {
 	background-image: url('/Images/home_no_hover.png');
