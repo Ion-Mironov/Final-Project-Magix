@@ -5,12 +5,12 @@ using Microsoft.AspNetCore.Mvc;
 namespace Final___Magix.Controllers
 {
     
-    public class CardController : Controller
+    public class CardApiResponse : Controller
     {
 
         private readonly CardContext _context;
 
-        public CardController(CardContext context)
+        public CardApiResponse(CardContext context)
         {
             _context = context;
         }
