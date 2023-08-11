@@ -2,7 +2,7 @@
 
 namespace Final___Magix.Api
 	{
-	public class ScryfallApiClient
+	public class CardApiResponse
 		{
 		// This class represents the structure of the Scryfall API response when fetching cards.
 
