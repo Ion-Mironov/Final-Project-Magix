@@ -122,11 +122,11 @@ nav {
 
 .new-additions-text-image {
 	position: absolute;
-	bottom: 25%;
+	bottom: 20%;
 }
 
 	.new-additions-image {
-		width: 80%;
+		width: 65%;
 		display: block;
 		margin: 0 auto;
 	}
