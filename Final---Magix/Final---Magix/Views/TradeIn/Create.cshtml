@@ -1,0 +1,36 @@
+﻿@model IEnumerable<TradeInModel>
+@{
+	ViewData["Title"] = "Create";
+}
+
+
+<div class="trade-in-container">
+
+	<!-- Trade-in Form -->
+	<div class="trade-in-form">
+		<form method="post" asp-action="AddToTradeIn">
+			<label for="cardName">Card Name:</label>
+			<input type="text" id="cardName" name="cardName" required>
+			<br>
+
+			<label for="cardSet">Card Set:</label>
+			<input type="text" id="cardSet" name="cardSet" required>
+			<br>
+
+			<label for="cardPrint">Card Print:</label>
+			<input type="text" id="cardPrint" name="cardPrint" required>
+			<br>
+
+			<label for="cardCondition">Card Condition:</label>
+			<input type="text" id="cardCondition" name="cardCondition" required>
+			<br>
+
+			<label for="cardIsFoil">Card Is Foil:</label>
+			<input type="checkbox" id="cardIsFoil" name="cardIsFoil">
+			<br>
+
+			<button type="submit">Add to Trade-in</button>
+		</form>
+	</div>
+
+</div>
