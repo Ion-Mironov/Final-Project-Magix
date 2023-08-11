@@ -15,21 +15,6 @@ namespace Final___Magix.DataContext
 
 		public DbSet<TradeInModel> TradeIns { get; set; }
 
-		public DbSet<InventoryModel> StoreInventory { get; set; }
 
-		protected override void OnModelCreating(ModelBuilder modelBuilder)
-			{
-			// Seed initial store inventory data
-			modelBuilder.Entity<InventoryModel>().HasData(
-				new InventoryModel { Id = 1, CName = "Card A", CImageUrl = "url", Price = 5.99m },
-				new InventoryModel { Id = 2, CName = "Card B", CImageUrl = "url", Price = 3.49m }
-			// Add more items as needed
-			);
-
-			// Specify the column type, precision, and scale for the Price property
-			modelBuilder.Entity<InventoryModel>()
-				.Property(i => i.Price)
-				.HasColumnType("decimal(18, 2)"); // Adjust precision and scale as needed, personally i think it could be lower but check with group.
-			}
 		}
 	}
