@@ -1,0 +1,20 @@
+﻿@model List<InventoryModel>
+
+<h1>Store Inventory</h1>
+
+<table>
+	<tr>
+		<th>Card</th>
+		<th>Image</th>
+		<th>Price</th>
+	</tr>
+
+	@foreach (var item in Model)
+		{
+		<tr>
+			<td>@item.CName</td>
+			<td><img src="@item.CImageUrl" alt="@item.CName" /></td>
+			<td>$@item.Price</td>
+		</tr>
+		}
+</table>
