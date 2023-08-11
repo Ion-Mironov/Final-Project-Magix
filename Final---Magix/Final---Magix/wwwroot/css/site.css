@@ -26,7 +26,7 @@ body {
 .cards-container {
 	display: flex;
 	position: relative;
-	top: 10px;
+	top: 13px;
 	justify-content: center;
 	gap: 10px;
 }
@@ -52,7 +52,7 @@ body {
 
 .featured-text-image {
 	position: absolute;
-	top: 23%;
+	top: 22%;
 }
 
 	.featured-image {
@@ -122,7 +122,7 @@ nav {
 
 .new-additions-text-image {
 	position: absolute;
-	bottom: 20%;
+	bottom: 21%;
 }
 
 	.new-additions-image {
@@ -168,7 +168,7 @@ p {
 .placeholder-images {
 	display: flex;
 	width: 460px;
-	padding-top: 230px;
+	padding-top: 215px;
 	justify-content: space-between;
 	margin: 0 auto;
 }
@@ -187,5 +187,5 @@ p {
 
 .welcome-text-image {
 	position: absolute;
-	top: 3%;
+	top: 1%;
 }
