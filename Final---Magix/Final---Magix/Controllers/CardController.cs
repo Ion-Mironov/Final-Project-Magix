@@ -15,8 +15,6 @@ namespace Final___Magix.Controllers
             _context = context;
         }
 
-
-
         // GET: CardController
         public ActionResult Index()
         {
