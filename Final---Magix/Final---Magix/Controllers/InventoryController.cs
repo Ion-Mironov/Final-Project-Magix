@@ -31,7 +31,7 @@ namespace Final___Magix.Controllers
 			_scryfallApiClient = scryfallApiClient;
 			}
 
-		public IActionResult BrowseInventory()
+/*		public IActionResult BrowseInventory()
 			{
 			// Fetch inventory from your database
 			var inventory = _dbContext.StoreInventory.ToList();
@@ -48,7 +48,7 @@ namespace Final___Magix.Controllers
 				}
 
 			return View("Index", inventory);  // Pass the inventory list to the Index view
-			}
+			}*/
 
 		// GET: InventoryController
 		public ActionResult Index()

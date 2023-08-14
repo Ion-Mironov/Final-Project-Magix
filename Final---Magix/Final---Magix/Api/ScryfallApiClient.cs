@@ -49,26 +49,5 @@ namespace Final___Magix.Api
 				}
 			else { return null; }
 			}
-
-		// Get a single card by name
-		public async Task<CardApiResponse> GetCardByNameAsync(string cardName)
-			{
-			// URL encode the card name to safely include it in a URL
-			var encodedCardName = System.Net.WebUtility.UrlEncode(cardName);
-
-			HttpResponseMessage response = await _httpClient.GetAsync($"cards/named?fuzzy={encodedCardName}");
-
-			if (response.IsSuccessStatusCode)
-				{
-				string content = await response.Content.ReadAsStringAsync();
-				var card = JsonSerializer.Deserialize<CardApiResponse>(content);
-				return card;
-				}
-			else
-				{
-				// Handle API error or return null/error response
-				return null;
-				}
-			}
 		}
 	}
