@@ -18,6 +18,5 @@ namespace Final___Magix.Models
 
 		[Required]
 		public int Quantity { get; set; }
-
 		}
 	}
