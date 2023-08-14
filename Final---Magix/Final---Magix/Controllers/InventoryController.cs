@@ -37,17 +37,17 @@ namespace Final___Magix.Controllers
 			var inventory = _dbContext.StoreInventory.ToList();
 
 			// Fetch additional card data from Scryfall API
-			//foreach (var item in inventory)
-			//	{
-			//	var scryfallApiResponse = _scryfallApiClient.GetCardByName(item.Name);
-			//	if (scryfallApiResponse != null)
-			//		{
-			//		// Update item with Scryfall data if needed
-			//		// For example: item.ScryfallImageUrl = scryfallApiResponse.ImageUrl;
-			//		}
-			//	}
+			foreach (var item in inventory)
+				{
+				var scryfallApiResponse = _scryfallApiClient.GetCardByName(item.Name);
+				if (scryfallApiResponse != null)
+					{
+					// Assuming Scryfall API provides an image URL, you might want to use that.
+					item.ImageUrl = scryfallApiResponse.ImageUrl;
+					}
+				}
 
-			return View(inventory);
+			return View("Index", inventory);  // Pass the inventory list to the Index view
 			}
 
 		// GET: InventoryController

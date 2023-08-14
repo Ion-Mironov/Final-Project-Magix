@@ -1,3 +1,4 @@
+using Final___Magix.Api;
 using Final___Magix.DataContext;
 
 namespace Final___Magix
@@ -12,13 +13,18 @@ namespace Final___Magix
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
-            var app = builder.Build();
+			// Register ScryfallApiClient with dependency injection.
+			builder.Services.AddHttpClient<ScryfallApiClient>(client =>
+			{
+				client.BaseAddress = new Uri("https://api.scryfall.com/");
+			});
+
+			var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
