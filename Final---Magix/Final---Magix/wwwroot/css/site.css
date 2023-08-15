@@ -7,6 +7,7 @@ a {
 	background-image: url('/Images/home_no_hover.png');
 	width: 90px;
 }
+
 	#home-link:hover {
 		background-image: url('/Images/home_hover.png');
 		width: 90px;
@@ -16,6 +17,7 @@ a {
 	background-image: url('/Images/browse_no_hover.png');
 	width: 116px;
 }
+
 	#browse-link:hover {
 		background-image: url('/Images/browse_hover.png');
 		width: 116px;
@@ -25,6 +27,7 @@ a {
 	background-image: url('/Images/tradein_no_hover.png');
 	width: 128px;
 }
+
 	#tradein-link:hover {
 		background-image: url('/Images/tradein_hover.png');
 		width: 128px;
@@ -42,11 +45,11 @@ body {
 	top: 22%;
 }
 
-	.featured-image {
-		width: 80%;
-		display: block;
-		margin: 0 auto;
-	}
+.featured-image {
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+}
 
 footer {
 	grid-row: 3;
@@ -141,13 +144,16 @@ header {
 	position: relative;
 	flex-direction: column;
 }
+
 	.main-cards img {
 		width: 100px;
 		transition: transform 0.3s ease;
 	}
+
 	.main-cards:hover img {
 		transform: scale(1.5);
 	}
+
 	.main-cards:not(:hover) img {
 		transform: scale(0.8);
 	}
@@ -158,21 +164,23 @@ nav {
 	width: 465px;
 	padding-left: 80px;
 }
-	.nav-link {
-		background-repeat: no-repeat;
-		background-size: contain;
-		text-indent: -9999px;
-	}
+
+.nav-link {
+	background-repeat: no-repeat;
+	background-size: contain;
+	text-indent: -9999px;
+}
 
 .new-additions-text-image {
 	position: absolute;
 	bottom: 21%;
 }
-	.new-additions-image {
-		width: 65%;
-		display: block;
-		margin: 0 auto;
-	}
+
+.new-additions-image {
+	width: 65%;
+	display: block;
+	margin: 0 auto;
+}
 
 p {
 	margin-bottom: 20px;
@@ -185,6 +193,7 @@ p {
 	justify-content: space-between;
 	margin: 0 auto;
 }
+
 	.placeholder-images img {
 		max-width: calc(50% - 10px);
 		display: block;
@@ -215,24 +224,38 @@ p {
 	position: absolute;
 	top: 13%;
 }
-	.inventory-greeting-image {
-		width: 75%;
-		display: block;
-		margin: 0 auto;
-	}
 
-.trade-in-container {
+.inventory-greeting-image {
+	width: 75%;
+	display: block;
+	margin: 0 auto;
+}
+
+.tradein-container {
 	grid-row: 2;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-image: url('/Images/scroll_background.png');
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	height: 1300px;
+	position: relative;
+	height: 100vh; /* Set the container height */
+	overflow: hidden; /* Hide any overflow */
 }
-.trade-in-form {
+
+	.tradein-container::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-image: url('/Images/scroll_background.png');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		z-index: -1; /* Place behind the content */
+	}
+
+.tradein-form {
 	position: absolute;
 	left: 5%;
 }
@@ -243,21 +266,9 @@ p {
 	left: 50%;
 	transform: translateX(-50%);
 }
-	.tradein-greeting-image {
-		width: 200px;
-	}
 
-@media screen and (max-width: 768px) {
-	.tradein-greeting-text-image, .trade-in-form {
-		position: static;
-		transform: none;
-		margin: 20px 0;
-	}
-
-	.trade-in-container {
-		align-items: flex-start;
-		padding: 60px 0; /* Increased padding due to stacking of elements on mobile */
-	}
+.tradein-greeting-image {
+	width: 200px;
 }
 
 .welcome-text-image {
