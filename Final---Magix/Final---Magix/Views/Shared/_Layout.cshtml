@@ -1,28 +1,45 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+	<!-- Set character encoding and viewport for responsive design -->
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Set the title dynamically based on the view -->
 	<title>@ViewData["Title"]</title>
+
+	<!-- Link to Bootstrap CSS and custom site.css -->
 	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 </head>
 
 <body>
+	<!-- Render the main content of the view -->
 	@RenderBody()
+
+	<!-- Header navigation bar -->
 	<header>
 		<nav>
+			<!-- Link to the Home page -->
 			<a id="home-link" class="nav-link" asp-action="Index" asp-controller="Home">Home</a>
+			<!-- Link to the Inventory (Browse) page -->
 			<a id="browse-link" class="nav-link" asp-action="Index" asp-controller="Inventory">Browse</a>
+			<!-- Link to the Trade-in page -->
 			<a id="tradein-link" class="nav-link" asp-action="Index" asp-controller="TradeIn">Trade-In</a>
 		</nav>
 	</header>
+
+	<!-- Footer with copyright information and privacy policy link -->
 	<footer class="footer">
 		Magix © 2023 <a asp-action="Privacy" asp-controller="Home">Privacy Policy</a>
 	</footer>
+
+	<!-- Include jQuery, Bootstrap's JavaScript bundle, and custom site.js -->
 	<script src="~/lib/jquery/dist/jquery.min.js"></script>
 	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="~/js/site.js" asp-append-version="true"></script>
+
+	<!-- Meant to include any additional scripts specific to this view if necessary -->
 	@await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
