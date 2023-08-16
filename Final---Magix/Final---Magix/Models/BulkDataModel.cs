@@ -11,7 +11,7 @@ namespace Final___Magix.Models
             public BulkDataModel[]? Property1 { get; set; }
         }
 
-        public class BulkDataRoot
+        public class BulkData
         {
             [JsonPropertyName("object")]
             public string? Object { get; set; }

@@ -21,6 +21,9 @@
 
 using Final___Magix.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json.Serialization;
+using Newtonsoft.Json;
+using Microsoft.CodeAnalysis.CSharp;
 
 namespace Final___Magix.DataContext
 	{
@@ -37,6 +40,7 @@ namespace Final___Magix.DataContext
 		public DbSet<TradeInModel> TradeIns { get; set; }// represent trades
 
 		public DbSet<InventoryModel> StoreInventory { get; set; }
+		public DbSet<BulkDataModel.BulkData> BulkData { get; set; }
 
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -56,6 +60,31 @@ namespace Final___Magix.DataContext
 				new TradeInModel { Id = 1 },
 				new TradeInModel { Id = 2 }
 				);
+
+            //create the file path
+            var jsonPath = Path.Combine(Directory.GetCurrentDirectory(), "infos", "AllCards.json");
+			//Read the file into a var
+			var jsonText = File.ReadAllText(jsonPath);
+			//Deserialize the var into List<BulkDataModel>
+			var cardList = JsonConvert.DeserializeObject<List<BulkDataModel>>(jsonText);
+			//Iterate through cardList to populate the BulkData db table with the objects created...
+			foreach (var card in cardList)
+			{
+				
 			}
+
+
+
+
+
+
+
+
+			}
+			
+			
+			
+			
+			
 		}
 	}
