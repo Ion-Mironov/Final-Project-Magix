@@ -3,27 +3,38 @@
 	ViewData["Title"] = "Trading In!";
 }
 
-<div class="tradein-container">
+<!-- Main container that handles background image and all content within it. -->
+<<div class="tradein-container">
 	<div class="tradein-greeting-text-image">
 		<img src="/Images/tradein_greeting.png" class="tradein-greeting-image" alt="Trade-In Greeting Text">
 	</div>
+
+	<!-- Container for the trade-in form and list of cards. -->
 	<div class="tradein-form-container">
-	<!-- Trade-In Form -->
+
+		<!-- Container for the trade-in form. -->
 		<div class="tradein-form">
 			<form method="post" asp-action="AddToTradeIn">
-				<label for="cardName">Card Name:</label>
+
+				<!-- <div> template for labels with tooltips -->
+				<div class="label-with-tooltip">
+					<label for="cardName">Card Name</label><span class="tooltip-icon" onclick="openTooltip('tooltip-cardName')">?</span>
+				</div>
+
+				<!-- Tooltip modal for the card name field; triggered on click -->
+				<div class="tooltip-modal" id="tooltip-cardName">
+
+					<!-- Content of the tooltip; styled and positioned as a tooltip box -->
+					<div class="tooltip-content tooltip-content-box">
+						Search by entering any word(s) found in the card title. Partial matches will also provide results.
+					</div>
+				</div>
+				<br>
 				<input type="text" id="cardName" name="cardName" required>
 				<br>
-
-				<label for="cardSet">Card Set:</label>
-				<input type="text" id="cardSet" name="cardSet" required>
-				<br>
-
-				<label for="cardPrint">Card Print:</label>
-				<input type="text" id="cardPrint" name="cardPrint" required>
-				<br>
-
-				<label for="cardCondition">Card Condition:</label>
+				<label for="cardEdition">Edition</label><br>
+				<input type="text" id="cardEdition" name="cardEdition" required>
+				<label for="cardCondition">Condition</label>
 				<select id="cardCondition" name="cardCondition" required>
 					<option value="M">Mint (M)</option>
 					<option value="NM">Near Mint (NM)</option>
@@ -31,25 +42,39 @@
 					<option value="GD">Good (GD)</option>
 					<option value="LP">Light Played (LP)</option>
 					<option value="PL">Played (PL)</option>
-					<option value="POOR">Poor</option>
+					<option value="PR">Poor (PR)</option>
 				</select>
-
-				<label for="cardIsFoil">Card Is Foil:</label>
-				<input type="checkbox" id="cardIsFoil" name="cardIsFoil">
 				<br>
-
+				<label for="cardBorder">Border</label>
+				<br>
+				<select id="cardBorder" name="cardBorder" required>
+					<option value="B">Black (B)</option>
+					<option value="W">White (W)</option>
+					<option value="SS">Set-specific (SS)</option>
+					<option value="EA">Extended-art (EA)</option>
+					<option value="BL">Borderless (BL)</option>
+					<option value="S">Silver (S)</option>
+					<option value="G">Gold (G)</option>
+				</select>
+				<label for="foilNonFoil">Foil/Non-Foil</label>
+				<select id="foilNonFoil" name="foilNonFoil" required>
+					<option value="Foil">Foil</option>
+					<option value="NonFoil">Non-Foil</option>
+				</select>
+				<br>
 				<button type="submit">Add to Trade-in</button>
 			</form>
 		</div>
-	</div>
 
-	<div class="tradein-list-container">
-		<!-- Trade-In List -->
-		<div class="tradein-list">
-			<!-- Add items dynamically here -->
-		</div>
-		<div class="tradein-total">
-			TOTAL: $<span id="total-price">0.00</span>
+		<!-- Container for the list of cards being traded in. -->
+		<div class="tradein-list-container">
+			<div class="tradein-list">
+				<!-- Add items dynamically here -->
+			</div>
+			<div class="tradein-total">
+				TOTAL: $<span id="total-price">0.00</span>
+			</div>
 		</div>
 	</div>
 </div>
+<script src="~/js/site.js"></script>

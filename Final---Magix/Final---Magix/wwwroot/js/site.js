@@ -1,4 +1,19 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿function openTooltip(id) {
+	var tooltip = document.getElementById(id);
+	tooltip.style.display = "block";
+	tooltip.classList.add('display-block'); // Add this line
+}
 
-// Write your JavaScript code.
+
+function closeTooltip(id) {
+	document.getElementById(id).style.display = "none";
+}
+
+window.onclick = function (event) {
+	if (!event.target.matches('.tooltip-icon')) {
+		var tooltips = document.getElementsByClassName('tooltip-modal');
+		for (var i = 0; i < tooltips.length; i++) {
+			tooltips[i].style.display = 'none';
+		}
+	}
+};
