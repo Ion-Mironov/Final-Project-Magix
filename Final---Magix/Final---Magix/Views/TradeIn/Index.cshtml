@@ -7,31 +7,49 @@
 	<div class="tradein-greeting-text-image">
 		<img src="/Images/tradein_greeting.png" class="tradein-greeting-image" alt="Trade-In Greeting Text">
 	</div>
+	<div class="tradein-form-container">
+	<!-- Trade-In Form -->
+		<div class="tradein-form">
+			<form method="post" asp-action="AddToTradeIn">
+				<label for="cardName">Card Name:</label>
+				<input type="text" id="cardName" name="cardName" required>
+				<br>
 
-	<!-- Trade-in Form -->
-	<div class="tradein-form">
-		<form method="post" asp-action="AddToTradeIn">
-			<label for="cardName">Card Name:</label>
-			<input type="text" id="cardName" name="cardName" required>
-			<br>
+				<label for="cardSet">Card Set:</label>
+				<input type="text" id="cardSet" name="cardSet" required>
+				<br>
 
-			<label for="cardSet">Card Set:</label>
-			<input type="text" id="cardSet" name="cardSet" required>
-			<br>
+				<label for="cardPrint">Card Print:</label>
+				<input type="text" id="cardPrint" name="cardPrint" required>
+				<br>
 
-			<label for="cardPrint">Card Print:</label>
-			<input type="text" id="cardPrint" name="cardPrint" required>
-			<br>
+				<label for="cardCondition">Card Condition:</label>
+				<select id="cardCondition" name="cardCondition" required>
+					<option value="M">Mint (M)</option>
+					<option value="NM">Near Mint (NM)</option>
+					<option value="EX">Excellent (EX)</option>
+					<option value="GD">Good (GD)</option>
+					<option value="LP">Light Played (LP)</option>
+					<option value="PL">Played (PL)</option>
+					<option value="POOR">Poor</option>
+				</select>
 
-			<label for="cardCondition">Card Condition:</label>
-			<input type="text" id="cardCondition" name="cardCondition" required>
-			<br>
+				<label for="cardIsFoil">Card Is Foil:</label>
+				<input type="checkbox" id="cardIsFoil" name="cardIsFoil">
+				<br>
 
-			<label for="cardIsFoil">Card Is Foil:</label>
-			<input type="checkbox" id="cardIsFoil" name="cardIsFoil">
-			<br>
+				<button type="submit">Add to Trade-in</button>
+			</form>
+		</div>
+	</div>
 
-			<button type="submit">Add to Trade-in</button>
-		</form>
+	<div class="tradein-list-container">
+		<!-- Trade-In List -->
+		<div class="tradein-list">
+			<!-- Add items dynamically here -->
+		</div>
+		<div class="tradein-total">
+			TOTAL: $<span id="total-price">0.00</span>
+		</div>
 	</div>
 </div>

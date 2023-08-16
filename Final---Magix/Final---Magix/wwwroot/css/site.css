@@ -220,32 +220,55 @@ p {
 	padding-bottom: 20px;
 }
 
+select {
+	width: 25%;
+	padding: 5px;
+	border: 1px solid #ccc;
+	/* Other styling as needed */
+}
+
 .tradein-container {
 	grid-row: 2;
 	display: flex;
+	justify-content: space-between;
 	flex-direction: column;
 	background-image: url('/Images/scroll_background.png');
 	background-size: cover;
 	height: 1300px;
 	background-position: center;
 	background-repeat: no-repeat;
-	align-items: center;
-	justify-content: space-between;
-	padding: 35px 0;
 }
-.tradein-form {
-	
+
+.tradein-form-container {
+	width: 50%;
+}
+	.tradein-form {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		top: 180px;
+	}
+
+.tradein-list-container {
+	width: 50%;
+}
+
+.tradein-list {
+	/* Style as needed for displaying the trade-in items */
+}
+
+.tradein-total {
+	/* Style for displaying the total */
 }
 
 .tradein-greeting-text-image {
+	position: relative;
 	display: flex;
 	justify-content: center;
-
+	top: 150px;
 }
 	.tradein-greeting-image {
-		width: 200px;
-		display: block;
-		margin: 0 auto;
+		width: 530px;
 	}
 
 .welcome-text-image {
