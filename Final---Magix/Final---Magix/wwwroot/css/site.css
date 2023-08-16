@@ -7,7 +7,6 @@ a {
 	background-image: url('/Images/home_no_hover.png');
 	width: 90px;
 }
-
 	#home-link:hover {
 		background-image: url('/Images/home_hover.png');
 		width: 90px;
@@ -17,7 +16,6 @@ a {
 	background-image: url('/Images/browse_no_hover.png');
 	width: 116px;
 }
-
 	#browse-link:hover {
 		background-image: url('/Images/browse_hover.png');
 		width: 116px;
@@ -27,7 +25,6 @@ a {
 	background-image: url('/Images/tradein_no_hover.png');
 	width: 128px;
 }
-
 	#tradein-link:hover {
 		background-image: url('/Images/tradein_hover.png');
 		width: 128px;
@@ -44,7 +41,6 @@ body {
 	position: absolute;
 	top: 22%;
 }
-
 	.featured-image {
 		width: 80%;
 		display: block;
@@ -97,6 +93,20 @@ header {
 	border-image-slice: 100;
 }
 
+.inventory-bg-container {
+	grid-row: 2;
+	display: flex;
+	flex-direction: column;
+	background-image: url('/Images/scroll_background.png');
+	background-size: cover;
+	height: 1300px;
+	background-position: center;
+	background-repeat: no-repeat;
+	align-items: center;
+	justify-content: space-between;
+	padding: 35px 0;
+}
+
 .inventory-cards {
 	display: flex;
 	flex-direction: column;
@@ -111,6 +121,16 @@ header {
 	justify-content: center;
 	gap: 40px;
 }
+
+.inventory-greeting-text-image {
+	position: absolute;
+	top: 13%;
+}
+	.inventory-greeting-image {
+		width: 75%;
+		display: block;
+		margin: 0 auto;
+	}
 
 .inventory-row {
 	display: flex;
@@ -144,16 +164,13 @@ header {
 	position: relative;
 	flex-direction: column;
 }
-
 	.main-cards img {
 		width: 100px;
 		transition: transform 0.3s ease;
 	}
-
 	.main-cards:hover img {
 		transform: scale(1.5);
 	}
-
 	.main-cards:not(:hover) img {
 		transform: scale(0.8);
 	}
@@ -164,18 +181,16 @@ nav {
 	width: 465px;
 	padding-left: 80px;
 }
-
-.nav-link {
-	background-repeat: no-repeat;
-	background-size: contain;
-	text-indent: -9999px;
-}
+	.nav-link {
+		background-repeat: no-repeat;
+		background-size: contain;
+		text-indent: -9999px;
+	}
 
 .new-additions-text-image {
 	position: absolute;
 	bottom: 21%;
 }
-
 	.new-additions-image {
 		width: 65%;
 		display: block;
@@ -193,7 +208,6 @@ p {
 	justify-content: space-between;
 	margin: 0 auto;
 }
-
 	.placeholder-images img {
 		max-width: calc(50% - 10px);
 		display: block;
@@ -206,7 +220,7 @@ p {
 	padding-bottom: 20px;
 }
 
-.scroll-bg-container {
+.tradein-container {
 	grid-row: 2;
 	display: flex;
 	flex-direction: column;
@@ -219,31 +233,20 @@ p {
 	justify-content: space-between;
 	padding: 35px 0;
 }
-
-.scroll-greeting-text-image {
-	position: absolute;
-	top: 13%;
+.tradein-form {
+	
 }
 
-	.scroll-greeting-image {
-		width: 75%;
+.tradein-greeting-text-image {
+	display: flex;
+	justify-content: center;
+
+}
+	.tradein-greeting-image {
+		width: 200px;
 		display: block;
 		margin: 0 auto;
 	}
-
-.trade-in-container {
-	grid-row: 2;
-	display: flex;
-	flex-direction: column;
-	background-image: url('/Images/scroll_background.png');
-	background-size: cover;
-	height: 1300px;
-	background-position: center;
-	background-repeat: no-repeat;
-	align-items: center;
-	justify-content: space-between;
-	padding: 35px 0;
-}
 
 .welcome-text-image {
 	position: absolute;
