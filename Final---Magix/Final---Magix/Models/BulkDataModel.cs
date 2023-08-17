@@ -13,20 +13,11 @@ namespace Final___Magix.Models
         [JsonPropertyName("id")]
         [Key]
         public string? Id { get; set; }
-        //[JsonPropertyName("oracle_id")]
-        //public string? OracleId { get; set; }
-        //[JsonPropertyName("multiverse_ids")]
-        //public int[]? MultiverseIds { get; set; }
-        //[JsonPropertyName("mtgo_id")]
-        //public int? MtgoId { get; set; }
-        //[JsonPropertyName("mtgo_foil_id")]
-        //public int? MtgoFoilId { get; set; }
-        //[JsonPropertyName("tcgplayer_id")]
-        //public int? TcgplayerId { get; set; }
-        //[JsonPropertyName("cardmarket_id")]
-        //public int? CardmarketId { get; set; }
         [JsonPropertyName("name")]
         public string? Name { get; set; }
+        public string ImageId { get; set; }
+        public virtual Image_Uris? ImageUris { get; set; }
+        public virtual Prices? Prices { get; set; }
         //[JsonPropertyName("lang")]
         //public string? Lang { get; set; }
         //[JsonPropertyName("released_at")]
@@ -41,10 +32,19 @@ namespace Final___Magix.Models
         //public bool HighresImage { get; set; }
         //[JsonPropertyName("image_status")]
         //public string? ImageStatus { get; set; }
-        [JsonPropertyName("image_uris")]
-         
-        public virtual Image_Uris? ImageUris { get; set; }
-
+        //[JsonPropertyName("image_uris")]
+        //[JsonPropertyName("oracle_id")]
+        //public string? OracleId { get; set; }
+        //[JsonPropertyName("multiverse_ids")]
+        //public int[]? MultiverseIds { get; set; }
+        //[JsonPropertyName("mtgo_id")]
+        //public int? MtgoId { get; set; }
+        //[JsonPropertyName("mtgo_foil_id")]
+        //public int? MtgoFoilId { get; set; }
+        //[JsonPropertyName("tcgplayer_id")]
+        //public int? TcgplayerId { get; set; }
+        //[JsonPropertyName("cardmarket_id")]
+        //public int? CardmarketId { get; set; }
         //[JsonPropertyName("mana_cost")]
         //public string? ManaCost { get; set; }
         //[JsonPropertyName("cmc")]
@@ -59,7 +59,6 @@ namespace Final___Magix.Models
         //public object[]? ColorIdentity { get; set; }
         //[JsonPropertyName("keywords")]
         //public object[]? Keywords { get; set; }
-
         //[JsonPropertyName("games")]
         //public string[]? Games { get; set; }
         //[JsonPropertyName("reserved")]
@@ -126,12 +125,9 @@ namespace Final___Magix.Models
         //public bool StorySpotlight { get; set; }
         //[JsonPropertyName("edhrec_rank")]
         //public int EdhrecRank { get; set; }
-       
         //[JsonPropertyName("prices")]
         //[ForeignKey("Prices")]
         //public string PricesId { get; set; }
-
-        public virtual Prices? Prices { get; set; }
         //[NotMapped]
         //[JsonPropertyName("related_uris")]
         //public Related_Uris? RelatedUris { get; set; }
