@@ -22,6 +22,7 @@
 using Final___Magix.Models;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
+using System.Security.Cryptography.Xml;
 
 namespace Final___Magix.DataContext
 {
@@ -38,8 +39,8 @@ namespace Final___Magix.DataContext
         public DbSet<TradeInModel> TradeIns { get; set; }// represent trades
         public DbSet<InventoryModel> StoreInventory { get; set; }
         public DbSet<BulkData> BulkData { get; set; }
-        public DbSet<Image_Uris> ImageUri { get; set; }
-        //public DbSet<Prices> Prices { get; set; }
+        public DbSet<Image_Uris> BulkImage { get; set; }
+        public DbSet<Prices> BulkPrices { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -76,6 +77,7 @@ namespace Final___Magix.DataContext
             var cardList = JsonConvert.DeserializeObject<List<BulkData>>(jsonText);
             var cardObjs = new List<BulkData>();
             var cardImgsList = new List<Image_Uris>();
+            var cardPriceList = new List<Prices>();
             foreach (var cardData in cardList)
             {
                 var card = new BulkData()
@@ -94,7 +96,13 @@ namespace Final___Magix.DataContext
                 //};
 
                 //Populate the imageUri db table
-                
+                var CardPrice = new Prices()
+                {
+                    Id = cardData.Id,
+                    Usd = cardData.Prices.Usd
+                };
+                cardPriceList.Add(CardPrice);
+
                 var cardImgs = new Image_Uris()
                 {
                     Id = cardData.Id,
@@ -105,7 +113,8 @@ namespace Final___Magix.DataContext
                 };
                 cardImgsList.Add(cardImgs);
             }
-            modelBuilder.Entity<BulkData>().HasData(cardObjs);
+            //modelBuilder.Entity<BulkData>().HasData(cardObjs);
+            //modelBuilder.Entity<BulkData>().HasOne(b=>b.Prices).HasForeignKey(b=>Prices.Id);
 
 
 

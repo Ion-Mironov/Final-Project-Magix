@@ -42,7 +42,9 @@ namespace Final___Magix.Models
         //[JsonPropertyName("image_status")]
         //public string? ImageStatus { get; set; }
         [JsonPropertyName("image_uris")]
-        public Image_Uris? ImageUris { get; set; }
+        public string? ImageId { get; set; }
+        public virtual Image_Uris? ImageUris { get; set; }
+
         //[JsonPropertyName("mana_cost")]
         //public string? ManaCost { get; set; }
         //[JsonPropertyName("cmc")]
@@ -124,8 +126,12 @@ namespace Final___Magix.Models
         //public bool StorySpotlight { get; set; }
         //[JsonPropertyName("edhrec_rank")]
         //public int EdhrecRank { get; set; }
-        //[JsonPropertyName("prices")]
-        //public Prices? Prices { get; set; }
+        //[ForeignKey("Prices.Id")]
+        [JsonPropertyName("prices")]
+        public string PricesId { get; set; }
+
+        public virtual Prices? Prices { get; set; }
+        //[NotMapped]
         //[JsonPropertyName("related_uris")]
         //public Related_Uris? RelatedUris { get; set; }
         //[JsonPropertyName("purchase_uris")]
@@ -154,6 +160,7 @@ namespace Final___Magix.Models
 
     }
 
+    
     public class Prices
     {
         [JsonPropertyName("id")]
