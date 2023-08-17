@@ -41,8 +41,8 @@ namespace Final___Magix.Models
         //public bool HighresImage { get; set; }
         //[JsonPropertyName("image_status")]
         //public string? ImageStatus { get; set; }
-        //[JsonPropertyName("image_uris")]
-        //public Image_Uris? ImageUris { get; set; }
+        [JsonPropertyName("image_uris")]
+        public Image_Uris? ImageUris { get; set; }
         //[JsonPropertyName("mana_cost")]
         //public string? ManaCost { get; set; }
         //[JsonPropertyName("cmc")]
@@ -134,37 +134,42 @@ namespace Final___Magix.Models
         //public Legalities? Legalities { get; set; }
     }
 
-    //public class Image_Uris
-    //{
-    //    [JsonPropertyName("small")]
-    //    public string? Small { get; set; }
-    //    [JsonPropertyName("normal")]
-    //    public string? Normal { get; set; }
-    //    [JsonPropertyName("large")]
-    //    public string? Large { get; set; }
-    //    [JsonPropertyName("png")]
-    //    public string? Png { get; set; }
-    //    [JsonPropertyName("art_crop")]
-    //    public string? ArtCrop { get; set; }
-    //    [JsonPropertyName("border_crop")]
-    //    public string? BorderCrop { get; set; }
+    public class Image_Uris
+    {
+        [JsonPropertyName("id")]
+        [Key]
+        public string? Id { get; set; }
+        [JsonPropertyName("small")]
+        public string? Small { get; set; }
+        [JsonPropertyName("normal")]
+        public string? Normal { get; set; }
+        [JsonPropertyName("large")]
+        public string? Large { get; set; }
+        [JsonPropertyName("border_crop")]
+        public string? BorderCrop { get; set; }
+        //[JsonPropertyName("png")]
+        //public string? Png { get; set; }
+        //[JsonPropertyName("art_crop")]
+        //public string? ArtCrop { get; set; }
 
-    //}
+    }
 
-    //public class Prices
-    //{
-    //    [JsonPropertyName("usd")]
-    //    public decimal Usd { get; set; }
-    //    [JsonPropertyName("usd_foil")]
-    //    public decimal UsdFoil { get; set; }
-    //    [JsonPropertyName("usd_etched")]
-    //    public decimal UsdEtched { get; set; }
-    //    [JsonPropertyName("eur")]
-    //    public decimal Eur { get; set; }
-    //    [JsonPropertyName("eur_foil")]
-    //    public decimal EurFoil { get; set; }
-    //    [JsonPropertyName("tix")]
-    //    public decimal Tix { get; set; }
+    public class Prices
+    {
+        [JsonPropertyName("id")]
+        public string? Id { get; set; }
+        [JsonPropertyName("usd")]
+        public decimal Usd { get; set; }
+        //[JsonPropertyName("usd_foil")]
+        //public decimal UsdFoil { get; set; }
+        //[JsonPropertyName("usd_etched")]
+        //public decimal UsdEtched { get; set; }
+        //[JsonPropertyName("eur")]
+        //public decimal Eur { get; set; }
+        //[JsonPropertyName("eur_foil")]
+        //public decimal EurFoil { get; set; }
+        //[JsonPropertyName("tix")]
+        //public decimal Tix { get; set; }
     }
 
     //{
@@ -240,3 +245,4 @@ namespace Final___Magix.Models
 
     //}
 
+}

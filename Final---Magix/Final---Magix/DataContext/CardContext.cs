@@ -38,7 +38,7 @@ namespace Final___Magix.DataContext
         public DbSet<TradeInModel> TradeIns { get; set; }// represent trades
         public DbSet<InventoryModel> StoreInventory { get; set; }
         public DbSet<BulkData> BulkData { get; set; }
-        //public DbSet<Image_Uris> ImageUri { get; set; }
+        public DbSet<Image_Uris> ImageUri { get; set; }
         //public DbSet<Prices> Prices { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -75,16 +75,35 @@ namespace Final___Magix.DataContext
             //Deserialize the var into List<BulkDataModel>
             var cardList = JsonConvert.DeserializeObject<List<BulkData>>(jsonText);
             var cardObjs = new List<BulkData>();
+            var cardImgsList = new List<Image_Uris>();
             foreach (var cardData in cardList)
             {
                 var card = new BulkData()
                 {
                     Id = cardData.Id,
                     Name = cardData.Name,
-                    
+                    //Prices
+                    //Images
 
                 };
                 cardObjs.Add(card);
+                //Populate Prices with JSON data (cardData.Prices
+                //var cardPrice = new Prices()
+                //{
+                //    cardPrice.Usd = (decimal)cardData.Price.Usd;
+                //};
+
+                //Populate the imageUri db table
+                
+                var cardImgs = new Image_Uris()
+                {
+                    Id = cardData.Id,
+                    Small = cardData.ImageUris.Small,
+                    Normal = cardData.ImageUris.Normal,
+                    Large = cardData.ImageUris.Large,
+                    BorderCrop = cardData.ImageUris.BorderCrop
+                };
+                cardImgsList.Add(cardImgs);
             }
             modelBuilder.Entity<BulkData>().HasData(cardObjs);
 
