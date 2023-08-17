@@ -1,37 +1,17 @@
-﻿a {
+﻿/* Content is laid out as follows:
+	• Shared/_Layout.cshtml		← (Responsible for setting initial design layout for all pages)
+	• Home/Privacy.cshtml
+	• Home/Index.cshtml			← (Home page)
+	• Inventory/Index.cshtml	← (Browse inventory page)
+	• TradeIn/Index.cshtml		← (Trade-in page)
+*/
+
+
+/* ↓↓ Shared/_Layout.cshtml ↓↓ */
+a {
 	color: #0077CC;
 	text-decoration: none;
 }
-
-/* ↓↓ Navigation bar buttons ↓↓ */
-#home-link {
-	background-image: url('/Images/home_no_hover.png');
-	width: 90px;
-}
-	#home-link:hover {
-		background-image: url('/Images/home_hover.png');
-		width: 90px;
-	}
-
-#browse-link {
-	background-image: url('/Images/browse_no_hover.png');
-	width: 116px;
-}
-	#browse-link:hover {
-		background-image: url('/Images/browse_hover.png');
-		width: 116px;
-	}
-
-#tradein-link {
-	background-image: url('/Images/tradein_no_hover.png');
-	width: 128px;
-}
-	#tradein-link:hover {
-		background-image: url('/Images/tradein_hover.png');
-		width: 128px;
-	}
-/* ↑↑ Navigation bar buttons ↑↑ */
-
 
 body {
 	display: grid;
@@ -40,61 +20,6 @@ body {
 	overflow-y: scroll;
 }
 
-
-/* ↓↓ Home/Index.cshtml ↓↓ */
-.featured-text-image {
-	position: absolute;
-	top: 22%;
-}
-	.featured-image {
-		width: 80%;
-		display: block;
-		margin: 0 auto;
-	}
-
-.home-bg-container {
-	grid-row: 2;
-	display: flex;
-	flex-direction: column;
-	background-image: url('/Images/home_background.jpg');
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	align-items: center;
-	justify-content: space-between;
-	padding: 50px 0;
-}
-
-.home-cards-container {
-	display: flex;
-	position: relative;
-	top: 13px;
-	justify-content: center;
-	gap: 10px;
-}
-
-.home-cards {
-	display: flex;
-	position: relative;
-	flex-direction: column;
-}
-
-	.home-cards img {
-		width: 100px;
-		transition: transform 0.3s ease;
-	}
-
-	.home-cards:hover img {
-		transform: scale(1.5);
-	}
-
-	.home-cards:not(:hover) img {
-		transform: scale(0.8);
-	}
-/* ↑↑ Home/Index.cshtml ↑↑ */
-
-
-/* ↓↓ Shared/_Layout.cshtml ↓↓ */
 footer {
 	grid-row: 3;
 	position: fixed;
@@ -140,7 +65,140 @@ header {
 	border-image-source: url(/Images/border_image.png);
 	border-image-slice: 100;
 }
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	width: 465px;
+	padding-left: 80px;
+}
+
+.nav-link {
+	background-repeat: no-repeat;
+	background-size: contain;
+	text-indent: -9999px;
+}
+
+	/* ↓ Nav-bar buttons ↓ */
+#home-link {
+	background-image: url('/Images/home_no_hover.png');
+	width: 90px;
+}
+	#home-link:hover {
+		background-image: url('/Images/home_hover.png');
+		width: 90px;
+	}
+
+#browse-link {
+	background-image: url('/Images/browse_no_hover.png');
+	width: 116px;
+}
+	#browse-link:hover {
+		background-image: url('/Images/browse_hover.png');
+		width: 116px;
+	}
+
+#tradein-link {
+	background-image: url('/Images/tradein_no_hover.png');
+	width: 128px;
+}
+	#tradein-link:hover {
+		background-image: url('/Images/tradein_hover.png');
+		width: 128px;
+	}
+	/* ↑ Nav-bar buttons ↑ */
+
+p {
+	margin-bottom: 20px;
+}
 /* ↑↑ Shared/_Layout.cshtml ↑↑ */
+
+
+/* ↓↓ Home/Privacy.cshtml ↓↓ */
+.privacy-content {
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+/* ↑↑ Home/Privacy.cshtml ↑↑ */
+
+
+/* ↓↓ Home/Index.cshtml ↓↓ */
+.featured-text-image {
+	position: absolute;
+	top: 22%;
+}
+	.featured-image {
+		width: 80%;
+		display: block;
+		margin: 0 auto;
+	}
+
+.home-bg-container {
+	grid-row: 2;
+	display: flex;
+	flex-direction: column;
+	background-image: url('/Images/home_background.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	align-items: center;
+	justify-content: space-between;
+	padding: 50px 0;
+}
+
+.home-cards-container {
+	display: flex;
+	position: relative;
+	top: 13px;
+	justify-content: center;
+	gap: 10px;
+}
+
+.home-cards {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+}
+	.home-cards img {
+		width: 100px;
+		transition: transform 0.3s ease;
+	}
+		.home-cards:hover img {
+			transform: scale(1.5);
+		}
+		.home-cards:not(:hover) img {
+			transform: scale(0.8);
+		}
+
+.new-additions-text-image {
+	position: absolute;
+	bottom: 21%;
+}
+	.new-additions-image {
+		width: 65%;
+		display: block;
+		margin: 0 auto;
+	}
+
+.placeholder-images {
+	display: flex;
+	width: 460px;
+	padding-top: 215px;
+	justify-content: space-between;
+	margin: 0 auto;
+}
+	.placeholder-images img {
+		max-width: calc(50% - 10px);
+		display: block;
+	}
+
+.welcome-text-image {
+	position: absolute;
+	top: 1%;
+}
+/* ↑↑ Home/Index.cshtml ↑↑ */
 
 
 /* ↓↓ Inventory/Index.cshtml ↓↓ */
@@ -191,55 +249,65 @@ header {
 /* ↑↑ Inventory/Index.cshtml ↑↑ */
 
 
-nav {
+/* ↓↓ TradeIn/Index.cshtml ↓↓ */
+input {
+	background: #ffffff;
+	border: 2px solid #203fcb;
+}
+
+.label-with-tooltip {
 	display: flex;
-	justify-content: space-between;
-	width: 465px;
-	padding-left: 80px;
-}
-	.nav-link {
-		background-repeat: no-repeat;
-		background-size: contain;
-		text-indent: -9999px;
-	}
-
-.new-additions-text-image {
-	position: absolute;
-	bottom: 21%;
-}
-	.new-additions-image {
-		width: 65%;
-		display: block;
-		margin: 0 auto;
-	}
-
-p {
-	margin-bottom: 20px;
 }
 
-.placeholder-images {
-	display: flex;
-	width: 460px;
-	padding-top: 215px;
-	justify-content: space-between;
-	margin: 0 auto;
-}
-	.placeholder-images img {
-		max-width: calc(50% - 10px);
-		display: block;
-	}
-
-.privacy-content {
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-
-select {
+select {			/* This relates to the 'select' function for the dropdown menus */
 	width: 25%;
 	padding: 5px;
-	border: 3px solid #203FCB;
+	border: 2px solid #203fcb;
+}
+
+.tooltip-content {
+	position: absolute;
+	background-color: #ffffff;
+	border-radius: 5px;
+	box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+	font-weight: 500;
+	padding-left: 7px;
+	padding-right: 7px;
+}
+
+.tooltip-icon {
+	position: relative;			/* This is needed in order to position the tooltip. */
+	cursor: help;				/* This turns the mouse pointer into different icons. 'help' is a pointer with question mark. */
+	font-size: 16px;
+	color: #ffffff;				/* White color for the question mark */
+	background-color: #0077cc;	/* Blue background */
+	border-radius: 50%;			/* This causes the borders to become more rounded, turning a square into a circle. */
+	width: 15px;				/* Width of the circle */
+	height: 15px;				/* Height of the circle */
+	display: flex;				/* Align the question mark to the center */
+	align-items: center;		/* Vertically aligns question mark in the center of blue circle. */
+	justify-content: center;	/* Horizontally aligns question mark in the center of blue circle. */
+	margin-left: 7px;			/* Add left margin to create some space. */
+}
+
+.tooltip-modal {
+	display: none;				/* Set to 'none' so that the modal only displays when tooltip is clicked on. */
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 5;					/* Makes sure that modal appears on top of everything else on the page. */
+}
+
+.tradein-button button {
+	background-color: #20bcc5;
+	color: #000000;				/* Text color */
+	padding: 10px 20px;
+	border: none;				/* Remove default border */
+	font-size: 16px;
+	font-weight: bold;
+    border-radius: 25px;
 }
 
 .tradein-container {
@@ -268,30 +336,7 @@ select {
 	top: 320px;
 	margin-left: 250px;
 	width: 50%;
-	font-weight: 700;
-}
-
-.tradein-form label,
-.tradein-form input,
-.tradein-form select {
-	margin-bottom: 10px;	/* Adds space between each element */
-}
-
-.tradein-list-container {
-	position: relative;
-	width: 400px;
-	border: 2px solid #000000;
-	background-color: #FFFFFF;
-	margin-right: 325px;
-	top: 315px;
-}
-
-.tradein-list {
-}
-
-.tradein-total {
-	padding-top: 10px;
-	padding-left: 10px;
+	font-weight: bold;
 }
 
 .tradein-greeting-text-image {
@@ -305,47 +350,20 @@ select {
 	width: 530px;
 }
 
-.tooltip-icon {
-	position: relative;			/* This is needed in order to position the tooltip. */
-	cursor: help;				/* This turns the mouse pointer into different icons. 'help' is a pointer with question mark. */
-	font-size: 16px;
-	color: #FFFFFF;				/* White color for the question mark */
-	background-color: #0077CC;	/* Blue background */
-	border-radius: 50%;			/* This causes the borders to become more rounded, turning a square into a circle. */
-	width: 15px;				/* Width of the circle */
-	height: 15px;				/* Height of the circle */
-	display: flex;				/* Align the question mark to the center */
-	align-items: center;		/* Vertically aligns question mark in the center of blue circle. */
-	justify-content: center;	/* Horizontally aligns question mark in the center of blue circle. */
-	margin-left: 7px;			/* Add left margin to create some space. */
+.tradein-list-container {
+	position: relative;
+	width: 400px;
+	border: 2px solid #000000;
+	background-color: #ffffff;
+	margin-right: 325px;
+	top: 315px;
 }
 
-.label-with-tooltip {
-	display: flex;
+.tradein-list {
 }
 
-.tooltip-modal {
-	display: none;						/* Set to 'none' so that the modal only displays when tooltip is clicked on. */
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0,0,0,0.4);	/* This creates a darker filter over the main webpage so that focus is on the tooltip. */
-	z-index: 5;							/* Makes sure that modal appears on top of everything else on the page. */
+.tradein-total {
+	padding-top: 10px;
+	padding-left: 10px;
 }
-
-/* This is responsible for how the content within the modal looks. */
-.tooltip-content {
-	position: absolute;
-	top: 41%;
-	left: 21%;
-	background-color: #FFFFFF;
-	border-radius: 5px;
-	box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.welcome-text-image {
-	position: absolute;
-	top: 1%;
-}
+/* ↑↑ TradeIn/Index.cshtml ↑↑ */
