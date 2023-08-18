@@ -13,13 +13,13 @@ namespace Final___Magix
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
-			// Register ScryfallApiClient with dependency injection.
-			builder.Services.AddHttpClient<ScryfallApiClient>(client =>
-			{
-				client.BaseAddress = new Uri("https://api.scryfall.com/");
-			});
+            // Register ScryfallApiClient with dependency injection.
+            builder.Services.AddHttpClient<ScryfallApiClient>(client =>
+            {
+                client.BaseAddress = new Uri("https://api.scryfall.com/");
+            });
 
-			var app = builder.Build();
+            var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
@@ -38,6 +38,14 @@ namespace Final___Magix
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
+
+            //Call the data seeding method
+            using (var scope = app.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                var context = services.GetRequiredService<CardContext>();
+                context.SeedData();
+            }
 
             app.Run();
         }
