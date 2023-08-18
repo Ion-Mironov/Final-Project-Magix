@@ -1,22 +1,34 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Final___Magix.Models
-	{
-	public class InventoryModel
-		{
-		[Key]
-		public int Id { get; set; }
+{
+    public class Inventory
+    {
 
-		[Required]
-		public string Name { get; set; }
+        [NotMapped]
+        public string? Object { get; set; }
+        [Key]
+        public string? Id { get; set; }
+        public string? Name { get; set; }
 
-		[Required]
-		public string ImageUrl { get; set; }
+        public string? ImageSmall { get; set; }
+        public string? ImageNormal { get; set; }
+        public string? ImageLarge { get; set; }
+        public string? ImageBorderCrop { get; set; }
 
-		[Required]
-		public decimal Price { get; set; }
+        public Price? Prices { get; set; }
 
-		[Required]
-		public int Quantity { get; set; }
-		}
-	}
+        [ForeignKey("InventoryPrices")]
+        public string? PriceId { get; set; }
+        public int? Quantity { get; set; }
+    }
+
+
+
+    public class InventoryPrice
+    {
+        public string? Id { get; set; }
+        public decimal Usd { get; set; }
+    }
+}
