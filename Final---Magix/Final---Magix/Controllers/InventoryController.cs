@@ -17,6 +17,8 @@ using Final___Magix.DataContext;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http; // Include the IFormCollection namespace
 using Final___Magix.Api;
+using Microsoft.EntityFrameworkCore;
+using Final___Magix.Models;
 
 namespace Final___Magix.Controllers
 	{
@@ -52,9 +54,21 @@ namespace Final___Magix.Controllers
 
 		// GET: InventoryController
 		public ActionResult Index()
+		{
+			var inventoryData = _dbContext.StoreInventory
+			.Include(i => i.Prices) // Assuming there's a navigation property between Inventory and InventoryPrice
+			.Select(i => new Inventory
 			{
-			return View();
-			}
+				Id = i.Id,
+				Name = i.Name,
+				ImageNormal = i.ImageNormal,
+				Quantity = i.Quantity,
+				Prices = i.Prices
+			})
+				.ToList();
+
+			return View(inventoryData);
+		}
 
 		// GET: InventoryController/Details/5
 		public ActionResult Details(int id)
