@@ -15,32 +15,22 @@ namespace Final___Magix.Models
         [JsonPropertyName("name")]
         public string? Name { get; set; }
 
-        [JsonPropertyName("image_uris")]
-        public Image? ImageUris { get; set; }
-        [ForeignKey("ImageUris")]
-        public string? ImageId { get; set; }
-
-
+        [JsonPropertyName("imagesmall")]
+        public string? ImageSmall { get; set; }
+        [JsonPropertyName("imagenormal")]
+        public string? ImageNormal { get; set; }
+        [JsonPropertyName("imagelarge")]
+        public string? ImageLarge { get; set; }
+        [JsonPropertyName("imagebordercrop")]
+        public string? ImageBorderCrop { get; set; }
+        
         [JsonPropertyName("prices")]
         public Price? Prices { get; set; }
         [ForeignKey("Prices")]
         public string? PriceId { get; set; }
     }
 
-    public class Image
-    {
-        [JsonPropertyName("id")]
-        [Key]
-        public string? Id { get; set; }
-        [JsonPropertyName("small")]
-        public string? Small { get; set; }
-        [JsonPropertyName("normal")]
-        public string? Normal { get; set; }
-        [JsonPropertyName("large")]
-        public string? Large { get; set; }
-        [JsonPropertyName("border_crop")]
-        public string? BorderCrop { get; set; }
-    }
+
 
     public class Price
     {

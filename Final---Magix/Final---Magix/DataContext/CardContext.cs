@@ -21,7 +21,7 @@ namespace Final___Magix.DataContext
         public DbSet<TradeInModel> TradeIns { get; set; } //Historical trade-ins database
         public DbSet<InventoryModel> StoreInventory { get; set; } //Store Inventory atabase
         public DbSet<BulkData> BulkData { get; set; } //BulkDataModel.BulkData database (Id, Name, ImageId, PriceId)
-        public DbSet<Image> BulkImage { get; set; } //BulkDataModel.Images database (Id, Small, Normal, Large, BorderCrop)
+        //public DbSet<Image> BulkImage { get; set; } //BulkDataModel.Images database (Id, Small, Normal, Large, BorderCrop)
         public DbSet<Price> BulkPrice { get; set; } //BulkDataModel.Price database (Id, Usd)
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -46,7 +46,7 @@ namespace Final___Magix.DataContext
         public void SeedData()
         {
             //Check if the database have already been seeded
-            if (BulkData.Any() || BulkImage.Any() || BulkPrice.Any())
+            if (BulkData.Any() /*|| BulkImage.Any()*/ || BulkPrice.Any())
             {   //If the database has been seeded, exit this method
                 return;
             }
@@ -63,6 +63,10 @@ namespace Final___Magix.DataContext
                 {
                     Id = cardData.Id,
                     Name = cardData.Name,
+                    ImageSmall = cardData.ImageSmall,
+                    ImageNormal = cardData.ImageNormal,
+                    ImageLarge = cardData.ImageLarge,
+                    ImageBorderCrop = cardData.ImageBorderCrop
                 };
                 BulkData.Add(card);
 
@@ -73,15 +77,7 @@ namespace Final___Magix.DataContext
                 };
                 BulkPrice.Add(CardPrice);
 
-                var cardImgs = new Image()
-                {
-                    Id = cardData.Id,
-                    Small = cardData.ImageUris.Small
-                    //Normal = cardData.ImageUris.Normal,
-                    //Large = cardData.ImageUris.Large,
-                    //BorderCrop = cardData.ImageUris.BorderCrop
-                };
-                BulkImage.Add(cardImgs);
+                
             }
             SaveChanges();
         }
