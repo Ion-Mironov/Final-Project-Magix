@@ -76,10 +76,14 @@ namespace Final___Magix.DataContext
                     Usd = cardData.Prices.Usd
                 };
                 BulkPrice.Add(CardPrice);
-
                 
+
+
+
+
             }
-            SaveChanges();
+            //SaveChanges();
+            
         }
     }
 }

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Final___Magix.Migrations
 {
     [DbContext(typeof(CardContext))]
-    [Migration("20230818142637_InitSeed")]
-    partial class InitSeed
+    [Migration("20230818144241_please")]
+    partial class please
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
