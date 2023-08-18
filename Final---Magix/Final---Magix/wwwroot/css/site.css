@@ -252,10 +252,10 @@ p {
 
 /* ↓↓ TradeIn/Index.cshtml ↓↓ */
 .tradein-container {
-	grid-row: 2;						/* Set to second row of 'body' */
+	grid-row: 2;									/* Set to second row of 'body' */
 	display: grid;
-	grid-template-columns: 1fr 1fr;		/* 2 columns */
-	grid-template-rows: 100px 1fr;		/* 2 rows */
+	grid-template-columns: 1fr 1fr;				/* 2 columns */
+	grid-template-rows: auto 1fr auto;			/* 3 rows */
 	align-items: center;
 	background-image: url('/Images/scroll_background.png');
 	background-size: cover;
@@ -265,9 +265,9 @@ p {
 }
 	/* ▼ Child items of tradein-container ▼ */
 	.tradein-greeting-text-image {
-		grid-column: 1/3;				/* Used to span across both columns - 1 tells it where to start and 3 tells it to stop at the end of column 2 */
-		grid-row: 1;					/* Set to first row of tradein-container */
-		position: relative;				/* Position the image in relation to how tradein-container is display on page */
+		grid-column: 1/3;						/* Used to span across both columns - 1 tells it where to start and 3 tells it to stop at the end of column 2 */
+		grid-row: 1;								/* Set to first row of tradein-container */
+		position: relative;						/* Position the image in relation to how tradein-container is display on page */
 		display: inline-grid;
 		justify-content: center;
 		top: 180px;
@@ -285,19 +285,13 @@ p {
 	/* ▲ Child iems of tradein-container ▲ */
 
 /* ↓ Wrappers ↓ */
-.alpha-tradein-wrapper {
-	display: grid;
-	grid-template-columns: 1fr 1fr;				/* 2 columns */
-}
-
 .tradein-form-wrapper {
 	grid-column: 1;								/* Place in the first column of alpha-tradein-wrapper */
-	grid-row: 2;								/* Place in the second row of alpha-tradein-wrapper */
+	grid-row: 2;									/* Place in the second row of alpha-tradein-wrapper */
 	position: relative;
 	display: grid;
 	grid-template-columns: 1fr 1fr;				/* 2 columns */
-	grid-template-rows: 75px 75px 75px 75px;	/* 4 rows */
-	top: 250px;
+	grid-template-rows: 75px 75px 75px 75px;		/* 4 rows */
 	font-weight: bold;
 }
 	/* ▼ Children of tradein-form-wrapper ▼ */
@@ -305,22 +299,18 @@ p {
 		grid-column: 1/3;
 		grid-row: 1;
 	}
-
 	.cardEditionWrapper {
 		grid-column: 1;
 		grid-row: 2;
 	}
-
 	.cardBorderWrapper {
 		grid-column: 2;
 		grid-row: 2;
 	}
-
 	.printTypeWrapper {
 		grid-column: 1;
 		grid-row: 3;
 	}
-
 	.cardConditionWrapper {
 		grid-column: 2;
 		grid-row: 3;
@@ -343,24 +333,24 @@ p {
 	/* ▲ Children of tradein-form-wrapper ▲ */
 
 .tradein-list-wrapper {
-	grid-column: 2;								/* Set to second column of alpha-tradein-wrapper */
-	grid-row: 2;								/* Set to second row of alpha-tradein-wrapper */
+	grid-column: 2;								/* Set to second column of tradein-form-wrapper */
+	grid-row: 2;									/* Set to second row of tradein-form-wrapper */
 	position: relative;
 	display: grid;
-	grid-template-columns: 1fr 1fr;				/* 2 columns */
-	grid-template-rows: 75px 75px 75px 75px;	/* 4 rows */
+	grid-template-columns: 1fr 1fr 1fr;			/* 3 columns */
+	grid-template-rows: auto 75px;				/* 2 rows */
 	top: 250px;
 	font-weight: bold;
 }
 	/* ▼ Children of tradein-list-wrapper ▼ */
 	.tradein-list {
-		grid-column: 1/3;
+		grid-column: 1/4;
 		grid-row: 1/4;
 		background: white;
 		overflow-y: scroll;
 	}
 	.tradein-total {
-		grid-column: 1/3;
+		grid-column: 1/4;
 		grid-row: 4;
 		display: flex;
 		justify-content: flex-end;
@@ -372,17 +362,17 @@ p {
 
 /* ↑ Wrappers ↑ */
 
-input {								/* This relates to the box where you enter in the Card Name */
+input {											/* This relates to the input box where you enter in the Card Name */
 	background: #ffffff;
 	border: 2px solid #203fcb;
 	width: 100%;
 }
 
-.label-with-tooltip {				/* This relates to the label name (Card Name, Edition, etc.) for all card fields */
+.label-with-tooltip {							/* This relates to the label name (Card Name, Edition, etc.) for all card fields */
 	display: flex;
 }
 
-select {							/* This relates to the 'select' function for the dropdown menus */
+select {											/* This relates to the 'select' function for the dropdown menus */
 	width: 100%;
 	padding: 5px;
 	border: 2px solid #203fcb;
@@ -400,28 +390,28 @@ select {							/* This relates to the 'select' function for the dropdown menus *
 }
 
 .tooltip-icon {
-	position: relative;				/* This is needed in order to position the tooltip */
-	cursor: help;					/* This turns the mouse pointer into different icons. 'help' is a pointer with question mark. */
+	position: relative;					/* This is needed in order to position the tooltip */
+	cursor: help;						/* This turns the mouse pointer into different icons. 'help' is a pointer with question mark. */
 	font-size: 16px;
-	color: #ffffff;					/* White color for the question mark */
-	background-color: #0077cc;		/* Blue background */
-	border-radius: 50%;				/* This causes the borders to become more rounded, turning a square into a circle */
-	width: 15px;					/* Width of the circle */
-	height: 15px;					/* Height of the circle */
-	display: flex;					/* Align the question mark to the center */
-	align-items: center;			/* Vertically aligns question mark in the center of blue circle */
-	justify-content: center;		/* Horizontally aligns question mark in the center of blue circle */
-	margin-left: 7px;				/* Add left margin to create some space. */
+	color: #ffffff;						/* White color for the question mark */
+	background-color: #0077cc;			/* Blue background */
+	border-radius: 50%;					/* This causes the borders to become more rounded, turning a square into a circle */
+	width: 15px;							/* Width of the circle */
+	height: 15px;						/* Height of the circle */
+	display: flex;						/* Align the question mark to the center */
+	align-items: center;					/* Vertically aligns question mark in the center of blue circle */
+	justify-content: center;				/* Horizontally aligns question mark in the center of blue circle */
+	margin-left: 7px;					/* Add left margin to create some space. */
 }
 
 .tooltip-modal {
-	display: none;					/* Set to 'none' so that the modal only displays when tooltip is clicked on */
+	display: none;						/* Set to 'none' so that the modal only displays when tooltip is clicked on */
 	position: fixed;
 	left: 0;
 	top: 0;
 	width: 100%;
 	height: 100%;
-	z-index: 5;						/* Makes sure that modal appears on top of everything else on the page */
+	z-index: 5;							/* Makes sure that modal appears on top of everything else on the page */
 }
 /* ↑ Question mark modal ↑ */
 
