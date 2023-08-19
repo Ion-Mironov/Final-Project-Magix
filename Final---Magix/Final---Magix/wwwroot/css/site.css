@@ -2,10 +2,11 @@
 	• Shared/_Layout.cshtml		← (Responsible for setting initial design layout for all pages)
 	• Home/Privacy.cshtml
 	• Home/Index.cshtml			← (Home page)
-	• Inventory/Index.cshtml	← (Browse inventory page)
+	• Inventory/Index.cshtml		← (Browse inventory page)
 	• TradeIn/Index.cshtml		← (Trade-in page)
-*/
 
+	NOTE: All pages are wrapped in a <div class="container"> tag, which is responsible for setting the content layout of the page. It also contains the background image of the page. All other elements are wrapped in a subsequent <div class="wrapper"> tag, which handle the layout of the content within the page.
+*/
 
 /* ↓↓ Shared/_Layout.cshtml ↓↓ */
 a {
@@ -15,24 +16,34 @@ a {
 
 body {
 	display: grid;
-	grid-template-rows: 40px 1fr 40px;
-	height: 110vh;
-	overflow-y: scroll;
+	grid-template-rows: 1fr;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	overflow-x: auto;
+	overflow-y: auto;
 }
 
-footer {
-	grid-row: 3;
+header {
 	position: fixed;
-	bottom: 0;
+	top: 0;
 	left: 0;
 	width: 100%;
 	height: 40px;
 	background-image: url(/Images/mahogany_wood.jpg);
+	padding-bottom: 40px;
+	border-bottom: 10px solid transparent;
+	border-image-source: url(/Images/border_image.png);
+	border-image-slice: 100;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 40px;
+	background-image: url(/Images/mahogany_wood.jpg);
 	color: #FFFFFF;
-	padding: 2px;
 	text-align: center;
-	background-clip: padding-box;
-	padding-top: 2px;
 	border-top: 10px solid transparent;
 	border-image-source: url(/Images/border_image.png);
 	border-image-slice: 100;
@@ -51,21 +62,6 @@ h4 {
 	padding-bottom: 10px;
 }
 
-header {
-	grid-row: 1;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 40px;
-	background-image: url(/Images/mahogany_wood.jpg);
-	background-clip: padding-box;
-	padding-bottom: 40px;
-	border-bottom: 10px solid transparent;
-	border-image-source: url(/Images/border_image.png);
-	border-image-slice: 100;
-}
-
 nav {
 	display: flex;
 	justify-content: space-between;
@@ -79,7 +75,7 @@ nav {
 	text-indent: -9999px;
 }
 
-	/* ↓ Nav-bar buttons ↓ */
+/* ↓ Nav-bar buttons ↓ */
 #home-link {
 	background-image: url('/Images/home_no_hover.png');
 	width: 90px;
@@ -106,7 +102,7 @@ nav {
 		background-image: url('/Images/tradein_hover.png');
 		width: 128px;
 	}
-	/* ↑ Nav-bar buttons ↑ */
+/* ↑ Nav-bar buttons ↑ */
 
 p {
 	margin-bottom: 20px;
@@ -126,79 +122,87 @@ p {
 
 
 /* ↓↓ Home/Index.cshtml ↓↓ */
-.featured-text-image {
-	position: absolute;
-	top: 22%;
-}
-	.featured-image {
-		width: 80%;
-		display: block;
-		margin: 0 auto;
-	}
-
 .home-bg-container {
 	grid-row: 2;
 	display: flex;
-	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	background-image: url('/Images/home_background.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	align-items: center;
-	justify-content: space-between;
-	padding: 50px 0;
+	height: 100vh;
 }
 
-.home-cards-container {
-	display: flex;
-	position: relative;
-	top: 13px;
-	justify-content: center;
-	gap: 10px;
+/* ↓ Wrappers ↓ */
+.home-alpha-wrapper {
+	display: grid;
+	grid-template-rows: repeat(5, auto);
 }
 
-.home-cards {
-	display: flex;
-	position: relative;
-	flex-direction: column;
-}
-	.home-cards img {
-		width: 100px;
-		transition: transform 0.3s ease;
+	.welcome-text-wrapper {
+		display: flex;
+		grid-row: 1;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
 	}
-		.home-cards:hover img {
-			transform: scale(1.5);
+
+	.featured-text-wrapper {
+		display: flex;
+		grid-row: 2;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.featured-images-wrapper {
+		display: flex;
+		grid-row: 3;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+		.featured-images {
+			display: flex;
+			width: 460px;
+			padding-top: 215px;
+			justify-content: space-between;
+			margin: 0 auto;
 		}
-		.home-cards:not(:hover) img {
-			transform: scale(0.8);
+
+	.new-additions-text-wrapper {
+		display: flex;
+		grid-row: 4;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.home-cards-wrapper {
+		display: flex;
+		grid-row: 5;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		grid-template-columns: repeat(5, auto);
+	}
+		.home-cards {
+
 		}
+			.home-cards img {
+				width: 100px;
+				transition: transform 0.3s ease;
+			}
+				.home-cards:hover img {
+					transform: scale(1.5);
+				}
+				.home-cards:not(:hover) img {
+					transform: scale(0.8);
+				}
 
-.new-additions-text-image {
-	position: absolute;
-	bottom: 21%;
-}
-	.new-additions-image {
-		width: 65%;
-		display: block;
-		margin: 0 auto;
-	}
+/* ↑ Wrappers ↑ */
 
-.placeholder-images {
-	display: flex;
-	width: 460px;
-	padding-top: 215px;
-	justify-content: space-between;
-	margin: 0 auto;
-}
-	.placeholder-images img {
-		max-width: calc(50% - 10px);
-		display: block;
-	}
-
-.welcome-text-image {
-	position: absolute;
-	top: 1%;
-}
 /* ↑↑ Home/Index.cshtml ↑↑ */
 
 
@@ -252,116 +256,121 @@ p {
 
 /* ↓↓ TradeIn/Index.cshtml ↓↓ */
 .tradein-container {
-	grid-row: 2;									/* Set to second row of 'body' */
-	display: grid;
-	grid-template-columns: 1fr 1fr;				/* 2 columns */
-	grid-template-rows: auto 1fr auto;			/* 3 rows */
-	align-items: center;
+	grid-row: 2;										/* Set to second row of 'body' */
 	background-image: url('/Images/scroll_background.png');
 	background-size: cover;
 	height: 1300px;
 	background-position: center;
 	background-repeat: no-repeat;
 }
-	/* ▼ Child items of tradein-container ▼ */
-	.tradein-greeting-text-image {
-		grid-column: 1/3;						/* Used to span across both columns - 1 tells it where to start and 3 tells it to stop at the end of column 2 */
-		grid-row: 1;								/* Set to first row of tradein-container */
-		position: relative;						/* Position the image in relation to how tradein-container is display on page */
-		display: inline-grid;
-		justify-content: center;
-		top: 180px;
-	}
-
-	.confirm-tradein-button button {
-		background-color: #20bcc5;
-		color: #000000;
-		padding: 10px 20px;
-		border: none;
-		font-size: 16px;
-		font-weight: bold;
-		border-radius: 25px;
-	}
-	/* ▲ Child iems of tradein-container ▲ */
 
 /* ↓ Wrappers ↓ */
-.tradein-form-wrapper {
-	grid-column: 1;								/* Place in the first column of alpha-tradein-wrapper */
-	grid-row: 2;									/* Place in the second row of alpha-tradein-wrapper */
-	position: relative;
+.alpha-tradein-wrapper {
 	display: grid;
-	grid-template-columns: 1fr 1fr;				/* 2 columns */
-	grid-template-rows: 75px 75px 75px 75px;		/* 4 rows */
-	font-weight: bold;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 245px 1fr auto;
 }
-	/* ▼ Children of tradein-form-wrapper ▼ */
-	.cardNameWrapper {
-		grid-column: 1/3;
-		grid-row: 1;
+	/* ▼ alpha-tradein-wrapper children ▼ */
+	.tradein-greeting-text-image {
+		grid-column: 1/3;							/* Used to span across both columns; 1 tells it where to start and 3 tells it to stop at the end of column 2 */
+		grid-row: 1;									/* Set to first row of tradein-container */
+		display: flex;
+		justify-content: center;
+		padding-top: 180px;
 	}
-	.cardEditionWrapper {
-		grid-column: 1;
-		grid-row: 2;
+ 
+	.tradein-form-wrapper {
+		grid-column: 1;								/* Place in the first column of alpha-tradein-wrapper */
+		grid-row: 2;									/* Place in the second row of alpha-tradein-wrapper */
+		position: relative;
+		display: grid;
+		grid-template-columns: 1fr 1fr;				/* 2 columns */
+		grid-template-rows: 75px 75px 75px 75px;		/* 4 rows */
+		font-weight: bold;
 	}
-	.cardBorderWrapper {
-		grid-column: 2;
-		grid-row: 2;
-	}
-	.printTypeWrapper {
-		grid-column: 1;
-		grid-row: 3;
-	}
-	.cardConditionWrapper {
-		grid-column: 2;
-		grid-row: 3;
-	}
+		/* ▼ tradein-form-wrapper children ▼ */
+		.cardNameWrapper {
+			grid-column: 1/3;
+			grid-row: 1;
+		}
+		.cardEditionWrapper {
+			grid-column: 1;
+			grid-row: 2;
+		}
+		.cardBorderWrapper {
+			grid-column: 2;
+			grid-row: 2;
+		}
+		.printTypeWrapper {
+			grid-column: 1;
+			grid-row: 3;
+		}
+		.cardConditionWrapper {
+			grid-column: 2;
+			grid-row: 3;
+		}
+		.tradein-button {
+			display: flex;
+			grid-column: 1;
+			grid-row: 4;
+		}
+			.tradein-button button {
+				background-color: #20bcc5;
+				color: #000000;						/* Text color */
+				padding: 10px 20px;
+				border: none;						/* Remove default border */
+				font-size: 16px;
+				font-weight: bold;
+				border-radius: 25px;
+			}
+		/* ▲ tradein-form-wrapper children ▲ */
 
-	.tradein-button {
+	.tradein-list-wrapper {
+		grid-column: 2;								/* Set to second column of tradein-form-wrapper */
+		grid-row: 2;									/* Set to second row of tradein-form-wrapper */
+		position: relative;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;			/* 3 columns */
+		grid-template-rows: auto 75px;				/* 2 rows */
+		font-weight: bold;
+	}
+		/* ▼ tradein-list-wrapper children ▼ */
+		.tradein-list {
+			grid-column: 1/4;
+			grid-row: 1/4;
+			display: flex;
+			background: white;
+			overflow-y: scroll;
+		}
+		.tradein-total {
+			grid-column: 1/4;
+			grid-row: 4;
+			display: flex;
+			justify-content: flex-end;
+			border-top: 2px solid #000000;
+			width: 100%;
+			background: lightblue;
+		}
+		/* ▲ tradein-list-wrapper children ▲ */
+
+	.confirm-tradein-button {
 		display: flex;
 		grid-column: 1/3;
-		grid-row: 4;
+		grid-row: 3;
 	}
-		.tradein-button button {
+		.confirm-tradein-button button {
 			background-color: #20bcc5;
-			color: #000000;						/* Text color */
+			color: #000000;
 			padding: 10px 20px;
-			border: none;						/* Remove default border */
+			border: none;
 			font-size: 16px;
 			font-weight: bold;
 			border-radius: 25px;
 		}
-	/* ▲ Children of tradein-form-wrapper ▲ */
-
-.tradein-list-wrapper {
-	grid-column: 2;								/* Set to second column of tradein-form-wrapper */
-	grid-row: 2;									/* Set to second row of tradein-form-wrapper */
-	position: relative;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;			/* 3 columns */
-	grid-template-rows: auto 75px;				/* 2 rows */
-	top: 250px;
-	font-weight: bold;
-}
-	/* ▼ Children of tradein-list-wrapper ▼ */
-	.tradein-list {
-		grid-column: 1/4;
-		grid-row: 1/4;
-		background: white;
-		overflow-y: scroll;
-	}
-	.tradein-total {
-		grid-column: 1/4;
-		grid-row: 4;
-		display: flex;
-		justify-content: flex-end;
-		border-top: 2px solid #000000;
-		width: 100%;
-		background: lightblue;
-	}
-	/* ▲ Children of tradein-list-wrapper ▲ */
-
+	/* ▲ alpha-tradein-wrapper children ▲ */
 /* ↑ Wrappers ↑ */
 
+/* ↓ Form fields ↓ */
 input {											/* This relates to the input box where you enter in the Card Name */
 	background: #ffffff;
 	border: 2px solid #203fcb;
@@ -377,6 +386,7 @@ select {											/* This relates to the 'select' function for the dropdown men
 	padding: 5px;
 	border: 2px solid #203fcb;
 }
+/* ↑ Form fields ↑ */
 
 /* ↓ Question mark modal ↓ */
 .tooltip-content {
