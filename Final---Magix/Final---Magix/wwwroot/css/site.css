@@ -126,47 +126,43 @@ navbar {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	height: 100vh;
+	height: 2036px;
 }
 
 	/* ↓ Wrappers ↓ */
 	.home-alpha-wrapper {
 		display: grid;
-		grid-template-rows: repeat(5, auto);
+		grid-template-rows: 200px 250px 500px auto auto;
 		justify-content: center;
 	}
 
 		.welcome-text-wrapper {
 			grid-row: 1;
 			display: flex;
-			flex-direction: row;
 			justify-content: center;
 			align-items: center;
 		}
-			.welcome-text-wrapper img {
-				width: 100%;
-			}
 
 		.featured-text-wrapper {
 			grid-row: 2;
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
-			align-items: center;
-			padding-top: 15%;
+			align-items: flex-end;
 		}
 
 		.featured-images-wrapper {
-			    grid-row: 3;
+				grid-row: 3;
 				display: grid;
-				grid-template-columns: 322px 322px;
+				grid-template-columns: 358px 358px;
 				justify-content: center;
-				height: 450px;
-				column-gap: 2rem;
+				align-items: center;
+				height: 500px;
+				column-gap: 5rem;
 		}
 			.featured-images-cardA,
 			.featured-images-cardB {
-				height: 450px;				/* Set the exact height */
+				height: 500px;				/* Set the exact height */
 				width: auto;					/* Maintain the aspect ratio */
 				position: relative;			/* Ensures the '::after' pseudo-element contains itself within the parent wrapper columns */
 				overflow: hidden;			/* Hide the overflow of the shine effect */
