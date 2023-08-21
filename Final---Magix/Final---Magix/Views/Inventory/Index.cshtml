@@ -58,20 +58,21 @@
     ViewData["Title"] = "Browse our wares!";
 }
 
-<div class="scroll-bg-container position-relative">
+@*<div class="scroll-bg-container position-relative">
     <div class="scroll-greeting-text-image">
         <img src="/Images/scroll_greeting.png" class="scroll-greeting-image" alt="Scroll Greeting Text">
     </div>
     <div class="inventory-container">
-		@foreach (var item in Model)
+		@* @foreach (var item in Model) 
+		@for (int i = 0; i < 8; i++)
 		{
 			<div class="inventory-row">
 				<div class="inventory-cards">
-					<img src="@item.ImageNormal" alt="Card @item.Name">
-					<p>Name: @item.Name</p>
+					<img src="@Model.ImageNormal" alt="Card @Model.Name">
+					<p>Name: @Model.Name</p>
 					
-					<p>Stock: @item.Quantity</p>
+					<p>Stock: @Model.Quantity</p>
 				</div>
 			</div>
 		}
-</div>
+</div>*@
