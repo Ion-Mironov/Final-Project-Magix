@@ -1,9 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Final___Magix.DataContext;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Final___Magix.Controllers
 	{
-	public class TradeInController : Controller
+	public class TradeInController : Controller { 
+		private readonly CardContext _context;
+		public TradeInController(CardContext context)
 		{
+			_context = context;
+		}
 		// GET: TradeInController
 		public ActionResult Index()
 			{
@@ -19,6 +25,8 @@ namespace Final___Magix.Controllers
 		// GET: TradeInController/Create
 		public ActionResult Create()
 			{
+
+
 			return View();
 			}
 
