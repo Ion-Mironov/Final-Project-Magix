@@ -17,10 +17,13 @@ namespace Final___Magix.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
+
                 .HasAnnotation("ProductVersion", "7.0.10")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128);
+
+                .HasAnnotation("ProductVersion", "7.0.9")
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
 
             modelBuilder.Entity("Final___Magix.Models.BulkData", b =>
                 {
@@ -58,50 +61,6 @@ namespace Final___Magix.Migrations
                     b.ToTable("BulkData");
                 });
 
-            modelBuilder.Entity("Final___Magix.Models.CardModel", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Condition")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("Foil")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Image")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("Print")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Set")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("TradeInModelId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("TradeInModelId");
-
-                    b.ToTable("Cards");
-                });
-
             modelBuilder.Entity("Final___Magix.Models.Inventory", b =>
                 {
                     b.Property<string>("Id")
@@ -126,17 +85,35 @@ namespace Final___Magix.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<int?>("Quantity")
+
+            modelBuilder.Entity("Final___Magix.Models.InventoryModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(6, 2)");
+
+                    b.Property<int>("Quantity")
+
+
 
                     b.HasIndex("PriceId");
 
-                    b.ToTable("StoreInventory");
 
-                    b.HasData(
-                        new
-                        {
+
+
                             Id = "655c489f-bffb-45a4-8e7c-2d1a35220197",
                             ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                             ImageLarge = "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
@@ -239,9 +216,36 @@ namespace Final___Magix.Migrations
 
                     b.ToTable("StoreInventoryPrice");
 
-                    b.HasData(
+                            Id = 1,
+                            ImageUrl = "url",
+                            Name = "Card A",
+                            Price = 5.99m,
+                            Quantity = 0
+                        },
                         new
                         {
+                            Id = 2,
+                            ImageUrl = "url",
+                            Name = "Card B",
+                            Price = 3.49m,
+                            Quantity = 0
+                        });
+                });
+
+            modelBuilder.Entity("Final___Magix.Models.TradeInModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TradeIns");
+
+                        {
+
                             Id = "655c489f-bffb-45a4-8e7c-2d1a35220197",
                             Usd = 0.22m
                         },
@@ -326,12 +330,17 @@ namespace Final___Magix.Migrations
                     b.Navigation("Prices");
                 });
 
-            modelBuilder.Entity("Final___Magix.Models.CardModel", b =>
-                {
-                    b.HasOne("Final___Magix.Models.TradeInModel", null)
-                        .WithMany("Cards")
-                        .HasForeignKey("TradeInModelId");
+
+                            Id = 1
+                        },
+                        new
+                        {
+                            Id = 2
+                        });
                 });
+
+
+
 
             modelBuilder.Entity("Final___Magix.Models.Inventory", b =>
                 {
@@ -341,12 +350,3 @@ namespace Final___Magix.Migrations
 
                     b.Navigation("Prices");
                 });
-
-            modelBuilder.Entity("Final___Magix.Models.TradeInModel", b =>
-                {
-                    b.Navigation("Cards");
-                });
-#pragma warning restore 612, 618
-        }
-    }
-}
