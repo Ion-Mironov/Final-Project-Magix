@@ -1,24 +1,72 @@
 a {
-	color: #0077cc;
+	color: #0077CC;
 	text-decoration: none;
 }
 
-.bg-container {
-	position: relative;
-	width: 100vw;
-	height: 100vh;
-	background-image: url('/Images/main_background.jpg');
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+#home-link {
+	background-image: url('/Images/home_no_hover.png');
+	width: 90px;
 }
-.footer {
+
+	#home-link:hover {
+		background-image: url('/Images/home_hover.png');
+		width: 90px;
+	}
+
+#browse-link {
+	background-image: url('/Images/browse_no_hover.png');
+	width: 116px;
+}
+
+	#browse-link:hover {
+		background-image: url('/Images/browse_hover.png');
+		width: 116px;
+	}
+
+#tradein-link {
+	background-image: url('/Images/tradein_no_hover.png');
+	width: 128px;
+}
+
+	#tradein-link:hover {
+		background-image: url('/Images/tradein_hover.png');
+		width: 128px;
+	}
+
+body {
+	display: grid;
+	grid-template-rows: 40px 1fr 40px;
+	height: 110vh;
+	overflow-y: scroll;
+}
+
+.featured-text-image {
 	position: absolute;
+	top: 22%;
+}
+
+	.featured-image {
+		width: 80%;
+		display: block;
+		margin: 0 auto;
+	}
+
+footer {
+	grid-row: 3;
+	position: fixed;
 	bottom: 0;
+	left: 0;
 	width: 100%;
-	color: #ffffff;
-	padding: 10px 0;
+	height: 40px;
+	background-image: url(/Images/mahogany_wood.jpg);
+	color: #FFFFFF;
+	padding: 2px;
 	text-align: center;
+	background-clip: padding-box;
+	padding-top: 2px;
+	border-top: 10px solid transparent;
+	border-image-source: url(/Images/border_image.png);
+	border-image-slice: 100;
 }
 
 h2 {
@@ -30,24 +78,160 @@ h4 {
 	font-size: 1.5em;
 	margin-top: 30px;
 	margin-bottom: 15px;
-	border-bottom: 1px solid #dddddd;
+	border-bottom: 1px solid #DDDDDD;
 	padding-bottom: 10px;
 }
 
-.logo-text-image {
-	position: absolute;
-	top: 10%;
-	left: 50%;
-	transform: translate(-50%, -15%);
+header {
+	grid-row: 1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 40px;
+	background-image: url(/Images/mahogany_wood.jpg);
+	background-clip: padding-box;
+	padding-bottom: 40px;
+	border-bottom: 10px solid transparent;
+	border-image-source: url(/Images/border_image.png);
+	border-image-slice: 100;
 }
+
+.inventory-cards {
+	display: flex;
+	flex-direction: column;
+	width: 100px;
+}
+
+.inventory-container {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	top: 250px;
+	justify-content: center;
+	gap: 40px;
+}
+
+.inventory-row {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.main-bg-container {
+	grid-row: 2;
+	display: flex;
+	flex-direction: column;
+	background-image: url('/Images/main_background.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	align-items: center;
+	justify-content: space-between;
+	padding: 50px 0;
+}
+
+.main-cards-container {
+	display: flex;
+	position: relative;
+	top: 13px;
+	justify-content: center;
+	gap: 10px;
+}
+
+.main-cards {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+}
+
+	.main-cards img {
+		width: 100px;
+		transition: transform 0.3s ease;
+	}
+
+	.main-cards:hover img {
+		transform: scale(1.5);
+	}
+
+	.main-cards:not(:hover) img {
+		transform: scale(0.8);
+	}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	width: 465px;
+	padding-left: 80px;
+}
+
+.nav-link {
+	background-repeat: no-repeat;
+	background-size: contain;
+	text-indent: -9999px;
+}
+
+.new-additions-text-image {
+	position: absolute;
+	bottom: 21%;
+}
+
+	.new-additions-image {
+		width: 65%;
+		display: block;
+		margin: 0 auto;
+	}
 
 p {
 	margin-bottom: 20px;
 }
+
+.placeholder-images {
+	display: flex;
+	width: 460px;
+	padding-top: 215px;
+	justify-content: space-between;
+	margin: 0 auto;
+}
+
+	.placeholder-images img {
+		max-width: calc(50% - 10px);
+		display: block;
+	}
 
 .privacy-content {
 	padding-left: 20px;
 	padding-right: 20px;
 	padding-top: 20px;
 	padding-bottom: 20px;
+}
+
+.scroll-bg-container {
+	grid-row: 2;
+	display: flex;
+	flex-direction: column;
+	background-image: url('/Images/scroll_background.png');
+	background-size: cover;
+	height: 1300px;
+	background-position: center;
+	background-repeat: no-repeat;
+	align-items: center;
+	justify-content: space-between;
+	padding: 35px 0;
+}
+
+.scroll-greeting-text-image {
+	position: absolute;
+	top: 13%;
+}
+
+	.scroll-greeting-image {
+		width: 75%;
+		display: block;
+		margin: 0 auto;
+	}
+
+.welcome-text-image {
+	position: absolute;
+	top: 1%;
 }

@@ -1,29 +1,28 @@
-﻿using Microsoft.IdentityModel.Protocols.OpenIdConnect;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Final___Magix.Models
-{
-    public class CardModel
-    {
+	{
+	public class CardModel
+		{
+		[Key]
+		public int Id { get; set; }				// Name of the card
 
-        [Required]
-        public string Name { get; set; }
-        
-        public int Id { get; set; }
-        [Required]
-        public string Condition { get; set; }
-        [Required]
-        public string Set { get; set; }
+		public decimal Price { get; set; }		// Card's worth
+		public string Image { get; set; }		// URL for the card picture
 
-        [Required]
+		[Required]
+		public string Name { get; set; }		// Unique identifier for each card
 
-        public string Print { get; set; }
-        [Required]
-        public bool Foil { get; set; }
+		[Required]
+		public string Condition { get; set; }
 
-        public int Price { get; set; }
-        
-        public string image { get; set; }
-           
-    }
-}
+		[Required]
+		public string Set { get; set; }         // Which group the card belongs to
+
+		[Required]
+		public string Print { get; set; }		// Regular or Special printing
+
+		[Required]
+		public bool Foil { get; set; }			// Whether the card is shiny or not
+		}
+	}
