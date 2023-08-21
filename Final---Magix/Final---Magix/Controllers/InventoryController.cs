@@ -17,6 +17,8 @@ using Final___Magix.DataContext;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http; // Include the IFormCollection namespace
 using Final___Magix.Api;
+using Microsoft.EntityFrameworkCore;
+using Final___Magix.Models;
 
 namespace Final___Magix.Controllers
 	{
@@ -36,25 +38,37 @@ namespace Final___Magix.Controllers
 			// Fetch inventory from your database
 			var inventory = _dbContext.StoreInventory.ToList();
 
-			// Fetch additional card data from Scryfall API
-			foreach (var item in inventory)
-				{
-				var scryfallApiResponse = _scryfallApiClient.GetCardByName(item.Name);
-				if (scryfallApiResponse != null)
-					{
-					// Assuming Scryfall API provides an image URL, you might want to use that.
-					item.ImageUrl = scryfallApiResponse.ImageUrl;
-					}
-				}
+			//// Fetch additional card data from Scryfall API
+			//foreach (var item in inventory)
+			//	{
+			//	var scryfallApiResponse = _scryfallApiClient.GetCardByName(item.Name);
+			//	if (scryfallApiResponse != null)
+			//		{
+			//		// Assuming Scryfall API provides an image URL, you might want to use that.
+			//		item.ImageUrl = scryfallApiResponse.ImageUrl;
+			//		}
+			//	}
 
 			return View("Index", inventory);  // Pass the inventory list to the Index view
 			}*/
 
 		// GET: InventoryController
 		public ActionResult Index()
+		{
+			var inventoryData = _dbContext.StoreInventory
+			.Include(i => i.Prices) // Assuming there's a navigation property between Inventory and InventoryPrice
+			.Select(i => new Inventory
 			{
-			return View();
-			}
+				Id = i.Id,
+				Name = i.Name,
+				ImageNormal = i.ImageNormal,
+				Quantity = i.Quantity,
+				Prices = i.Prices
+			})
+				.ToList();
+
+			return View(inventoryData);
+		}
 
 		// GET: InventoryController/Details/5
 		public ActionResult Details(int id)
