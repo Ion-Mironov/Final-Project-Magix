@@ -14,6 +14,7 @@ namespace Final___Magix.Api
 			_httpClient.BaseAddress = new Uri("https://api.scryfall.com/");
 			}
 
+		// Get all cards
 		public async Task<CardApiResponse> GetCardsAsync()
 			{
 			HttpResponseMessage response = await _httpClient.GetAsync("cards");
@@ -35,7 +36,8 @@ namespace Final___Magix.Api
 				return null;
 				}
 			}
-		//Get card names for input validation
+
+		// Get card names for input validation
 		public async Task<List<string>> GetCardNamesAsync()
 			{
 			HttpResponseMessage response = await _httpClient.GetAsync("catalog/card-names");
