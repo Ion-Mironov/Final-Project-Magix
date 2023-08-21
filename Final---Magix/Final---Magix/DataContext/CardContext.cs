@@ -33,10 +33,14 @@ namespace Final___Magix.DataContext
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+			modelBuilder.Entity<Inventory>()
+	        .HasOne(i => i.InventoryPrice)
+	        .WithOne(ip => ip.Inventory)
+	        .HasForeignKey<InventoryPrice>(ip => ip.Id);
 
-            //// Seed initial store inventory data
-            ///
-            modelBuilder.Entity<Inventory>().HasData(
+			//// Seed initial store inventory data
+			///
+			modelBuilder.Entity<Inventory>().HasData(
                 new Inventory
                 {
                     Id = "655c489f-bffb-45a4-8e7c-2d1a35220197",

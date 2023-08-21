@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Final___Magix.Migrations
 {
     [DbContext(typeof(CardContext))]
-    [Migration("20230821174323_mig")]
-    partial class mig
+    [Migration("20230821180937_Prices")]
+    partial class Prices
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -343,6 +343,23 @@ namespace Final___Magix.Migrations
                         .HasForeignKey("PriceId");
 
                     b.Navigation("Prices");
+                });
+
+            modelBuilder.Entity("Final___Magix.Models.InventoryPrice", b =>
+                {
+                    b.HasOne("Final___Magix.Models.Inventory", "Inventory")
+                        .WithOne("InventoryPrice")
+                        .HasForeignKey("Final___Magix.Models.InventoryPrice", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Inventory");
+                });
+
+            modelBuilder.Entity("Final___Magix.Models.Inventory", b =>
+                {
+                    b.Navigation("InventoryPrice")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Final___Magix.Models.TradeInModel", b =>

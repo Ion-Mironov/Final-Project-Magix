@@ -1,4 +1,4 @@
-﻿@{
+﻿@*{
 	ViewData["Title"] = "Browse our wares!";
 }
 
@@ -59,38 +59,42 @@
 			<div class="inventory-cards"><img src="/Images/dinosaur_placeholder.png" alt="Card 32"></div>
 		</div>
 	</div>
-</div>
+</div>*@
 
 
-
-			ViewData["Title"] = "Browse our wares!";
+@{
+    ViewData["Title"] = "Browse our wares!";
 }
 
 <div class="scroll-bg-container position-relative">
-	<div class="scroll-greeting-text-image">
-		<img src="/Images/scroll_greeting.png" class="scroll-greeting-image" alt="Scroll Greeting Text">
+	<!-- Scroll Greeting Text -->
+	<div class="inventory-greeting-text-image">
+		<img src="/Images/inventory_greeting.png" class="inventory-greeting-image" alt="Inventory Greeting Text">
+		
+			@for (var i = 0; i < Model.Count; i += 8)  // Iterate over the inventory list in chunks of 8
+
+			{
+				<div class="inventory-row">
+					@for (var j = i; j < i + 8 && j < Model.Count; j++)
+					{
+						
+
+						<div class="inventory-cards">
+							@*<img src="@Model[j].ImageSmall" alt="Small Image of Card @j">*@
+							<img src="@Model[j].ImageNormal" alt="Normal Image of Card @j">
+							@*<img src="@Model[j].ImageLarge" alt="Large Image of Card @j">
+					<img src="@Model[j].ImageBorderCrop" alt="Border Crop Image of Card @j">*@
+							<p>Price:$ @Model[j].InventoryPrice.Usd</p>
+							<p>Stock: @Model[j].Quantity</p>
+						</div>
+					}
+				</div>
+			}
+		
 	</div>
-	<div class="inventory-container">
-		@for (var i = 0; i < Model.Count; i += 8)  // Iterate over the inventory list in chunks of 8
-			
-		{
-			<div class="inventory-row">
-				@for (var j = i; j < i + 8 && j < Model.Count; j++)
-				{
-					<div class="inventory-cards">
-						@*<img src="@Model[j].ImageSmall" alt="Small Image of Card @j">*@
-						<img src="@Model[j].ImageNormal" alt="Normal Image of Card @j">
-						@*<img src="@Model[j].ImageLarge" alt="Large Image of Card @j">
-						<img src="@Model[j].ImageBorderCrop" alt="Border Crop Image of Card @j">*@
-						@*<p>Price: $@Model[j].Prices.Usd</p>*@
-						<p>Stock: @Model[j].Quantity</p>
-					</div>
-				}
-			</div>
-		}
-	</div>
+	
 </div> 
-=======
+
 
 
 @* @model IEnumerable<Final___Magix.Models.InventoryModel>

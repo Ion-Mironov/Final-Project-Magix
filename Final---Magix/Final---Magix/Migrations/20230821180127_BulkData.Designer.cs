@@ -4,6 +4,7 @@ using Final___Magix.DataContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Final___Magix.Migrations
 {
     [DbContext(typeof(CardContext))]
-    partial class CardContextModelSnapshot : ModelSnapshot
+    [Migration("20230821180127_BulkData")]
+    partial class BulkData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -340,23 +343,6 @@ namespace Final___Magix.Migrations
                         .HasForeignKey("PriceId");
 
                     b.Navigation("Prices");
-                });
-
-            modelBuilder.Entity("Final___Magix.Models.InventoryPrice", b =>
-                {
-                    b.HasOne("Final___Magix.Models.Inventory", "Inventory")
-                        .WithOne("InventoryPrice")
-                        .HasForeignKey("Final___Magix.Models.InventoryPrice", "Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Inventory");
-                });
-
-            modelBuilder.Entity("Final___Magix.Models.Inventory", b =>
-                {
-                    b.Navigation("InventoryPrice")
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("Final___Magix.Models.TradeInModel", b =>
