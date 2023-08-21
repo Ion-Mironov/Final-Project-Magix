@@ -12,15 +12,15 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Final___Magix.Migrations
 {
     [DbContext(typeof(CardContext))]
-    [Migration("20230821135117_InitSeed")]
-    partial class InitSeed
+    [Migration("20230821153529_Magic1")]
+    partial class Magic1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.9")
+                .HasAnnotation("ProductVersion", "7.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -217,6 +217,16 @@ namespace Final___Magix.Migrations
                             ImageSmall = "https://cards.scryfall.io/small/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                             Name = "Smash to Smithereens",
                             Quantity = 10
+                        },
+                        new
+                        {
+                            Id = "655c489f-bffb-45a4-8e7c-2d1a352201788",
+                            ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
+                            ImageLarge = "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
+                            ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
+                            ImageSmall = "https://cards.scryfall.io/small/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
+                            Name = "Smash to Smithereens",
+                            Quantity = 11
                         });
                 });
 
@@ -272,6 +282,11 @@ namespace Final___Magix.Migrations
                         {
                             Id = "655c489f-bffb-45a4-8e7c-2d1a35220190",
                             Usd = 0.22m
+                        },
+                        new
+                        {
+                            Id = "655c489f-bffb-45a4-8e7c-2d1a352201788",
+                            Usd = 0.25m
                         });
                 });
 

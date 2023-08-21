@@ -7,7 +7,7 @@
 namespace Final___Magix.Migrations
 {
     /// <inheritdoc />
-    public partial class InitSeed : Migration
+    public partial class Magic : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

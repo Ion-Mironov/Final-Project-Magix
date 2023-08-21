@@ -116,8 +116,19 @@ namespace Final___Magix.DataContext
                     ImageLarge = "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                     ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                     Quantity = 10
-                });
-            modelBuilder.Entity<InventoryPrice>().HasData(
+                },
+
+				 new Inventory
+				 {
+					 Id = "655c489f-bffb-45a4-8e7c-2d1a352201788",
+					 Name = "Smash to Smithereens",
+					 ImageSmall = "https://cards.scryfall.io/small/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
+					 ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
+					 ImageLarge = "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
+					 ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
+					 Quantity = 11
+				 });
+			modelBuilder.Entity<InventoryPrice>().HasData(
                 new InventoryPrice
                 {
                     Id = "655c489f-bffb-45a4-8e7c-2d1a35220197",
@@ -156,8 +167,13 @@ namespace Final___Magix.DataContext
                 {
                     Id = "655c489f-bffb-45a4-8e7c-2d1a35220190",
                     Usd = 0.22M
-                }
-                );
+                },
+                    new InventoryPrice
+                {
+				    Id = "655c489f-bffb-45a4-8e7c-2d1a352201788",
+                    Usd = 0.25M
+
+				});
         }
 
         public void SeedData()

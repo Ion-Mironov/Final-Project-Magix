@@ -16,8 +16,8 @@ namespace Final___Magix.Models
         public string? ImageNormal { get; set; }
         public string? ImageLarge { get; set; }
         public string? ImageBorderCrop { get; set; }
-
-        public Price? Prices { get; set; }
+		
+		public Price? Prices { get; set; }
 
         [ForeignKey("InventoryPrices")]
         public string? PriceId { get; set; }
