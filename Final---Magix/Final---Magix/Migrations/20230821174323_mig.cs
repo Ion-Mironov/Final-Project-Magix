@@ -7,7 +7,7 @@
 namespace Final___Magix.Migrations
 {
     /// <inheritdoc />
-    public partial class Magic : Migration
+    public partial class mig : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -123,6 +123,7 @@ namespace Final___Magix.Migrations
                 columns: new[] { "Id", "ImageBorderCrop", "ImageLarge", "ImageNormal", "ImageSmall", "Name", "PriceId", "Quantity" },
                 values: new object[,]
                 {
+                    { "655c489f-bffb-45a4-8e7c-2d1a352201788", "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107", "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107", "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107", "https://cards.scryfall.io/small/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107", "Smash to Smithereens", null, 11 },
                     { "655c489f-bffb-45a4-8e7c-2d1a35220190", "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107", "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107", "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107", "https://cards.scryfall.io/small/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107", "Smash to Smithereens", null, 10 },
                     { "655c489f-bffb-45a4-8e7c-2d1a35220191", "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107", "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107", "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107", "https://cards.scryfall.io/small/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107", "Smash to Smithereens", null, 10 },
                     { "655c489f-bffb-45a4-8e7c-2d1a35220192", "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107", "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107", "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107", "https://cards.scryfall.io/small/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107", "Smash to Smithereens", null, 10 },
@@ -138,6 +139,7 @@ namespace Final___Magix.Migrations
                 columns: new[] { "Id", "Usd" },
                 values: new object[,]
                 {
+                    { "655c489f-bffb-45a4-8e7c-2d1a352201788", 0.25m },
                     { "655c489f-bffb-45a4-8e7c-2d1a35220190", 0.22m },
                     { "655c489f-bffb-45a4-8e7c-2d1a35220191", 0.22m },
                     { "655c489f-bffb-45a4-8e7c-2d1a35220192", 0.22m },

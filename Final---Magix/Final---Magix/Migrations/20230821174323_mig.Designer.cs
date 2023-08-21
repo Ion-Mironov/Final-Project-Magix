@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Final___Magix.Migrations
 {
     [DbContext(typeof(CardContext))]
-    [Migration("20230821153529_Magic1")]
-    partial class Magic1
+    [Migration("20230821174323_mig")]
+    partial class mig
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
