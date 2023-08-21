@@ -1,69 +1,49 @@
+﻿/* Content is laid out as follows:
+	• Shared/_Layout.cshtml		← (Responsible for setting initial design layout for all pages)
+	• Home/Privacy.cshtml
+	• Home/Index.cshtml			← (Home page)
+	• Inventory/Index.cshtml		← (Browse inventory page)
+	• TradeIn/Index.cshtml		← (Trade-in page)
+
+	NOTE: All pages are wrapped in a <div class="container"> tag, which is responsible for setting the content layout of the page. It also contains the background image of the page. All other elements are wrapped in a subsequent <div class="wrapper"> tag, which handle the layout of the content within the page.
+*/
+
+/* ↓↓ Shared/_Layout.cshtml ↓↓ */
 a {
 	color: #0077CC;
 	text-decoration: none;
 }
 
-#home-link {
-	background-image: url('/Images/home_no_hover.png');
-	width: 90px;
-}
-
-	#home-link:hover {
-		background-image: url('/Images/home_hover.png');
-		width: 90px;
-	}
-
-#browse-link {
-	background-image: url('/Images/browse_no_hover.png');
-	width: 116px;
-}
-
-	#browse-link:hover {
-		background-image: url('/Images/browse_hover.png');
-		width: 116px;
-	}
-
-#tradein-link {
-	background-image: url('/Images/tradein_no_hover.png');
-	width: 128px;
-}
-
-	#tradein-link:hover {
-		background-image: url('/Images/tradein_hover.png');
-		width: 128px;
-	}
-
 body {
-	display: grid;
-	grid-template-rows: 40px 1fr 40px;
-	height: 110vh;
-	overflow-y: scroll;
+	display: grid;				/* This is set to [display: grid] to override Bootstrap's default [display: block] */
+	padding-top: 52px;
+	padding-bottom: 38px;
+	overflow-x: auto;
+	overflow-y: auto;
 }
 
-.featured-text-image {
-	position: absolute;
-	top: 22%;
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 52px;
+	background-image: url(/Images/mahogany_wood.jpg);
+	padding-top: 2px;
+	padding-bottom: 40px;
+	border-bottom: 10px solid transparent;
+	border-image-source: url(/Images/border_image.png);
+	border-image-slice: 100;
 }
-
-	.featured-image {
-		width: 80%;
-		display: block;
-		margin: 0 auto;
-	}
 
 footer {
-	grid-row: 3;
 	position: fixed;
 	bottom: 0;
-	left: 0;
 	width: 100%;
 	height: 40px;
 	background-image: url(/Images/mahogany_wood.jpg);
 	color: #FFFFFF;
-	padding: 2px;
 	text-align: center;
-	background-clip: padding-box;
-	padding-top: 2px;
 	border-top: 10px solid transparent;
 	border-image-source: url(/Images/border_image.png);
 	border-image-slice: 100;
@@ -82,19 +62,189 @@ h4 {
 	padding-bottom: 10px;
 }
 
-header {
-	grid-row: 1;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 40px;
-	background-image: url(/Images/mahogany_wood.jpg);
-	background-clip: padding-box;
-	padding-bottom: 40px;
-	border-bottom: 10px solid transparent;
-	border-image-source: url(/Images/border_image.png);
-	border-image-slice: 100;
+/* ↓ Nav-bar buttons ↓ */
+navbar {
+	display: flex;
+	justify-content: space-between;
+	width: 465px;
+	padding-left: 80px;
+}
+	.navbar-buttons {
+		display: flex;
+		background-repeat: no-repeat;
+		background-size: contain;
+		text-indent: -9999px;
+		padding: 0.5rem 1rem;
+		color: #0d6efd;
+		text-decoration: none;
+		transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+	}
+		#home-button {
+			background-image: url('/Images/home_no_hover.png');
+			width: 90px;
+		}
+			#home-button:hover {
+				background-image: url('/Images/home_hover.png');
+				width: 90px;
+			}
+		#browse-button {
+			background-image: url('/Images/browse_no_hover.png');
+			width: 116px;
+		}
+			#browse-button:hover {
+				background-image: url('/Images/browse_hover.png');
+				width: 116px;
+			}
+		#tradein-button {
+			background-image: url('/Images/tradein_no_hover.png');
+			width: 128px;
+		}
+			#tradein-button:hover {
+				background-image: url('/Images/tradein_hover.png');
+				width: 128px;
+			}
+/* ↑ Nav-bar buttons ↑ */
+
+/* ↑↑ Shared/_Layout.cshtml ↑↑ */
+
+
+/* ↓↓ Home/Privacy.cshtml ↓↓ */
+.privacy-content {
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+/* ↑↑ Home/Privacy.cshtml ↑↑ */
+
+
+/* ↓↓ Home/Index.cshtml ↓↓ */
+.home-bg-container {
+	display: flex;
+	justify-content: center;
+	background-image: url('/Images/home_background.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 2036px;
+}
+
+	/* ↓ Wrappers ↓ */
+	.home-alpha-wrapper {
+		display: grid;
+		grid-template-rows: 200px 250px 500px auto auto;
+		justify-content: center;
+	}
+
+		.welcome-text-wrapper {
+			grid-row: 1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.featured-text-wrapper {
+			grid-row: 2;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: flex-end;
+		}
+
+		.featured-images-wrapper {
+				grid-row: 3;
+				display: grid;
+				grid-template-columns: 358px 358px;
+				justify-content: center;
+				align-items: center;
+				height: 500px;
+				column-gap: 5rem;
+		}
+			.featured-images-cardA,
+			.featured-images-cardB {
+				height: 500px;				/* Set the exact height */
+				width: auto;					/* Maintain the aspect ratio */
+				position: relative;			/* Ensures the '::after' pseudo-element contains itself within the parent wrapper columns */
+				overflow: hidden;			/* Hide the overflow of the shine effect */
+			}
+				.featured-images-cardA::after,
+				.featured-images-cardB::after {
+					content: "";
+					position: absolute;
+					top: -10%;
+					left: -64%;
+					width: 7%;
+					height: 110%;
+					opacity: 0;
+					transform: rotate(30deg);
+					background: linear-gradient(90deg, hsla(0, 0%, 100%, .1) 0, hsla(0, 0%, 100%, .1) 77%, hsla(0, 0%, 100%, .5) 92%, hsla(0, 0%, 100%, 0));
+				}
+					.featured-images-cardA:hover::after,
+					.featured-images-cardB:hover::after {
+						opacity: 1;
+						left: 150%;
+						transition-property: left, top, opacity;
+						transition-duration: .9s, .9s, .9s;
+						transition-timing-function: ease;
+					}
+
+			.featured-images-cardA {
+				grid-column: 1;
+				display: flex;
+				justify-content: center;
+			}
+			.featured-images-cardB {
+				grid-column: 2;
+				display: flex;
+				justify-content: center;
+			}
+
+		.new-additions-text-wrapper {
+			grid-row: 4;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.home-cards-wrapper {
+			grid-row: 5;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
+			.home-cards {
+			}
+				.home-cards img {
+					width: 100px;
+					transition: transform 0.3s ease;
+				}
+					.home-cards:hover img {
+						transform: scale(1.5);
+					}
+					.home-cards:not(:hover) img {
+						transform: scale(0.8);
+					}
+
+	/* ↑ Wrappers ↑ */
+
+/* ↑↑ Home/Index.cshtml ↑↑ */
+
+
+/* ↓↓ Inventory/Index.cshtml ↓↓ */
+.inventory-bg-container {
+	grid-row: 2;
+	display: flex;
+	flex-direction: column;
+	background-image: url('/Images/scroll_background.png');
+	background-size: cover;
+	height: 1300px;
+	background-position: center;
+	background-repeat: no-repeat;
+	align-items: center;
+	justify-content: space-between;
+	padding: 35px 0;
 }
 
 .inventory-cards {
@@ -112,126 +262,193 @@ header {
 	gap: 40px;
 }
 
-.inventory-row {
-	display: flex;
-	justify-content: center;
-	gap: 20px;
-}
-
-.main-bg-container {
-	grid-row: 2;
-	display: flex;
-	flex-direction: column;
-	background-image: url('/Images/main_background.jpg');
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	align-items: center;
-	justify-content: space-between;
-	padding: 50px 0;
-}
-
-.main-cards-container {
-	display: flex;
-	position: relative;
-	top: 13px;
-	justify-content: center;
-	gap: 10px;
-}
-
-.main-cards {
-	display: flex;
-	position: relative;
-	flex-direction: column;
-}
-
-	.main-cards img {
-		width: 100px;
-		transition: transform 0.3s ease;
-	}
-
-	.main-cards:hover img {
-		transform: scale(1.5);
-	}
-
-	.main-cards:not(:hover) img {
-		transform: scale(0.8);
-	}
-
-nav {
-	display: flex;
-	justify-content: space-between;
-	width: 465px;
-	padding-left: 80px;
-}
-
-.nav-link {
-	background-repeat: no-repeat;
-	background-size: contain;
-	text-indent: -9999px;
-}
-
-.new-additions-text-image {
-	position: absolute;
-	bottom: 21%;
-}
-
-	.new-additions-image {
-		width: 65%;
-		display: block;
-		margin: 0 auto;
-	}
-
-p {
-	margin-bottom: 20px;
-}
-
-.placeholder-images {
-	display: flex;
-	width: 460px;
-	padding-top: 215px;
-	justify-content: space-between;
-	margin: 0 auto;
-}
-
-	.placeholder-images img {
-		max-width: calc(50% - 10px);
-		display: block;
-	}
-
-.privacy-content {
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-
-.scroll-bg-container {
-	grid-row: 2;
-	display: flex;
-	flex-direction: column;
-	background-image: url('/Images/scroll_background.png');
-	background-size: cover;
-	height: 1300px;
-	background-position: center;
-	background-repeat: no-repeat;
-	align-items: center;
-	justify-content: space-between;
-	padding: 35px 0;
-}
-
-.scroll-greeting-text-image {
+.inventory-greeting-text-image {
 	position: absolute;
 	top: 13%;
 }
-
-	.scroll-greeting-image {
+	.inventory-greeting-image {
 		width: 75%;
 		display: block;
 		margin: 0 auto;
 	}
 
-.welcome-text-image {
-	position: absolute;
-	top: 1%;
+.inventory-row {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
 }
+/* ↑↑ Inventory/Index.cshtml ↑↑ */
+
+
+/* ↓↓ TradeIn/Index.cshtml ↓↓ */
+.tradein-container {
+	grid-row: 2;										/* Set to second row of 'body' */
+	background-image: url('/Images/scroll_background.png');
+	background-size: cover;
+	height: 1300px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+/* ↓ Wrappers ↓ */
+.alpha-tradein-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 245px 1fr auto;
+}
+	/* ▼ alpha-tradein-wrapper children ▼ */
+	.tradein-greeting-text-image {
+		grid-column: 1/3;							/* Used to span across both columns; 1 tells it where to start and 3 tells it to stop at the end of column 2 */
+		grid-row: 1;									/* Set to first row of tradein-container */
+		display: flex;
+		justify-content: center;
+		padding-top: 180px;
+	}
+ 
+	.tradein-form-wrapper {
+		grid-column: 1;								/* Place in the first column of alpha-tradein-wrapper */
+		grid-row: 2;									/* Place in the second row of alpha-tradein-wrapper */
+		position: relative;
+		display: grid;
+		grid-template-columns: 1fr 1fr;				/* 2 columns */
+		grid-template-rows: 75px 75px 75px 75px;		/* 4 rows */
+		font-weight: bold;
+	}
+		/* ▼ tradein-form-wrapper children ▼ */
+		.cardNameWrapper {
+			grid-column: 1/3;
+			grid-row: 1;
+		}
+		.cardEditionWrapper {
+			grid-column: 1;
+			grid-row: 2;
+		}
+		.cardBorderWrapper {
+			grid-column: 2;
+			grid-row: 2;
+		}
+		.printTypeWrapper {
+			grid-column: 1;
+			grid-row: 3;
+		}
+		.cardConditionWrapper {
+			grid-column: 2;
+			grid-row: 3;
+		}
+		.tradein-button {
+			display: flex;
+			grid-column: 1;
+			grid-row: 4;
+		}
+			.tradein-button button {
+				background-color: #20bcc5;
+				color: #000000;						/* Text color */
+				padding: 10px 20px;
+				border: none;						/* Remove default border */
+				font-size: 16px;
+				font-weight: bold;
+				border-radius: 25px;
+			}
+		/* ▲ tradein-form-wrapper children ▲ */
+
+	.tradein-list-wrapper {
+		grid-column: 2;								/* Set to second column of tradein-form-wrapper */
+		grid-row: 2;									/* Set to second row of tradein-form-wrapper */
+		position: relative;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;			/* 3 columns */
+		grid-template-rows: auto 75px;				/* 2 rows */
+		font-weight: bold;
+	}
+		/* ▼ tradein-list-wrapper children ▼ */
+		.tradein-list {
+			grid-column: 1/4;
+			grid-row: 1/4;
+			display: flex;
+			background: white;
+			overflow-y: scroll;
+		}
+		.tradein-total {
+			grid-column: 1/4;
+			grid-row: 4;
+			display: flex;
+			justify-content: flex-end;
+			border-top: 2px solid #000000;
+			width: 100%;
+			background: lightblue;
+		}
+		/* ▲ tradein-list-wrapper children ▲ */
+
+	.confirm-tradein-button {
+		display: flex;
+		grid-column: 1/3;
+		grid-row: 3;
+	}
+		.confirm-tradein-button button {
+			background-color: #20bcc5;
+			color: #000000;
+			padding: 10px 20px;
+			border: none;
+			font-size: 16px;
+			font-weight: bold;
+			border-radius: 25px;
+		}
+	/* ▲ alpha-tradein-wrapper children ▲ */
+/* ↑ Wrappers ↑ */
+
+/* ↓ Form fields ↓ */
+input {											/* This relates to the input box where you enter in the Card Name */
+	background: #ffffff;
+	border: 2px solid #203fcb;
+	width: 100%;
+}
+
+.label-with-tooltip {							/* This relates to the label name (Card Name, Edition, etc.) for all card fields */
+	display: flex;
+}
+
+select {											/* This relates to the 'select' function for the dropdown menus */
+	width: 100%;
+	padding: 5px;
+	border: 2px solid #203fcb;
+}
+/* ↑ Form fields ↑ */
+
+/* ↓ Question mark modal ↓ */
+.tooltip-content {
+	position: absolute;
+	background-color: #ffffff;
+	border-radius: 5px;
+	box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+	font-weight: 500;
+	padding-left: 7px;
+	padding-right: 7px;
+}
+
+.tooltip-icon {
+	position: relative;					/* This is needed in order to position the tooltip */
+	cursor: help;						/* This turns the mouse pointer into different icons. 'help' is a pointer with question mark. */
+	font-size: 16px;
+	color: #ffffff;						/* White color for the question mark */
+	background-color: #0077cc;			/* Blue background */
+	border-radius: 50%;					/* This causes the borders to become more rounded, turning a square into a circle */
+	width: 15px;							/* Width of the circle */
+	height: 15px;						/* Height of the circle */
+	display: flex;						/* Align the question mark to the center */
+	align-items: center;					/* Vertically aligns question mark in the center of blue circle */
+	justify-content: center;				/* Horizontally aligns question mark in the center of blue circle */
+	margin-left: 7px;					/* Add left margin to create some space. */
+}
+
+.tooltip-modal {
+	display: none;						/* Set to 'none' so that the modal only displays when tooltip is clicked on */
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 5;							/* Makes sure that modal appears on top of everything else on the page */
+}
+/* ↑ Question mark modal ↑ */
+
+/* ↑↑ TradeIn/Index.cshtml ↑↑ */

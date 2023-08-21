@@ -22,6 +22,7 @@ namespace Final___Magix.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+
             modelBuilder.Entity("Final___Magix.Models.BulkData", b =>
                 {
                     b.Property<string>("Id")
@@ -102,36 +103,33 @@ namespace Final___Magix.Migrations
                     b.ToTable("Cards");
                 });
 
-            modelBuilder.Entity("Final___Magix.Models.Inventory", b =>
+
+            modelBuilder.Entity("Final___Magix.Models.InventoryModel", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("ImageBorderCrop")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImageLarge")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImageNormal")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImageSmall")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PriceId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int?>("Quantity")
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+                        
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+                        
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(6, 2)");
+                        
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+                        
                     b.HasKey("Id");
-
+                    
                     b.HasIndex("PriceId");
-
+                    
                     b.ToTable("StoreInventory");
 
                     b.HasData(
@@ -316,15 +314,6 @@ namespace Final___Magix.Migrations
                     b.HasOne("Final___Magix.Models.TradeInModel", null)
                         .WithMany("Cards")
                         .HasForeignKey("TradeInModelId");
-                });
-
-            modelBuilder.Entity("Final___Magix.Models.Inventory", b =>
-                {
-                    b.HasOne("Final___Magix.Models.Price", "Prices")
-                        .WithMany()
-                        .HasForeignKey("PriceId");
-
-                    b.Navigation("Prices");
                 });
 
             modelBuilder.Entity("Final___Magix.Models.TradeInModel", b =>
