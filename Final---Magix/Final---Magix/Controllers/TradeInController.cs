@@ -5,16 +5,23 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Final___Magix.Controllers
 	{
-	public class TradeInController : Controller { 
-		private readonly CardContext _context;
-		public TradeInController(CardContext context)
-		{
-			_context = context;
-		}
+
+	public class TradeInController : Controller
+	{
+
+
 		// GET: TradeInController
-		public ActionResult Index()
-			{
-			return View();
+		private readonly CardContext _dbContext; 
+	public TradeInController(CardContext dbContext)
+        {
+            _dbContext = dbContext;
+        }
+
+        public ActionResult Index()
+        {
+
+			var tradein = _dbContext.TradeIns.ToList();
+            return View(tradein);
 			}
 
 		// GET: TradeInController/Details/5
@@ -35,22 +42,22 @@ namespace Final___Magix.Controllers
 		[ValidateAntiForgeryToken]
 		public ActionResult Create(IFormCollection collection)
 		{
-				try
-				{
-				// Get the card name entered by the user from the form collection
-				string cardName = collection["cardName"];
+			//	try
+			//	{
+			//	// Get the card name entered by the user from the form collection
+			//	string cardName = collection["cardName"];
 
-				// Your logic to retrieve matching cards based on the entered card name
-				IEnumerable<TradeInModel> matchingCards = GetMatchingCards(cardName);
+			//	// Your logic to retrieve matching cards based on the entered card name
+			//	IEnumerable<TradeInModel> matchingCards = GetMatchingCards(cardName);
 
-				// Pass the matching cards to the view
-				return View("Create", matchingCards); // You might want to rename the view to match your file name
-				}
-			catch
-				{
+			//	// Pass the matching cards to the view
+			//	return View("Create", matchingCards); // You might want to rename the view to match your file name
+			//	}
+			//catch
+			//	{
 				return View();
-				}
-		}
+			//	}
+			}
 
 		// GET: TradeInController/Edit/5
 		public ActionResult Edit(int id)
