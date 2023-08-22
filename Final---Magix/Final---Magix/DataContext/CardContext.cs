@@ -28,11 +28,6 @@ namespace Final___Magix.DataContext
         public DbSet<BulkData> BulkData { get; set; } //BulkDataModel.BulkData database (Id, Name, ImageId, PriceId)
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-			modelBuilder.Entity<Inventory>()
-	        .HasOne(i => i.InventoryPrice)
-	        .WithOne(ip => ip.Inventory)
-	        .HasForeignKey<InventoryPrice>(ip => ip.Id);
-
 			//// Seed initial store inventory data
 			///
 			modelBuilder.Entity<Inventory>().HasData(
