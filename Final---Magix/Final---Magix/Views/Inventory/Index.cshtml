@@ -1,7 +1,8 @@
-﻿{
+﻿@Model IEnumerable<Final___Magix.Models.Inventory>
+
+@{
 	ViewData["Title"] = "Browse our wares!";
 }
-
 <div class="inventory-bg-container position-relative">
 	<!-- Scroll Greeting Text -->
 	<div class="inventory-greeting-text-image">
@@ -90,11 +91,7 @@
 	
 </div> 
 
-@model IEnumerable<Final___Magix.Models.Inventory>
 
-@{
-    ViewData["Title"] = "Browse our wares!";
-}
 
 @*<div class="scroll-bg-container position-relative">
     <div class="scroll-greeting-text-image">
