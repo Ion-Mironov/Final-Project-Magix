@@ -16,9 +16,11 @@ namespace Final___Magix.Models
         public string? ImageNormal { get; set; }
         public string? ImageLarge { get; set; }
         public string? ImageBorderCrop { get; set; }
+
 		
 		public decimal? Price { get; set; }
 
         public int? Quantity { get; set; }
     }
+
 }

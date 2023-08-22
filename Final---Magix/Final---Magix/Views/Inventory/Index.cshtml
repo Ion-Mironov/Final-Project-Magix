@@ -90,18 +90,18 @@
 	
 </div> 
 
+@model IEnumerable<Final___Magix.Models.Inventory>
 
-
-@* @model IEnumerable<Final___Magix.Models.InventoryModel>
 @{
     ViewData["Title"] = "Browse our wares!";
 }
 
-<div class="scroll-bg-container position-relative">
+@*<div class="scroll-bg-container position-relative">
     <div class="scroll-greeting-text-image">
         <img src="/Images/scroll_greeting.png" class="scroll-greeting-image" alt="Scroll Greeting Text">
     </div>
     <div class="inventory-container">
+
         @for (var i = 0; i < Model.Count(); i += 8)  // Iterate over the inventory list in chunks of 8
         {
             <div class="inventory-row">

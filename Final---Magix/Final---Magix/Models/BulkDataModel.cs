@@ -1,5 +1,7 @@
+
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
+
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
@@ -29,5 +31,6 @@ namespace Final___Magix.Models
         public string? Price { get; set; }
         
         
+
     }
 }
