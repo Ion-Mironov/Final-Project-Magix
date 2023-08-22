@@ -22,7 +22,8 @@ namespace Final___Magix.Models
         [ForeignKey("InventoryPrices")]
         public string? PriceId { get; set; }
         public int? Quantity { get; set; }
-    }
+		public InventoryPrice InventoryPrice { get; set; }
+	}
 
 
 
@@ -30,5 +31,6 @@ namespace Final___Magix.Models
     {
         public string? Id { get; set; }
         public decimal Usd { get; set; }
-    }
+		public Inventory Inventory { get; set; }
+	}
 }
