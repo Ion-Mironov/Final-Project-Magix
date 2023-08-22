@@ -1,4 +1,5 @@
 ﻿using Final___Magix.DataContext;
+using Final___Magix.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -25,19 +26,25 @@ namespace Final___Magix.Controllers
 		// GET: TradeInController/Create
 		public ActionResult Create()
 			{
-
-
-			return View();
+				return View();
 			}
+
 
 		// POST: TradeInController/Create
 		[HttpPost]
 		[ValidateAntiForgeryToken]
 		public ActionResult Create(IFormCollection collection)
-			{
-			try
+		{
+				try
 				{
-				return RedirectToAction(nameof(Index));
+				// Get the card name entered by the user from the form collection
+				string cardName = collection["cardName"];
+
+				// Your logic to retrieve matching cards based on the entered card name
+				IEnumerable<TradeInModel> matchingCards = GetMatchingCards(cardName);
+
+				// Pass the matching cards to the view
+				return View("Create", matchingCards); // You might want to rename the view to match your file name
 				}
 			catch
 				{
