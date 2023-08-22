@@ -55,7 +55,7 @@ namespace Final___Magix.Controllers
 		// GET: InventoryController
 		public ActionResult Index()
 		{
-			var inventoryData = _dbContext.BulkData.ToList();
+			var inventoryData = _dbContext.StoreInventory.ToList();
 
 			return View(inventoryData);
 		}

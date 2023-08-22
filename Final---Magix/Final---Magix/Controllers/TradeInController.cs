@@ -1,13 +1,23 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Final___Magix.DataContext;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Final___Magix.Controllers
 	{
 	public class TradeInController : Controller
-		{
+	{
 		// GET: TradeInController
-		public ActionResult Index()
-			{
-			return View();
+		private readonly CardContext _dbContext; 
+	public TradeInController(CardContext dbContext)
+        {
+            _dbContext = dbContext;
+        }
+
+        public ActionResult Index()
+        {
+
+			var tradein = _dbContext.TradeIns.ToList();
+            return View(tradein);
 			}
 
 		// GET: TradeInController/Details/5
