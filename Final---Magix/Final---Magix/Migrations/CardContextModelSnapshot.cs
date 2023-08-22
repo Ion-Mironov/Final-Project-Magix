@@ -49,8 +49,7 @@ namespace Final___Magix.Migrations
                         .HasAnnotation("Relational:JsonPropertyName", "name");
 
                     b.Property<string>("Price")
-                        .HasColumnType("nvarchar(max)")
-                        .HasAnnotation("Relational:JsonPropertyName", "priceusd");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
