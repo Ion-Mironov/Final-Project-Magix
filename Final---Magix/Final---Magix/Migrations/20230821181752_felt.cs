@@ -7,7 +7,7 @@
 namespace Final___Magix.Migrations
 {
     /// <inheritdoc />
-    public partial class mig : Migration
+    public partial class felt : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
