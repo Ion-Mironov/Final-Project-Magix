@@ -9,7 +9,7 @@
 	</div>
 
 	<!-- Container for Inventory Display -->
-	<div class="inventory-container">
+@*	<div class="inventory-container">
 		<!-- Inventory Row 1 -->
 		<div class="inventory-row">
 			<!-- Individual Inventory Cards (Cards 1-8) -->
@@ -59,12 +59,10 @@
 			<div class="inventory-cards"><img src="/Images/dinosaur_placeholder.png" alt="Card 32"></div>
 		</div>
 	</div>
-</div>
+</div>*@
 
 
 
-			ViewData["Title"] = "Browse our wares!";
-}
 
 <div class="scroll-bg-container position-relative">
 	<div class="scroll-greeting-text-image">
@@ -79,10 +77,10 @@
 				{
 					<div class="inventory-cards">
 						@*<img src="@Model[j].ImageSmall" alt="Small Image of Card @j">*@
-						<img src="@Model[j].ImageNormal" alt="Normal Image of Card @j">
-						@*<img src="@Model[j].ImageLarge" alt="Large Image of Card @j">
-						<img src="@Model[j].ImageBorderCrop" alt="Border Crop Image of Card @j">*@
-						@*<p>Price: $@Model[j].Prices.Usd</p>*@
+						@*<img src="@Model[j].ImageNormal" alt="Normal Image of Card @j">*@
+						<img src="@Model[j].ImageLarge" alt="Large Image of Card @j">
+						@*<img src="@Model[j].ImageBorderCrop" alt="Border Crop Image of Card @j">*@
+						<p>Price: $@Model[j].Price</p>
 						<p>Stock: @Model[j].Quantity</p>
 					</div>
 				}

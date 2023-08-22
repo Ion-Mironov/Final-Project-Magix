@@ -24,19 +24,7 @@ namespace Final___Magix.Models
         [JsonPropertyName("imagebordercrop")]
         public string? ImageBorderCrop { get; set; }
         
-        [JsonPropertyName("prices")]
-        public Price? Prices { get; set; }
-        [ForeignKey("Prices")]
-        public string? PriceId { get; set; }
-    }
-
-
-
-    public class Price
-    {
-        [JsonPropertyName("id")]
-        public string? Id { get; set; }
-        [JsonPropertyName("usd")]
-        public decimal Usd { get; set; }
+        [JsonPropertyName("priceusd")]
+        public string? Price { get; set; }
     }
 }

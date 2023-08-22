@@ -17,13 +17,10 @@ namespace Final___Magix.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-
                 .HasAnnotation("ProductVersion", "7.0.10")
-
-                .HasAnnotation("ProductVersion", "7.0.9")
+                .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
 
             modelBuilder.Entity("Final___Magix.Models.BulkData", b =>
                 {
@@ -51,14 +48,57 @@ namespace Final___Magix.Migrations
                         .HasColumnType("nvarchar(max)")
                         .HasAnnotation("Relational:JsonPropertyName", "name");
 
-                    b.Property<string>("PriceId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<string>("Price")
+                        .HasColumnType("nvarchar(max)")
+                        .HasAnnotation("Relational:JsonPropertyName", "priceusd");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("PriceId");
-
                     b.ToTable("BulkData");
+                });
+
+            modelBuilder.Entity("Final___Magix.Models.CardModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Condition")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Foil")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("Print")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Set")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("TradeInModelId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TradeInModelId");
+
+                    b.ToTable("Cards");
                 });
 
             modelBuilder.Entity("Final___Magix.Models.Inventory", b =>
@@ -81,45 +121,26 @@ namespace Final___Magix.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PriceId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<decimal?>("Price")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<int?>("Quantity")
-
-            modelBuilder.Entity("Final___Magix.Models.InventoryModel", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    b.HasKey("Id");
 
-                    b.Property<string>("ImageUrl")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.ToTable("StoreInventory");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(6, 2)");
-
-                    b.Property<int>("Quantity")
-
-
-
-                    b.HasIndex("PriceId");
-
-
-
-
+                    b.HasData(
+                        new
+                        {
                             Id = "655c489f-bffb-45a4-8e7c-2d1a35220197",
                             ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                             ImageLarge = "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                             ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                             ImageSmall = "https://cards.scryfall.io/small/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                             Name = "Smash to Smithereens",
+                            Price = 4.99m,
                             Quantity = 10
                         },
                         new
@@ -130,6 +151,7 @@ namespace Final___Magix.Migrations
                             ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                             ImageSmall = "https://cards.scryfall.io/small/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                             Name = "Smash to Smithereens",
+                            Price = 4.99m,
                             Quantity = 10
                         },
                         new
@@ -140,6 +162,7 @@ namespace Final___Magix.Migrations
                             ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                             ImageSmall = "https://cards.scryfall.io/small/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                             Name = "Smash to Smithereens",
+                            Price = 4.99m,
                             Quantity = 10
                         },
                         new
@@ -150,6 +173,7 @@ namespace Final___Magix.Migrations
                             ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                             ImageSmall = "https://cards.scryfall.io/small/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                             Name = "Smash to Smithereens",
+                            Price = 4.99m,
                             Quantity = 10
                         },
                         new
@@ -160,6 +184,7 @@ namespace Final___Magix.Migrations
                             ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                             ImageSmall = "https://cards.scryfall.io/small/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                             Name = "Smash to Smithereens",
+                            Price = 4.99m,
                             Quantity = 10
                         },
                         new
@@ -170,6 +195,7 @@ namespace Final___Magix.Migrations
                             ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                             ImageSmall = "https://cards.scryfall.io/small/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                             Name = "Smash to Smithereens",
+                            Price = 4.99m,
                             Quantity = 10
                         },
                         new
@@ -180,6 +206,7 @@ namespace Final___Magix.Migrations
                             ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                             ImageSmall = "https://cards.scryfall.io/small/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                             Name = "Smash to Smithereens",
+                            Price = 4.99m,
                             Quantity = 10
                         },
                         new
@@ -190,6 +217,7 @@ namespace Final___Magix.Migrations
                             ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                             ImageSmall = "https://cards.scryfall.io/small/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                             Name = "Smash to Smithereens",
+                            Price = 4.99m,
                             Quantity = 10
                         },
                         new
@@ -200,114 +228,11 @@ namespace Final___Magix.Migrations
                             ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                             ImageSmall = "https://cards.scryfall.io/small/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                             Name = "Smash to Smithereens",
+                            Price = 4.99m,
                             Quantity = 11
                         });
                 });
 
-            modelBuilder.Entity("Final___Magix.Models.InventoryPrice", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<decimal>("Usd")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("StoreInventoryPrice");
-
-                            Id = 1,
-                            ImageUrl = "url",
-                            Name = "Card A",
-                            Price = 5.99m,
-                            Quantity = 0
-                        },
-                        new
-                        {
-                            Id = 2,
-                            ImageUrl = "url",
-                            Name = "Card B",
-                            Price = 3.49m,
-                            Quantity = 0
-                        });
-                });
-
-            modelBuilder.Entity("Final___Magix.Models.TradeInModel", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.HasKey("Id");
-
-                    b.ToTable("TradeIns");
-
-                        {
-
-                            Id = "655c489f-bffb-45a4-8e7c-2d1a35220197",
-                            Usd = 0.22m
-                        },
-                        new
-                        {
-                            Id = "655c489f-bffb-45a4-8e7c-2d1a35220196",
-                            Usd = 0.22m
-                        },
-                        new
-                        {
-                            Id = "655c489f-bffb-45a4-8e7c-2d1a35220195",
-                            Usd = 0.22m
-                        },
-                        new
-                        {
-                            Id = "655c489f-bffb-45a4-8e7c-2d1a35220194",
-                            Usd = 0.22m
-                        },
-                        new
-                        {
-                            Id = "655c489f-bffb-45a4-8e7c-2d1a35220193",
-                            Usd = 0.22m
-                        },
-                        new
-                        {
-                            Id = "655c489f-bffb-45a4-8e7c-2d1a35220192",
-                            Usd = 0.22m
-                        },
-                        new
-                        {
-                            Id = "655c489f-bffb-45a4-8e7c-2d1a35220191",
-                            Usd = 0.22m
-                        },
-                        new
-                        {
-                            Id = "655c489f-bffb-45a4-8e7c-2d1a35220190",
-                            Usd = 0.22m
-                        },
-                        new
-                        {
-                            Id = "655c489f-bffb-45a4-8e7c-2d1a352201788",
-                            Usd = 0.25m
-                        });
-                });
-
-            modelBuilder.Entity("Final___Magix.Models.Price", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)")
-                        .HasAnnotation("Relational:JsonPropertyName", "id");
-
-                    b.Property<decimal>("Usd")
-                        .HasColumnType("decimal(18,2)")
-                        .HasAnnotation("Relational:JsonPropertyName", "usd");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("BulkPrice");
-
-                    b.HasAnnotation("Relational:JsonPropertyName", "prices");
-                });
-
             modelBuilder.Entity("Final___Magix.Models.TradeInModel", b =>
                 {
                     b.Property<int>("Id")
@@ -321,32 +246,18 @@ namespace Final___Magix.Migrations
                     b.ToTable("TradeIns");
                 });
 
-            modelBuilder.Entity("Final___Magix.Models.BulkData", b =>
+            modelBuilder.Entity("Final___Magix.Models.CardModel", b =>
                 {
-                    b.HasOne("Final___Magix.Models.Price", "Prices")
-                        .WithMany()
-                        .HasForeignKey("PriceId");
-
-                    b.Navigation("Prices");
+                    b.HasOne("Final___Magix.Models.TradeInModel", null)
+                        .WithMany("Cards")
+                        .HasForeignKey("TradeInModelId");
                 });
 
-
-                            Id = 1
-                        },
-                        new
-                        {
-                            Id = 2
-                        });
-                });
-
-
-
-
-            modelBuilder.Entity("Final___Magix.Models.Inventory", b =>
+            modelBuilder.Entity("Final___Magix.Models.TradeInModel", b =>
                 {
-                    b.HasOne("Final___Magix.Models.Price", "Prices")
-                        .WithMany()
-                        .HasForeignKey("PriceId");
-
-                    b.Navigation("Prices");
+                    b.Navigation("Cards");
                 });
+#pragma warning restore 612, 618
+        }
+    }
+}

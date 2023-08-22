@@ -88,14 +88,7 @@
     "booster": true,
     "story_spotlight": false,
     "edhrec_rank": 6499,
-    "prices": {
-      "usd": "11.89",
-      "usd_foil": "85.48",
-      "usd_etched": null,
-      "eur": "5.66",
-      "eur_foil": "57.00",
-      "tix": "0.17"
-    },
+    "priceusd": "11.89",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=20842",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Balthor+the+Defiled\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -220,14 +213,7 @@
       "source_uri": "https://magic.wizards.com/en/articles/archive/card-image-gallery/dominaria-united",
       "previewed_at": "2022-08-21"
     },
-    "prices": {
-      "usd": "0.10",
-      "usd_foil": "0.08",
-      "usd_etched": null,
-      "eur": "0.10",
-      "eur_foil": "0.10",
-      "tix": "0.03"
-    },
+    "priceusd": "0.10",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=574645",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Herd+Migration\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -335,14 +321,7 @@
       "source_uri": "https://magic.wizards.com/en/articles/archive/card-preview/crawling-2020-09-03",
       "previewed_at": "2020-09-03"
     },
-    "prices": {
-      "usd": "0.18",
-      "usd_foil": "0.32",
-      "usd_etched": null,
-      "eur": "0.32",
-      "eur_foil": "0.55",
-      "tix": "0.02"
-    },
+    "priceusd": "0.18",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=491917",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Crawling+Barrens\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -444,14 +423,7 @@
     "story_spotlight": false,
     "edhrec_rank": 13456,
     "penny_rank": 13107,
-    "prices": {
-      "usd": "0.63",
-      "usd_foil": "4.60",
-      "usd_etched": null,
-      "eur": "0.19",
-      "eur_foil": "4.90",
-      "tix": "0.02"
-    },
+    "priceusd": "0.63",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=42272",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Primal+Whisperer\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -553,14 +525,7 @@
     "story_spotlight": false,
     "edhrec_rank": 18843,
     "penny_rank": 9068,
-    "prices": {
-      "usd": "0.04",
-      "usd_foil": "0.15",
-      "usd_etched": null,
-      "eur": "0.49",
-      "eur_foil": "0.38",
-      "tix": "0.03"
-    },
+    "priceusd": "0.04",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=452949",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Sonic+Assault\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -661,14 +626,7 @@
     "booster": false,
     "story_spotlight": false,
     "edhrec_rank": 8604,
-    "prices": {
-      "usd": "0.91",
-      "usd_foil": null,
-      "usd_etched": null,
-      "eur": "1.99",
-      "eur_foil": null,
-      "tix": null
-    },
+    "priceusd": "0.91",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=433258",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Kheru+Mind-Eater\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -771,14 +729,7 @@
     "booster": true,
     "story_spotlight": false,
     "edhrec_rank": 23116,
-    "prices": {
-      "usd": "0.11",
-      "usd_foil": "0.59",
-      "usd_etched": null,
-      "eur": "0.02",
-      "eur_foil": "0.40",
-      "tix": "0.11"
-    },
+    "priceusd": "0.11",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=26280",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Phyrexian+Bloodstock\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -878,14 +829,7 @@
     "booster": true,
     "story_spotlight": false,
     "edhrec_rank": 10930,
-    "prices": {
-      "usd": "0.12",
-      "usd_foil": "0.91",
-      "usd_etched": null,
-      "eur": "0.06",
-      "eur_foil": "0.35",
-      "tix": null
-    },
+    "priceusd": "0.12",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=416792",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Messenger+Jays\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -1008,14 +952,7 @@
     "story_spotlight": false,
     "edhrec_rank": 5938,
     "penny_rank": 6926,
-    "prices": {
-      "usd": "0.50",
-      "usd_foil": "2.11",
-      "usd_etched": null,
-      "eur": "0.43",
-      "eur_foil": "0.18",
-      "tix": "0.02"
-    },
+    "priceusd": "0.50",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=409991",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Silverfur+Partisan\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -1117,14 +1054,7 @@
     "story_spotlight": false,
     "edhrec_rank": 13758,
     "penny_rank": 12504,
-    "prices": {
-      "usd": "0.55",
-      "usd_foil": "16.98",
-      "usd_etched": null,
-      "eur": "0.20",
-      "eur_foil": "20.00",
-      "tix": "0.03"
-    },
+    "priceusd": "0.55",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=8830",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Scrapheap\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -1227,14 +1157,7 @@
     "story_spotlight": false,
     "edhrec_rank": 8309,
     "penny_rank": 12386,
-    "prices": {
-      "usd": "0.10",
-      "usd_foil": "0.17",
-      "usd_etched": null,
-      "eur": "0.03",
-      "eur_foil": "0.49",
-      "tix": "0.04"
-    },
+    "priceusd": "0.10",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=622644",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Knighted+Myr\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -1339,14 +1262,7 @@
     "story_spotlight": false,
     "edhrec_rank": 7987,
     "penny_rank": 4135,
-    "prices": {
-      "usd": "0.26",
-      "usd_foil": "0.56",
-      "usd_etched": null,
-      "eur": "0.34",
-      "eur_foil": "0.39",
-      "tix": "0.02"
-    },
+    "priceusd": "0.26",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=414481",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Ulvenwald+Observer\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -1474,14 +1390,7 @@
       "source_uri": "https://twitter.com/aishawakatsuki/status/1410954452991836163",
       "previewed_at": "2021-07-02"
     },
-    "prices": {
-      "usd": "21.86",
-      "usd_foil": "23.29",
-      "usd_etched": null,
-      "eur": "19.04",
-      "eur_foil": "24.49",
-      "tix": "1.74"
-    },
+    "priceusd": "21.86",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=527484",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Old+Gnawbone\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -1603,14 +1512,7 @@
     "story_spotlight": false,
     "edhrec_rank": 10819,
     "penny_rank": 4724,
-    "prices": {
-      "usd": "0.20",
-      "usd_foil": "0.55",
-      "usd_etched": null,
-      "eur": "0.10",
-      "eur_foil": "0.70",
-      "tix": "0.02"
-    },
+    "priceusd": "0.20",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=430842",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Leave+%2F%2F+Chance\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -1713,14 +1615,7 @@
     "booster": true,
     "story_spotlight": false,
     "edhrec_rank": 22213,
-    "prices": {
-      "usd": "0.03",
-      "usd_foil": "0.18",
-      "usd_etched": null,
-      "eur": "0.10",
-      "eur_foil": "0.14",
-      "tix": "0.05"
-    },
+    "priceusd": "0.03",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=442007",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Karona%27s+Zealot\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -1825,14 +1720,7 @@
     "story_spotlight": false,
     "edhrec_rank": 20238,
     "penny_rank": 11217,
-    "prices": {
-      "usd": "0.03",
-      "usd_foil": "0.24",
-      "usd_etched": null,
-      "eur": "0.02",
-      "eur_foil": "0.09",
-      "tix": "0.04"
-    },
+    "priceusd": "0.03",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=213787",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Kuldotha+Ringleader\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -1932,14 +1820,7 @@
     "booster": true,
     "story_spotlight": false,
     "edhrec_rank": 16745,
-    "prices": {
-      "usd": "0.10",
-      "usd_foil": "0.33",
-      "usd_etched": null,
-      "eur": "0.19",
-      "eur_foil": "0.20",
-      "tix": "0.03"
-    },
+    "priceusd": "0.10",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=107685",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Necromancer%27s+Magemark\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -2061,14 +1942,7 @@
     "story_spotlight": false,
     "edhrec_rank": 15658,
     "penny_rank": 13540,
-    "prices": {
-      "usd": "0.01",
-      "usd_foil": "0.03",
-      "usd_etched": null,
-      "eur": "0.02",
-      "eur_foil": "0.03",
-      "tix": "0.02"
-    },
+    "priceusd": "0.01",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=555421",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Security+Rhox\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -2174,14 +2048,7 @@
       "source_uri": "https://www.wargamer.com/magic-the-gathering/streets-of-new-capenna-commander-deck-maestros-massacre-reveal",
       "previewed_at": "2022-04-18"
     },
-    "prices": {
-      "usd": "0.07",
-      "usd_foil": null,
-      "usd_etched": null,
-      "eur": "0.15",
-      "eur_foil": null,
-      "tix": null
-    },
+    "priceusd": "0.07",
     "related_uris": {
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Spellbinding+Soprano\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
       "tcgplayer_infinite_decks": "https://infinite.tcgplayer.com/search?contentMode=deck\u0026game=magic\u0026partner=scryfall\u0026q=Spellbinding+Soprano\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -2285,14 +2152,7 @@
       "source_uri": "https://twitter.com/MTGNerdGirl/status/1365375385903357954",
       "previewed_at": "2021-02-26"
     },
-    "prices": {
-      "usd": "0.08",
-      "usd_foil": "0.32",
-      "usd_etched": null,
-      "eur": "0.06",
-      "eur_foil": "0.06",
-      "tix": "0.04"
-    },
+    "priceusd": "0.08",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=509443",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Piracy+Charm\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -2393,14 +2253,7 @@
     "story_spotlight": false,
     "edhrec_rank": 2064,
     "penny_rank": 798,
-    "prices": {
-      "usd": "0.77",
-      "usd_foil": null,
-      "usd_etched": null,
-      "eur": "0.80",
-      "eur_foil": null,
-      "tix": null
-    },
+    "priceusd": "0.77",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=394056",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Stinkweed+Imp\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -2507,14 +2360,7 @@
       "source_uri": "https://www.twitch.tv/videos/441806807",
       "previewed_at": "2019-06-20"
     },
-    "prices": {
-      "usd": "0.02",
-      "usd_foil": "0.09",
-      "usd_etched": null,
-      "eur": "0.02",
-      "eur_foil": "0.35",
-      "tix": "0.03"
-    },
+    "priceusd": "0.02",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=466979",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Diviner%27s+Lockbox\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -2623,14 +2469,7 @@
       "source_uri": "https://twitter.com/thebeccascott/status/1301535423999758337",
       "previewed_at": "2020-09-03"
     },
-    "prices": {
-      "usd": "0.02",
-      "usd_foil": "0.09",
-      "usd_etched": null,
-      "eur": "0.02",
-      "eur_foil": "0.05",
-      "tix": "0.03"
-    },
+    "priceusd": "0.02",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=491805",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Skyclave+Geopede\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -2730,14 +2569,7 @@
     "textless": false,
     "booster": true,
     "story_spotlight": false,
-    "prices": {
-      "usd": "0.22",
-      "usd_foil": "1.89",
-      "usd_etched": null,
-      "eur": "0.13",
-      "eur_foil": "1.40",
-      "tix": null
-    },
+    "priceusd": "0.22",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=74333",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Pygmy+Giant\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -2836,14 +2668,7 @@
     "booster": false,
     "story_spotlight": false,
     "edhrec_rank": 13023,
-    "prices": {
-      "usd": "0.30",
-      "usd_foil": null,
-      "usd_etched": null,
-      "eur": "0.09",
-      "eur_foil": null,
-      "tix": null
-    },
+    "priceusd": "0.30",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=430227",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Curse+of+the+Forsaken\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -2947,14 +2772,7 @@
     "story_spotlight": false,
     "edhrec_rank": 8145,
     "penny_rank": 12480,
-    "prices": {
-      "usd": "0.38",
-      "usd_foil": "1.28",
-      "usd_etched": null,
-      "eur": "0.20",
-      "eur_foil": "0.94",
-      "tix": "0.02"
-    },
+    "priceusd": "0.38",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=380393",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Daring+Thief\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -3055,14 +2873,7 @@
     "booster": true,
     "story_spotlight": false,
     "edhrec_rank": 22304,
-    "prices": {
-      "usd": "0.02",
-      "usd_foil": "0.04",
-      "usd_etched": null,
-      "eur": "0.02",
-      "eur_foil": "0.10",
-      "tix": "0.03"
-    },
+    "priceusd": "0.02",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=391902",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Reach+of+Shadows\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -3164,14 +2975,7 @@
     "story_spotlight": false,
     "edhrec_rank": 19155,
     "penny_rank": 12458,
-    "prices": {
-      "usd": "0.07",
-      "usd_foil": "0.18",
-      "usd_etched": null,
-      "eur": "0.02",
-      "eur_foil": "0.08",
-      "tix": "0.03"
-    },
+    "priceusd": "0.07",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=366373",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Mental+Vapors\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -3293,14 +3097,7 @@
     "story_spotlight": false,
     "edhrec_rank": 7782,
     "penny_rank": 9880,
-    "prices": {
-      "usd": "0.14",
-      "usd_foil": "0.25",
-      "usd_etched": null,
-      "eur": "0.08",
-      "eur_foil": "0.13",
-      "tix": "0.02"
-    },
+    "priceusd": "0.14",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=513672",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Dramatic+Finale\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -3402,14 +3199,7 @@
     "story_spotlight": false,
     "edhrec_rank": 9586,
     "penny_rank": 7125,
-    "prices": {
-      "usd": "0.25",
-      "usd_foil": "10.42",
-      "usd_etched": null,
-      "eur": "0.40",
-      "eur_foil": "0.45",
-      "tix": "0.03"
-    },
+    "priceusd": "0.25",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=154164",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Obsidian+Battle-Axe\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -3509,14 +3299,7 @@
     "booster": true,
     "story_spotlight": false,
     "edhrec_rank": 24684,
-    "prices": {
-      "usd": "3.09",
-      "usd_foil": null,
-      "usd_etched": null,
-      "eur": "2.93",
-      "eur_foil": null,
-      "tix": null
-    },
+    "priceusd": "3.09",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=1475",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Brine+Hag\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -3618,14 +3401,7 @@
     "story_spotlight": false,
     "edhrec_rank": 125,
     "penny_rank": 1161,
-    "prices": {
-      "usd": "0.26",
-      "usd_foil": null,
-      "usd_etched": null,
-      "eur": "0.21",
-      "eur_foil": null,
-      "tix": null
-    },
+    "priceusd": "0.26",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=625346",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Azorius+Signet\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -3747,14 +3523,7 @@
     "story_spotlight": false,
     "edhrec_rank": 21336,
     "penny_rank": 10849,
-    "prices": {
-      "usd": "0.03",
-      "usd_foil": "0.21",
-      "usd_etched": null,
-      "eur": "0.02",
-      "eur_foil": "0.15",
-      "tix": "0.03"
-    },
+    "priceusd": "0.03",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=439726",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Dusk+Charger\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -3861,14 +3630,7 @@
       "source_uri": "https://magic.wizards.com/en/articles/archive/feature/kamigawa-neon-dynasty-mechanics-2022-01-27",
       "previewed_at": "2022-01-27"
     },
-    "prices": {
-      "usd": "0.01",
-      "usd_foil": "0.05",
-      "usd_etched": null,
-      "eur": "0.03",
-      "eur_foil": "0.15",
-      "tix": "0.01"
-    },
+    "priceusd": "0.01",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=548434",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Akki+War+Paint\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -3972,14 +3734,7 @@
     "story_spotlight": false,
     "edhrec_rank": 22104,
     "penny_rank": 8185,
-    "prices": {
-      "usd": "0.01",
-      "usd_foil": "0.14",
-      "usd_etched": null,
-      "eur": "0.02",
-      "eur_foil": "0.13",
-      "tix": "0.05"
-    },
+    "priceusd": "0.01",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=423674",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Audacious+Infiltrator\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -4099,14 +3854,7 @@
     "story_spotlight": false,
     "edhrec_rank": 10769,
     "penny_rank": 10999,
-    "prices": {
-      "usd": "0.08",
-      "usd_foil": "0.28",
-      "usd_etched": null,
-      "eur": "0.10",
-      "eur_foil": "0.08",
-      "tix": "0.03"
-    },
+    "priceusd": "0.08",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=425962",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Slime+Molding\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -4208,14 +3956,7 @@
     "booster": true,
     "story_spotlight": false,
     "edhrec_rank": 24975,
-    "prices": {
-      "usd": "0.01",
-      "usd_foil": null,
-      "usd_etched": null,
-      "eur": "0.02",
-      "eur_foil": "0.20",
-      "tix": "0.03"
-    },
+    "priceusd": "0.01",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=509455",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Stormcloud+Djinn\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -4315,14 +4056,7 @@
     "booster": true,
     "story_spotlight": false,
     "edhrec_rank": 15932,
-    "prices": {
-      "usd": "0.26",
-      "usd_foil": "4.94",
-      "usd_etched": null,
-      "eur": "0.50",
-      "eur_foil": "9.88",
-      "tix": "0.11"
-    },
+    "priceusd": "0.26",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=22302",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Sivvi%27s+Valor\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -4423,14 +4157,7 @@
     "booster": true,
     "story_spotlight": false,
     "edhrec_rank": 20662,
-    "prices": {
-      "usd": "0.09",
-      "usd_foil": "0.22",
-      "usd_etched": null,
-      "eur": "0.02",
-      "eur_foil": "0.02",
-      "tix": "0.03"
-    },
+    "priceusd": "0.09",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=414509",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Thirsting+Axe\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -4532,14 +4259,7 @@
     "booster": true,
     "story_spotlight": false,
     "edhrec_rank": 19920,
-    "prices": {
-      "usd": "0.10",
-      "usd_foil": "0.28",
-      "usd_etched": null,
-      "eur": "0.02",
-      "eur_foil": "0.12",
-      "tix": "0.04"
-    },
+    "priceusd": "0.10",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=75258",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Cruel+Deceiver\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -4659,14 +4379,7 @@
     "booster": false,
     "story_spotlight": false,
     "edhrec_rank": 1066,
-    "prices": {
-      "usd": "1.89",
-      "usd_foil": null,
-      "usd_etched": null,
-      "eur": "1.07",
-      "eur_foil": null,
-      "tix": null
-    },
+    "priceusd": "1.89",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=612583",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=The+Locust+God\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -4769,14 +4482,7 @@
     "story_spotlight": false,
     "edhrec_rank": 16988,
     "penny_rank": 6014,
-    "prices": {
-      "usd": "0.02",
-      "usd_foil": "0.04",
-      "usd_etched": null,
-      "eur": "0.02",
-      "eur_foil": "0.02",
-      "tix": "0.03"
-    },
+    "priceusd": "0.02",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=497639",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Dhund+Operative\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -4881,14 +4587,7 @@
     "story_spotlight": false,
     "edhrec_rank": 14706,
     "penny_rank": 11012,
-    "prices": {
-      "usd": "0.12",
-      "usd_foil": "0.37",
-      "usd_etched": null,
-      "eur": "0.12",
-      "eur_foil": "0.12",
-      "tix": "0.03"
-    },
+    "priceusd": "0.12",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=205483",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Tel-Jilad+Fallen\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -4994,14 +4693,7 @@
       "source_uri": "https://www.mtggoldfish.com/articles/commander-legends-exclusive-previews-araumi-of-the-dead-tide-reprints",
       "previewed_at": "2020-11-02"
     },
-    "prices": {
-      "usd": "0.02",
-      "usd_foil": "0.06",
-      "usd_etched": null,
-      "eur": "0.04",
-      "eur_foil": "0.16",
-      "tix": "0.04"
-    },
+    "priceusd": "0.02",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=497649",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Ghastly+Demise\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -5103,14 +4795,7 @@
     "story_spotlight": false,
     "edhrec_rank": 15945,
     "penny_rank": 6047,
-    "prices": {
-      "usd": "0.36",
-      "usd_foil": "8.96",
-      "usd_etched": null,
-      "eur": "0.36",
-      "eur_foil": "6.50",
-      "tix": "0.02"
-    },
+    "priceusd": "0.36",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=34684",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Mythic+Proportions\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -5213,14 +4898,7 @@
     "story_spotlight": false,
     "edhrec_rank": 2833,
     "penny_rank": 4084,
-    "prices": {
-      "usd": "0.15",
-      "usd_foil": "0.34",
-      "usd_etched": null,
-      "eur": "0.13",
-      "eur_foil": "0.48",
-      "tix": "0.02"
-    },
+    "priceusd": "0.15",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=522169",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Necrogoyf\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -5321,14 +4999,7 @@
     "booster": true,
     "story_spotlight": false,
     "edhrec_rank": 8394,
-    "prices": {
-      "usd": "6.53",
-      "usd_foil": "40.99",
-      "usd_etched": null,
-      "eur": "2.50",
-      "eur_foil": "22.50",
-      "tix": "0.04"
-    },
+    "priceusd": "6.53",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=9705",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Iron+Maiden\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -5428,14 +5099,7 @@
     "booster": true,
     "story_spotlight": false,
     "edhrec_rank": 10909,
-    "prices": {
-      "usd": "4.38",
-      "usd_foil": "36.45",
-      "usd_etched": null,
-      "eur": "1.01",
-      "eur_foil": "11.25",
-      "tix": "0.03"
-    },
+    "priceusd": "4.38",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=29916",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Delaying+Shield\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -5542,14 +5206,7 @@
       "source_uri": "https://magic.wizards.com/en/articles/archive/card-preview/bridges-limited-modern-2021-05-26",
       "previewed_at": "2021-05-26"
     },
-    "prices": {
-      "usd": "0.10",
-      "usd_foil": "0.15",
-      "usd_etched": null,
-      "eur": "0.14",
-      "eur_foil": "0.35",
-      "tix": "0.03"
-    },
+    "priceusd": "0.10",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=522332",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Slagwoods+Bridge\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -5658,14 +5315,7 @@
       "source_uri": "https://twitter.com/raphlevymtg/status/1287047726576939015",
       "previewed_at": "2020-07-25"
     },
-    "prices": {
-      "usd": "8.59",
-      "usd_foil": "11.75",
-      "usd_etched": null,
-      "eur": "8.83",
-      "eur_foil": "7.60",
-      "tix": "0.82"
-    },
+    "priceusd": "8.59",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=489882",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Mazirek%2C+Kraul+Death+Priest\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -5764,14 +5414,7 @@
     "textless": false,
     "booster": true,
     "story_spotlight": false,
-    "prices": {
-      "usd": "21.78",
-      "usd_foil": null,
-      "usd_etched": null,
-      "eur": "7.75",
-      "eur_foil": "200.00",
-      "tix": null
-    },
+    "priceusd": "21.78",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=74327",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=City+of+Ass\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -5880,14 +5523,7 @@
       "source_uri": "https://www.twitch.tv/videos/1565562937",
       "previewed_at": "2022-08-18"
     },
-    "prices": {
-      "usd": "4.03",
-      "usd_foil": "4.34",
-      "usd_etched": null,
-      "eur": "2.83",
-      "eur_foil": "3.75",
-      "tix": "0.31"
-    },
+    "priceusd": "4.03",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=574564",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Braids%2C+Arisen+Nightmare\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -5989,14 +5625,7 @@
     "story_spotlight": false,
     "edhrec_rank": 18083,
     "penny_rank": 13610,
-    "prices": {
-      "usd": "0.13",
-      "usd_foil": "6.41",
-      "usd_etched": null,
-      "eur": "0.48",
-      "eur_foil": "3.50",
-      "tix": "0.03"
-    },
+    "priceusd": "0.13",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=12422",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Rack+and+Ruin\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -6099,14 +5728,7 @@
     "story_spotlight": false,
     "edhrec_rank": 11361,
     "penny_rank": 7665,
-    "prices": {
-      "usd": "0.11",
-      "usd_foil": "0.53",
-      "usd_etched": null,
-      "eur": "0.16",
-      "eur_foil": "0.18",
-      "tix": "0.03"
-    },
+    "priceusd": "0.11",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=402080",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Ulamog%27s+Despoiler\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -6212,14 +5834,7 @@
       "source_uri": "https://twitter.com/Theasianavenger/status/1113199801917628416",
       "previewed_at": "2019-04-02"
     },
-    "prices": {
-      "usd": "0.02",
-      "usd_foil": "0.16",
-      "usd_etched": null,
-      "eur": "0.02",
-      "eur_foil": "0.19",
-      "tix": "0.04"
-    },
+    "priceusd": "0.02",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=461001",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Totally+Lost\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -6321,14 +5936,7 @@
     "booster": true,
     "story_spotlight": false,
     "edhrec_rank": 7365,
-    "prices": {
-      "usd": "0.96",
-      "usd_foil": "36.76",
-      "usd_etched": null,
-      "eur": "0.50",
-      "eur_foil": "19.48",
-      "tix": "0.07"
-    },
+    "priceusd": "0.96",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=15189",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Body+Snatcher\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -6437,14 +6045,7 @@
       "source_uri": "https://twitter.com/fireshoes/status/1513985409474306054",
       "previewed_at": "2022-04-12"
     },
-    "prices": {
-      "usd": "0.02",
-      "usd_foil": "0.05",
-      "usd_etched": null,
-      "eur": "0.02",
-      "eur_foil": "0.10",
-      "tix": "0.02"
-    },
+    "priceusd": "0.02",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=555344",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Elegant+Entourage\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -6546,14 +6147,7 @@
     "story_spotlight": false,
     "edhrec_rank": 13878,
     "penny_rank": 12363,
-    "prices": {
-      "usd": "0.17",
-      "usd_foil": "0.55",
-      "usd_etched": null,
-      "eur": "0.05",
-      "eur_foil": "0.79",
-      "tix": "0.03"
-    },
+    "priceusd": "0.17",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=46155",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Echoing+Ruin\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -6655,14 +6249,7 @@
     "story_spotlight": false,
     "edhrec_rank": 20963,
     "penny_rank": 11610,
-    "prices": {
-      "usd": "0.10",
-      "usd_foil": "0.25",
-      "usd_etched": null,
-      "eur": "0.03",
-      "eur_foil": "0.14",
-      "tix": "0.02"
-    },
+    "priceusd": "0.10",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=89397",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Plow+Through+Reito\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -6763,14 +6350,7 @@
     "booster": true,
     "story_spotlight": false,
     "edhrec_rank": 22172,
-    "prices": {
-      "usd": "0.10",
-      "usd_foil": null,
-      "usd_etched": null,
-      "eur": "0.05",
-      "eur_foil": null,
-      "tix": "0.11"
-    },
+    "priceusd": "0.10",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=6114",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Dizzying+Gaze\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -6868,14 +6448,7 @@
     "booster": true,
     "story_spotlight": false,
     "edhrec_rank": 19520,
-    "prices": {
-      "usd": "0.20",
-      "usd_foil": null,
-      "usd_etched": null,
-      "eur": "0.30",
-      "eur_foil": null,
-      "tix": null
-    },
+    "priceusd": "0.20",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=2145",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Backfire\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -6982,14 +6555,7 @@
       "source_uri": "https://twitter.com/TianMun/status/1455946753774129157",
       "previewed_at": "2021-11-04"
     },
-    "prices": {
-      "usd": "0.08",
-      "usd_foil": "0.22",
-      "usd_etched": null,
-      "eur": "0.02",
-      "eur_foil": "0.10",
-      "tix": "0.03"
-    },
+    "priceusd": "0.08",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=541052",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Cartographer%27s+Survey\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -7094,14 +6660,7 @@
     "promo_types": [ "starterdeck" ],
     "edhrec_rank": 20122,
     "penny_rank": 13470,
-    "prices": {
-      "usd": "0.19",
-      "usd_foil": null,
-      "usd_etched": null,
-      "eur": "0.14",
-      "eur_foil": null,
-      "tix": null
-    },
+    "priceusd": "0.19",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=469884",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Hostile+Minotaur\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -7203,14 +6762,7 @@
     "story_spotlight": false,
     "edhrec_rank": 12624,
     "penny_rank": 9793,
-    "prices": {
-      "usd": "1.01",
-      "usd_foil": "18.69",
-      "usd_etched": null,
-      "eur": "0.20",
-      "eur_foil": "2.98",
-      "tix": "0.01"
-    },
+    "priceusd": "1.01",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=136048",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Barren+Glory\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -7310,14 +6862,7 @@
     "story_spotlight": false,
     "edhrec_rank": 9832,
     "penny_rank": 845,
-    "prices": {
-      "usd": "0.27",
-      "usd_foil": null,
-      "usd_etched": null,
-      "eur": "0.50",
-      "eur_foil": null,
-      "tix": null
-    },
+    "priceusd": "0.27",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=401702",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Forked+Bolt\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -7419,14 +6964,7 @@
     "story_spotlight": false,
     "edhrec_rank": 7300,
     "penny_rank": 11078,
-    "prices": {
-      "usd": "0.22",
-      "usd_foil": "1.09",
-      "usd_etched": null,
-      "eur": "0.29",
-      "eur_foil": "0.81",
-      "tix": "0.04"
-    },
+    "priceusd": "0.22",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=398669",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Smash+to+Smithereens\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -7529,14 +7067,7 @@
     "booster": true,
     "story_spotlight": false,
     "edhrec_rank": 21477,
-    "prices": {
-      "usd": "0.01",
-      "usd_foil": "0.23",
-      "usd_etched": null,
-      "eur": "0.09",
-      "eur_foil": "0.19",
-      "tix": "0.03"
-    },
+    "priceusd": "0.01",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=245292",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Niblis+of+the+Mist\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -7639,14 +7170,7 @@
     "story_spotlight": false,
     "edhrec_rank": 19207,
     "penny_rank": 2272,
-    "prices": {
-      "usd": "0.09",
-      "usd_foil": "0.24",
-      "usd_etched": null,
-      "eur": "0.05",
-      "eur_foil": "0.06",
-      "tix": "0.03"
-    },
+    "priceusd": "0.09",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=413678",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Keldon+Marauders\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -7751,14 +7275,7 @@
     "story_spotlight": false,
     "edhrec_rank": 2569,
     "penny_rank": 3553,
-    "prices": {
-      "usd": "0.30",
-      "usd_foil": null,
-      "usd_etched": null,
-      "eur": "0.02",
-      "eur_foil": null,
-      "tix": "0.04"
-    },
+    "priceusd": "0.30",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=25625",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Blood+Pet\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -7879,14 +7396,7 @@
     "story_spotlight": false,
     "edhrec_rank": 5050,
     "penny_rank": 5037,
-    "prices": {
-      "usd": "0.19",
-      "usd_foil": null,
-      "usd_etched": null,
-      "eur": "0.17",
-      "eur_foil": null,
-      "tix": null
-    },
+    "priceusd": "0.19",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=482732",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Thraben+Doomsayer\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -7989,14 +7499,7 @@
     "booster": true,
     "story_spotlight": false,
     "edhrec_rank": 22174,
-    "prices": {
-      "usd": "0.35",
-      "usd_foil": null,
-      "usd_etched": null,
-      "eur": "0.79",
-      "eur_foil": null,
-      "tix": "0.02"
-    },
+    "priceusd": "0.35",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=4763",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Fugitive+Druid\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -8104,14 +7607,7 @@
       "source_uri": "https://magic.wizards.com/en/articles/archive/card-image-gallery/commander-legends-battle-for-baldurs-gate",
       "previewed_at": "2022-05-23"
     },
-    "prices": {
-      "usd": "0.10",
-      "usd_foil": "0.18",
-      "usd_etched": null,
-      "eur": "0.15",
-      "eur_foil": "0.15",
-      "tix": "0.77"
-    },
+    "priceusd": "0.10",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=563172",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Nine-Fingers+Keene\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -8214,14 +7710,7 @@
     "booster": true,
     "story_spotlight": false,
     "edhrec_rank": 13868,
-    "prices": {
-      "usd": "0.02",
-      "usd_foil": "0.04",
-      "usd_etched": null,
-      "eur": "0.02",
-      "eur_foil": "0.10",
-      "tix": "0.03"
-    },
+    "priceusd": "0.02",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=503789",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Horizon+Seeker\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -8338,14 +7827,7 @@
     "booster": true,
     "story_spotlight": false,
     "promo_types": [ "setpromo" ],
-    "prices": {
-      "usd": "0.09",
-      "usd_foil": null,
-      "usd_etched": null,
-      "eur": null,
-      "eur_foil": null,
-      "tix": null
-    },
+    "priceusd": "0.09",
     "related_uris": {
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Giant+Warrior\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
       "tcgplayer_infinite_decks": "https://infinite.tcgplayer.com/search?contentMode=deck\u0026game=magic\u0026partner=scryfall\u0026q=Giant+Warrior\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -8442,14 +7924,7 @@
     "textless": false,
     "booster": true,
     "story_spotlight": false,
-    "prices": {
-      "usd": "0.14",
-      "usd_foil": "0.24",
-      "usd_etched": null,
-      "eur": "0.02",
-      "eur_foil": "1.48",
-      "tix": null
-    },
+    "priceusd": "0.14",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=439586",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Optical+Optimizer\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -8554,14 +8029,7 @@
     "story_spotlight": false,
     "edhrec_rank": 4646,
     "penny_rank": 6381,
-    "prices": {
-      "usd": "1.24",
-      "usd_foil": "25.10",
-      "usd_etched": null,
-      "eur": "0.81",
-      "eur_foil": "8.30",
-      "tix": "0.03"
-    },
+    "priceusd": "1.24",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=220364",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Myr+Galvanizer\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -8670,14 +8138,7 @@
       "source_uri": "https://www.facebook.com/ggadelaide/posts/10159644634965616",
       "previewed_at": "2021-05-26"
     },
-    "prices": {
-      "usd": "0.13",
-      "usd_foil": "0.44",
-      "usd_etched": null,
-      "eur": "0.06",
-      "eur_foil": "0.18",
-      "tix": "0.02"
-    },
+    "priceusd": "0.13",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=522265",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Carth+the+Lion\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -8783,14 +8244,7 @@
       "source_uri": "https://magic.wizards.com/en/articles/archive/card-image-gallery/innistrad-crimson-vow",
       "previewed_at": "2021-11-05"
     },
-    "prices": {
-      "usd": "0.02",
-      "usd_foil": "0.01",
-      "usd_etched": null,
-      "eur": "0.12",
-      "eur_foil": "0.02",
-      "tix": "0.03"
-    },
+    "priceusd": "0.02",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=540892",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Cradle+of+Safety\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -8891,14 +8345,7 @@
     "booster": true,
     "story_spotlight": false,
     "edhrec_rank": 7342,
-    "prices": {
-      "usd": "0.73",
-      "usd_foil": "0.91",
-      "usd_etched": null,
-      "eur": "0.92",
-      "eur_foil": "0.53",
-      "tix": "0.02"
-    },
+    "priceusd": "0.73",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=615416",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Open+the+Way\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -9003,14 +8450,7 @@
     "story_spotlight": false,
     "edhrec_rank": 15287,
     "penny_rank": 13507,
-    "prices": {
-      "usd": "0.13",
-      "usd_foil": "0.76",
-      "usd_etched": null,
-      "eur": "0.20",
-      "eur_foil": "0.79",
-      "tix": "0.04"
-    },
+    "priceusd": "0.13",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=391920",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Shockmaw+Dragon\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -9114,14 +8554,7 @@
     "story_spotlight": false,
     "edhrec_rank": 7214,
     "penny_rank": 4992,
-    "prices": {
-      "usd": "0.14",
-      "usd_foil": null,
-      "usd_etched": null,
-      "eur": "0.30",
-      "eur_foil": null,
-      "tix": "0.30"
-    },
+    "priceusd": "0.14",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=380241",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Aether+Adept\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -9229,14 +8662,7 @@
       "source_uri": "https://twitter.com/InsayneHayne/status/1213198117794963456",
       "previewed_at": "2020-01-03"
     },
-    "prices": {
-      "usd": "0.22",
-      "usd_foil": "0.34",
-      "usd_etched": null,
-      "eur": "0.79",
-      "eur_foil": "0.45",
-      "tix": "0.02"
-    },
+    "priceusd": "0.22",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=476345",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Erebos%27s+Intervention\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -9338,14 +8764,7 @@
     "story_spotlight": false,
     "edhrec_rank": 9886,
     "penny_rank": 14502,
-    "prices": {
-      "usd": "4.70",
-      "usd_foil": "38.99",
-      "usd_etched": null,
-      "eur": "1.99",
-      "eur_foil": "20.00",
-      "tix": "0.22"
-    },
+    "priceusd": "4.70",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=19721",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Puppet%27s+Verdict\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -9448,14 +8867,7 @@
     "booster": true,
     "story_spotlight": false,
     "edhrec_rank": 16422,
-    "prices": {
-      "usd": "0.07",
-      "usd_foil": "0.31",
-      "usd_etched": null,
-      "eur": "0.05",
-      "eur_foil": "0.49",
-      "tix": "0.03"
-    },
+    "priceusd": "0.07",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=447173",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Shield+Mare\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -9572,14 +8984,7 @@
     "booster": true,
     "story_spotlight": false,
     "promo_types": [ "setpromo" ],
-    "prices": {
-      "usd": "0.10",
-      "usd_foil": null,
-      "usd_etched": null,
-      "eur": null,
-      "eur_foil": null,
-      "tix": null
-    },
+    "priceusd": "0.10",
     "related_uris": {
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Anointer+Priest\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
       "tcgplayer_infinite_decks": "https://infinite.tcgplayer.com/search?contentMode=deck\u0026game=magic\u0026partner=scryfall\u0026q=Anointer+Priest\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -9704,14 +9109,7 @@
       "source_uri": "https://twitter.com/GabySpartz/status/1377395545149296640",
       "previewed_at": "2021-03-31"
     },
-    "prices": {
-      "usd": "0.05",
-      "usd_foil": "0.12",
-      "usd_etched": null,
-      "eur": "0.12",
-      "eur_foil": "0.99",
-      "tix": "0.03"
-    },
+    "priceusd": "0.05",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=513529",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Serpentine+Curve\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -9813,14 +9211,7 @@
     "story_spotlight": false,
     "edhrec_rank": 17295,
     "penny_rank": 8091,
-    "prices": {
-      "usd": "0.04",
-      "usd_foil": "0.16",
-      "usd_etched": null,
-      "eur": "0.02",
-      "eur_foil": "0.15",
-      "tix": "0.03"
-    },
+    "priceusd": "0.04",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=378461",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Bolt+of+Keranos\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -9924,14 +9315,7 @@
     "story_spotlight": false,
     "edhrec_rank": 22930,
     "penny_rank": 6060,
-    "prices": {
-      "usd": "0.02",
-      "usd_foil": "0.01",
-      "usd_etched": null,
-      "eur": "0.02",
-      "eur_foil": "0.13",
-      "tix": "0.04"
-    },
+    "priceusd": "0.02",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=423734",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Night+Market+Aeronaut\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -10038,14 +9422,7 @@
       "source_uri": "https://magic.wizards.com/en/articles/archive/card-image-gallery/innistrad-crimson-vow",
       "previewed_at": "2021-11-05"
     },
-    "prices": {
-      "usd": "0.12",
-      "usd_foil": "0.32",
-      "usd_etched": null,
-      "eur": "0.18",
-      "eur_foil": "0.05",
-      "tix": "0.03"
-    },
+    "priceusd": "0.12",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=540996",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Ancestral+Anger\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -10153,14 +9530,7 @@
       "source_uri": "https://twitter.com/simongoertzen/status/1287749168824553482",
       "previewed_at": "2020-07-27"
     },
-    "prices": {
-      "usd": "2.80",
-      "usd_foil": "3.24",
-      "usd_etched": null,
-      "eur": "4.01",
-      "eur_foil": "6.48",
-      "tix": "1.71"
-    },
+    "priceusd": "2.80",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=489755",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Death%27s+Shadow\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -10277,14 +9647,7 @@
     "booster": false,
     "story_spotlight": false,
     "promo_types": [ "setpromo" ],
-    "prices": {
-      "usd": "0.57",
-      "usd_foil": null,
-      "usd_etched": null,
-      "eur": null,
-      "eur_foil": null,
-      "tix": null
-    },
+    "priceusd": "0.57",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=209163",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Hornet\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -10391,14 +9754,7 @@
       "source_uri": "https://twitter.com/MythicMeebo/status/1271125588602912769",
       "previewed_at": "2020-06-11"
     },
-    "prices": {
-      "usd": "1.19",
-      "usd_foil": "4.44",
-      "usd_etched": null,
-      "eur": "1.20",
-      "eur_foil": "3.49",
-      "tix": "0.03"
-    },
+    "priceusd": "1.19",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=485380",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Miscast\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -10502,14 +9858,7 @@
     "story_spotlight": false,
     "edhrec_rank": 8779,
     "penny_rank": 2815,
-    "prices": {
-      "usd": "0.23",
-      "usd_foil": "0.70",
-      "usd_etched": null,
-      "eur": "0.72",
-      "eur_foil": "0.73",
-      "tix": "0.03"
-    },
+    "priceusd": "0.23",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=456659",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Magus+of+the+Bazaar\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -10613,14 +9962,7 @@
     "story_spotlight": false,
     "edhrec_rank": 1097,
     "penny_rank": 2661,
-    "prices": {
-      "usd": "0.58",
-      "usd_foil": null,
-      "usd_etched": null,
-      "eur": "0.45",
-      "eur_foil": null,
-      "tix": null
-    },
+    "priceusd": "0.58",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=496032",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Mina+and+Denn%2C+Wildborn\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -10720,14 +10062,7 @@
     "booster": true,
     "story_spotlight": false,
     "edhrec_rank": 22059,
-    "prices": {
-      "usd": "0.02",
-      "usd_foil": "0.01",
-      "usd_etched": null,
-      "eur": "0.02",
-      "eur_foil": "0.05",
-      "tix": "0.03"
-    },
+    "priceusd": "0.02",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=607135",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Failed+Conversion\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -10835,14 +10170,7 @@
       "source_uri": "https://magic.wizards.com/en/articles/archive/card-preview/worldbuilding-eldraine-2019-09-11",
       "previewed_at": "2019-09-11"
     },
-    "prices": {
-      "usd": "0.10",
-      "usd_foil": "0.24",
-      "usd_etched": null,
-      "eur": "0.02",
-      "eur_foil": "0.25",
-      "tix": "0.03"
-    },
+    "priceusd": "0.10",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=473196",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Spinning+Wheel\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -10943,14 +10271,7 @@
     "booster": true,
     "story_spotlight": false,
     "edhrec_rank": 13028,
-    "prices": {
-      "usd": "0.03",
-      "usd_foil": "0.06",
-      "usd_etched": null,
-      "eur": "0.15",
-      "eur_foil": "0.17",
-      "tix": "0.02"
-    },
+    "priceusd": "0.03",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=527455",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=You+Come+to+the+Gnoll+Camp\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -11054,14 +10375,7 @@
     "booster": true,
     "story_spotlight": false,
     "edhrec_rank": 16852,
-    "prices": {
-      "usd": "0.03",
-      "usd_foil": "0.24",
-      "usd_etched": null,
-      "eur": "0.09",
-      "eur_foil": "0.12",
-      "tix": "0.03"
-    },
+    "priceusd": "0.03",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=369082",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Armored+Wolf-Rider\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -11163,14 +10477,7 @@
     "booster": true,
     "story_spotlight": false,
     "edhrec_rank": 16437,
-    "prices": {
-      "usd": "0.24",
-      "usd_foil": "8.50",
-      "usd_etched": null,
-      "eur": "0.04",
-      "eur_foil": "4.00",
-      "tix": "0.02"
-    },
+    "priceusd": "0.24",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=84704",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Kiri-Onna\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -11274,14 +10581,7 @@
     "story_spotlight": false,
     "edhrec_rank": 16267,
     "penny_rank": 3013,
-    "prices": {
-      "usd": "0.19",
-      "usd_foil": "0.44",
-      "usd_etched": null,
-      "eur": "0.19",
-      "eur_foil": "1.90",
-      "tix": "0.05"
-    },
+    "priceusd": "0.19",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=37909",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Branchsnap+Lorian\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -11387,14 +10687,7 @@
       "source_uri": "https://www.youtube.com/watch?v=wiIDbPfQRfc",
       "previewed_at": "2023-04-04"
     },
-    "prices": {
-      "usd": "0.51",
-      "usd_foil": null,
-      "usd_etched": null,
-      "eur": "0.50",
-      "eur_foil": null,
-      "tix": null
-    },
+    "priceusd": "0.51",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=612149",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Conclave+Sledge-Captain\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -11511,14 +10804,7 @@
     "booster": true,
     "story_spotlight": false,
     "promo_types": [ "setpromo" ],
-    "prices": {
-      "usd": "0.30",
-      "usd_foil": null,
-      "usd_etched": null,
-      "eur": null,
-      "eur_foil": null,
-      "tix": null
-    },
+    "priceusd": "0.30",
     "related_uris": {
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Wasp\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
       "tcgplayer_infinite_decks": "https://infinite.tcgplayer.com/search?contentMode=deck\u0026game=magic\u0026partner=scryfall\u0026q=Wasp\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -11642,14 +10928,7 @@
       "source_uri": "https://twitter.com/RLYKNGHT/status/1573224030303559681",
       "previewed_at": "2022-09-23"
     },
-    "prices": {
-      "usd": "0.58",
-      "usd_foil": "0.95",
-      "usd_etched": null,
-      "eur": "0.79",
-      "eur_foil": "1.22",
-      "tix": null
-    },
+    "priceusd": "0.58",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=580713",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Clown+Car\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -11750,14 +11029,7 @@
     "booster": false,
     "story_spotlight": false,
     "edhrec_rank": 13211,
-    "prices": {
-      "usd": "0.05",
-      "usd_foil": null,
-      "usd_etched": null,
-      "eur": "0.10",
-      "eur_foil": null,
-      "tix": "0.12"
-    },
+    "priceusd": "0.05",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=588402",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Glint+Raker\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -11867,14 +11139,7 @@
       "source_uri": "https://www.kotaku.com.au/2022/04/weve-got-an-exclusive-card-from-the-magic-the-gathering-streets-of-new-capenna-set/",
       "previewed_at": "2022-04-11"
     },
-    "prices": {
-      "usd": "0.02",
-      "usd_foil": "0.02",
-      "usd_etched": null,
-      "eur": "0.02",
-      "eur_foil": "0.15",
-      "tix": "0.02"
-    },
+    "priceusd": "0.02",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=555370",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Brazen+Upstart\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -11999,14 +11264,7 @@
       "source_uri": "https://www.youtube.com/watch?v=XoMeQBpv9FE",
       "previewed_at": "2022-05-19"
     },
-    "prices": {
-      "usd": "0.44",
-      "usd_foil": "1.01",
-      "usd_etched": null,
-      "eur": "0.95",
-      "eur_foil": "0.70",
-      "tix": "8.90"
-    },
+    "priceusd": "0.44",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=563098",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Avenging+Hunter\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -12108,14 +11366,7 @@
     "booster": false,
     "story_spotlight": false,
     "edhrec_rank": 1047,
-    "prices": {
-      "usd": "1.91",
-      "usd_foil": null,
-      "usd_etched": null,
-      "eur": "3.49",
-      "eur_foil": null,
-      "tix": null
-    },
+    "priceusd": "1.91",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=567690",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Spellskite\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -12215,14 +11466,7 @@
     "booster": true,
     "story_spotlight": false,
     "edhrec_rank": 21909,
-    "prices": {
-      "usd": "0.20",
-      "usd_foil": "6.18",
-      "usd_etched": null,
-      "eur": "0.79",
-      "eur_foil": "6.99",
-      "tix": "0.24"
-    },
+    "priceusd": "0.20",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=21392",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Eye+of+Yawgmoth\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
@@ -12348,14 +11592,7 @@
     "booster": true,
     "story_spotlight": false,
     "edhrec_rank": 11250,
-    "prices": {
-      "usd": "0.05",
-      "usd_foil": "0.22",
-      "usd_etched": null,
-      "eur": "0.04",
-      "eur_foil": "0.20",
-      "tix": "0.34"
-    },
+    "priceusd": "0.05",
     "related_uris": {
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=563114",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Ettercap+%2F%2F+Web+Shot\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",

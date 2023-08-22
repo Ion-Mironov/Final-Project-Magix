@@ -25,12 +25,7 @@ namespace Final___Magix.DataContext
         public DbSet<CardModel> Cards { get; set; } //represents the card collection
         public DbSet<TradeInModel> TradeIns { get; set; } //Historical trade-ins database
         public DbSet<Inventory> StoreInventory { get; set; } //Store Inventory atabase
-        public DbSet<InventoryPrice> StoreInventoryPrice { get; set; } //Store Inventory database
-
         public DbSet<BulkData> BulkData { get; set; } //BulkDataModel.BulkData database (Id, Name, ImageId, PriceId)
-        //public DbSet<Image> BulkImage { get; set; } //BulkDataModel.Images database (Id, Small, Normal, Large, BorderCrop)
-        public DbSet<Price> BulkPrice { get; set; } //BulkDataModel.Price database (Id, Usd)
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
@@ -45,7 +40,8 @@ namespace Final___Magix.DataContext
                     ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                     ImageLarge = "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                     ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-                    Quantity = 10
+                    Quantity = 10,
+                    Price = (decimal)4.99M
                 },
                 new Inventory
                 {
@@ -55,7 +51,8 @@ namespace Final___Magix.DataContext
                     ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                     ImageLarge = "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                     ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-                    Quantity = 10
+                    Quantity = 10,
+                    Price = (decimal)4.99M
                 },
                 new Inventory
                 {
@@ -65,8 +62,9 @@ namespace Final___Magix.DataContext
                     ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                     ImageLarge = "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                     ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-                    Quantity = 10
-                },
+                    Quantity = 10,
+					Price = (decimal)4.99M
+				},
                 new Inventory
                 {
                     Id = "655c489f-bffb-45a4-8e7c-2d1a35220194",
@@ -75,8 +73,9 @@ namespace Final___Magix.DataContext
                     ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                     ImageLarge = "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                     ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-                    Quantity = 10
-                },
+                    Quantity = 10,
+					Price = (decimal)4.99M
+				},
                 new Inventory
                 {
                     Id = "655c489f-bffb-45a4-8e7c-2d1a35220193",
@@ -85,8 +84,9 @@ namespace Final___Magix.DataContext
                     ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                     ImageLarge = "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                     ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-                    Quantity = 10
-                },
+                    Quantity = 10,
+					Price = (decimal)4.99M
+				},
                 new Inventory
                 {
                     Id = "655c489f-bffb-45a4-8e7c-2d1a35220192",
@@ -95,8 +95,9 @@ namespace Final___Magix.DataContext
                     ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                     ImageLarge = "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                     ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-                    Quantity = 10
-                },
+                    Quantity = 10,
+					Price = (decimal)4.99M
+				},
                 new Inventory
                 {
                     Id = "655c489f-bffb-45a4-8e7c-2d1a35220191",
@@ -105,8 +106,9 @@ namespace Final___Magix.DataContext
                     ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                     ImageLarge = "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                     ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-                    Quantity = 10
-                },
+                    Quantity = 10,
+					Price = (decimal)4.99M
+				},
                 new Inventory
                 {
                     Id = "655c489f-bffb-45a4-8e7c-2d1a35220190",
@@ -115,8 +117,9 @@ namespace Final___Magix.DataContext
                     ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                     ImageLarge = "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                     ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-                    Quantity = 10
-                },
+                    Quantity = 10,
+					Price = (decimal)4.99M
+				},
 
 				 new Inventory
 				 {
@@ -126,54 +129,9 @@ namespace Final___Magix.DataContext
 					 ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
 					 ImageLarge = "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
 					 ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-					 Quantity = 11
+					 Quantity = 11,
+					 Price = (decimal)4.99M
 				 });
-			modelBuilder.Entity<InventoryPrice>().HasData(
-                new InventoryPrice
-                {
-                    Id = "655c489f-bffb-45a4-8e7c-2d1a35220197",
-                    Usd = 0.22M
-                },
-                new InventoryPrice
-                {
-                    Id = "655c489f-bffb-45a4-8e7c-2d1a35220196",
-                    Usd = 0.22M
-                },
-                new InventoryPrice
-                {
-                    Id = "655c489f-bffb-45a4-8e7c-2d1a35220195",
-                    Usd = 0.22M
-                },
-                new InventoryPrice
-                {
-                    Id = "655c489f-bffb-45a4-8e7c-2d1a35220194",
-                    Usd = 0.22M
-                },
-                new InventoryPrice
-                {
-                    Id = "655c489f-bffb-45a4-8e7c-2d1a35220193",
-                    Usd = 0.22M
-                },
-                new InventoryPrice
-                {
-                    Id = "655c489f-bffb-45a4-8e7c-2d1a35220192",
-                    Usd = 0.22M
-                },
-                new InventoryPrice
-                {
-                    Id = "655c489f-bffb-45a4-8e7c-2d1a35220191",
-                    Usd = 0.22M
-                }, new InventoryPrice
-                {
-                    Id = "655c489f-bffb-45a4-8e7c-2d1a35220190",
-                    Usd = 0.22M
-                },
-                    new InventoryPrice
-                {
-				    Id = "655c489f-bffb-45a4-8e7c-2d1a352201788",
-                    Usd = 0.25M
-
-				});
         }
 
         public void SeedData()
@@ -199,16 +157,10 @@ namespace Final___Magix.DataContext
                     ImageSmall = cardData.ImageSmall,
                     ImageNormal = cardData.ImageNormal,
                     ImageLarge = cardData.ImageLarge,
-                    ImageBorderCrop = cardData.ImageBorderCrop
+                    ImageBorderCrop = cardData.ImageBorderCrop,
+                    Price = cardData.Price
                 };
                 BulkData.Add(card);
-
-                var CardPrice = new Price()
-                {
-                    Id = cardData.Id,
-                    Usd = cardData.Prices.Usd
-                };
-                BulkPrice.Add(CardPrice);
             }
             SaveChanges();
         }
