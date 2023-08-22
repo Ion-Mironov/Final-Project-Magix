@@ -1,4 +1,4 @@
-﻿@model Final___Magix.Models.TradeInModel
+﻿@model IEnumerable<Final___Magix.Models.TradeInModel>
 
 @{
     ViewData["Title"] = "Create";
@@ -24,6 +24,19 @@
 					<div class="label-with-tooltip">
 						<label for="cardName">Card Name</label><span class="tooltip-icon" onclick="openTooltip('tooltip-cardName')">?</span>
 					</div>
+
+
+					<div class="matching-cards">
+						<h3>Matching Cards:</h3>
+						<ul>
+							@foreach (var card in Model)
+							{
+								<li>@card.CardName </li>
+							}
+						</ul>
+					</div>
+
+
 
 					<!-- Tooltip modal for the Card Name field; triggered on click. See /wwwroot/js/site.js for JavaScript code. -->
 					<div class="tooltip-modal" id="tooltip-cardName">
