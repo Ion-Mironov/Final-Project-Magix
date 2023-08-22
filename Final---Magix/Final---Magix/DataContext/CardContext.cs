@@ -25,15 +25,9 @@ namespace Final___Magix.DataContext
         public DbSet<CardModel> Cards { get; set; } //represents the card collection
         public DbSet<TradeInModel> TradeIns { get; set; } //Historical trade-ins database
         public DbSet<Inventory> StoreInventory { get; set; } //Store Inventory atabase
-        public DbSet<InventoryPrice> StoreInventoryPrice { get; set; } //Store Inventory database
-
         public DbSet<BulkData> BulkData { get; set; } //BulkDataModel.BulkData database (Id, Name, ImageId, PriceId)
-        //public DbSet<Image> BulkImage { get; set; } //BulkDataModel.Images database (Id, Small, Normal, Large, BorderCrop)
-        public DbSet<Price> BulkPrice { get; set; } //BulkDataModel.Price database (Id, Usd)
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
             //// Seed initial store inventory data
             ///
             modelBuilder.Entity<Inventory>().HasData(
@@ -45,7 +39,8 @@ namespace Final___Magix.DataContext
                     ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                     ImageLarge = "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                     ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-                    Quantity = 10
+                    Quantity = 10,
+                    Price = (decimal)4.99M
                 },
                 new Inventory
                 {
@@ -55,7 +50,8 @@ namespace Final___Magix.DataContext
                     ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                     ImageLarge = "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                     ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-                    Quantity = 10
+                    Quantity = 10,
+                    Price = (decimal)4.99M
                 },
                 new Inventory
                 {
@@ -65,7 +61,8 @@ namespace Final___Magix.DataContext
                     ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                     ImageLarge = "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                     ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-                    Quantity = 10
+                    Quantity = 10,
+                    Price = (decimal)4.99M
                 },
                 new Inventory
                 {
@@ -75,7 +72,8 @@ namespace Final___Magix.DataContext
                     ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                     ImageLarge = "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                     ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-                    Quantity = 10
+                    Quantity = 10,
+                    Price = (decimal)4.99M
                 },
                 new Inventory
                 {
@@ -85,7 +83,8 @@ namespace Final___Magix.DataContext
                     ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                     ImageLarge = "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                     ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-                    Quantity = 10
+                    Quantity = 10,
+                    Price = (decimal)4.99M
                 },
                 new Inventory
                 {
@@ -95,7 +94,8 @@ namespace Final___Magix.DataContext
                     ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                     ImageLarge = "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                     ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-                    Quantity = 10
+                    Quantity = 10,
+                    Price = (decimal)4.99M
                 },
                 new Inventory
                 {
@@ -105,7 +105,8 @@ namespace Final___Magix.DataContext
                     ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                     ImageLarge = "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                     ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-                    Quantity = 10
+                    Quantity = 10,
+                    Price = (decimal)4.99M
                 },
                 new Inventory
                 {
@@ -115,86 +116,53 @@ namespace Final___Magix.DataContext
                     ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                     ImageLarge = "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
                     ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-                    Quantity = 10
-                });
-            modelBuilder.Entity<InventoryPrice>().HasData(
-                new InventoryPrice
-                {
-                    Id = "655c489f-bffb-45a4-8e7c-2d1a35220197",
-                    Usd = 0.22M
+                    Quantity = 10,
+                    Price = (decimal)4.99M
                 },
-                new InventoryPrice
-                {
-                    Id = "655c489f-bffb-45a4-8e7c-2d1a35220196",
-                    Usd = 0.22M
-                },
-                new InventoryPrice
-                {
-                    Id = "655c489f-bffb-45a4-8e7c-2d1a35220195",
-                    Usd = 0.22M
-                },
-                new InventoryPrice
-                {
-                    Id = "655c489f-bffb-45a4-8e7c-2d1a35220194",
-                    Usd = 0.22M
-                },
-                new InventoryPrice
-                {
-                    Id = "655c489f-bffb-45a4-8e7c-2d1a35220193",
-                    Usd = 0.22M
-                },
-                new InventoryPrice
-                {
-                    Id = "655c489f-bffb-45a4-8e7c-2d1a35220192",
-                    Usd = 0.22M
-                },
-                new InventoryPrice
-                {
-                    Id = "655c489f-bffb-45a4-8e7c-2d1a35220191",
-                    Usd = 0.22M
-                }, new InventoryPrice
-                {
-                    Id = "655c489f-bffb-45a4-8e7c-2d1a35220190",
-                    Usd = 0.22M
-                }
-                );
+
+                 new Inventory
+                 {
+                     Id = "655c489f-bffb-45a4-8e7c-2d1a352201788",
+                     Name = "Smash to Smithereens",
+                     ImageSmall = "https://cards.scryfall.io/small/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
+                     ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
+                     ImageLarge = "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
+                     ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
+                     Quantity = 11,
+                     Price = (decimal)4.99M
+                 });
         }
+		public void SeedData()
+		{
+			//Check if the database have already been seeded
+			if (BulkData.Any())
+			{   //If the database has been seeded, exit this method
+				return;
+			}
+			//If the database has not been seeded, seed the databases.
+			var jsonPath = Path.Combine(Directory.GetCurrentDirectory(), "infos", "AllCards.json");
+			//Read the file into a var
+			var jsonText = File.ReadAllText(jsonPath);
+			//Deserialize the var into List<BulkDataModel>
+			var cardList = JsonConvert.DeserializeObject<List<BulkData>>(jsonText);
 
-        public void SeedData()
-        {
-            //Check if the database have already been seeded
-            if (BulkData.Any() /*|| BulkImage.Any()*/ || BulkPrice.Any())
-            {   //If the database has been seeded, exit this method
-                return;
-            }
-            //If the database has not been seeded, seed the databases.
-            var jsonPath = Path.Combine(Directory.GetCurrentDirectory(), "infos", "AllCards.json");
-            //Read the file into a var
-            var jsonText = File.ReadAllText(jsonPath);
-            //Deserialize the var into List<BulkDataModel>
-            var cardList = JsonConvert.DeserializeObject<List<BulkData>>(jsonText);
+			foreach (var cardData in cardList)
+			{
+				var card = new BulkData()
+				{
+					Id = cardData.Id,
+					Name = cardData.Name,
+					ImageSmall = cardData.ImageSmall,
+					ImageNormal = cardData.ImageNormal,
+					ImageLarge = cardData.ImageLarge,
+					ImageBorderCrop = cardData.ImageBorderCrop,
+					Price = cardData.Price
+				};
+				BulkData.Add(card);
+			}
+			SaveChanges();
+		}
+	}
 
-            foreach (var cardData in cardList)
-            {
-                var card = new BulkData()
-                {
-                    Id = cardData.Id,
-                    Name = cardData.Name,
-                    ImageSmall = cardData.ImageSmall,
-                    ImageNormal = cardData.ImageNormal,
-                    ImageLarge = cardData.ImageLarge,
-                    ImageBorderCrop = cardData.ImageBorderCrop
-                };
-                BulkData.Add(card);
-
-                var CardPrice = new Price()
-                {
-                    Id = cardData.Id,
-                    Usd = cardData.Prices.Usd
-                };
-                BulkPrice.Add(CardPrice);
-            }
-            SaveChanges();
-        }
-    }
 }
+

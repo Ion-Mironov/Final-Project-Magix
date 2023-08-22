@@ -55,17 +55,11 @@ namespace Final___Magix.Controllers
 		// GET: InventoryController
 		public ActionResult Index()
 		{
-			var inventoryData = _dbContext.StoreInventory
-			.Include(i => i.Prices) // Assuming there's a navigation property between Inventory and InventoryPrice
-			.Select(i => new Inventory
-			{
-				Id = i.Id,
-				Name = i.Name,
-				ImageNormal = i.ImageNormal,
-				Quantity = i.Quantity,
-				Prices = i.Prices
-			})
-				.ToList();
+
+			var inventoryData = _dbContext.StoreInventory.ToList();
+
+
+
 
 			return View(inventoryData);
 		}

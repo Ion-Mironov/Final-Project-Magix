@@ -1,4 +1,4 @@
-﻿@{
+﻿{
 	ViewData["Title"] = "Browse our wares!";
 }
 
@@ -7,7 +7,7 @@
 	<div class="inventory-greeting-text-image">
 		<img src="/Images/inventory_greeting.png" class="inventory-greeting-image" alt="Inventory Greeting Text">
 	</div>
-
+@*
 	<!-- Container for Inventory Display -->
 	<div class="inventory-container">
 		<!-- Inventory Row 1 -->
@@ -59,8 +59,36 @@
 			<div class="inventory-cards"><img src="/Images/dinosaur_placeholder.png" alt="Card 32"></div>
 		</div>
 	</div>
-</div>
+</div>*@
 
+
+
+
+<div class="scroll-bg-container position-relative">
+	@*<div class="scroll-greeting-text-image">
+		<img src="/Images/scroll_greeting.png" class="scroll-greeting-image" alt="Scroll Greeting Text">
+	</div>*@
+	<div class="inventory-container">
+		@for (var i = 0; i < Model.Count; i += 8)  // Iterate over the inventory list in chunks of 8
+			
+		{
+			<div class="inventory-row">
+				@for (var j = i; j < i + 8 && j < Model.Count; j++)
+				{
+					<div class="inventory-cards">
+						@*<img src="@Model[j].ImageSmall" alt="Small Image of Card @j">*@
+						@*<img src="@Model[j].ImageNormal" alt="Normal Image of Card @j">*@
+						<img src="@Model[j].ImageLarge" alt="Large Image of Card @j">
+						@*<img src="@Model[j].ImageBorderCrop" alt="Border Crop Image of Card @j">*@
+						<p>Price: $@Model[j].Price</p>
+							@*<p>Stock: @Model[j].Quantity</p>*@
+					</div>
+				}
+			</div>
+		}
+	</div>
+	
+</div> 
 
 @model IEnumerable<Final___Magix.Models.Inventory>
 
@@ -73,16 +101,20 @@
         <img src="/Images/scroll_greeting.png" class="scroll-greeting-image" alt="Scroll Greeting Text">
     </div>
     <div class="inventory-container">
-		@* @foreach (var item in Model) 
-		@for (int i = 0; i < 8; i++)
-		{
-			<div class="inventory-row">
-				<div class="inventory-cards">
-					<img src="@Model.ImageNormal" alt="Card @Model.Name">
-					<p>Name: @Model.Name</p>
-					
-					<p>Stock: @Model.Quantity</p>
-				</div>
-			</div>
-		}
-</div>*@
+
+        @for (var i = 0; i < Model.Count(); i += 8)  // Iterate over the inventory list in chunks of 8
+        {
+            <div class="inventory-row">
+                @for (var j = i; j < i + 8 && j < Model.Count(); j++)
+                {
+                    <div class="inventory-cards">
+                        <img src="@Model.ElementAt(j).ImageUrl" alt="Card @j">
+                        <p>Price: $@Model.ElementAt(j).Price</p>
+                        <p>Stock: @Model.ElementAt(j).Quantity</p>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</div> *@
+

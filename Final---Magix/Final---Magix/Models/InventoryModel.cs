@@ -17,18 +17,10 @@ namespace Final___Magix.Models
         public string? ImageLarge { get; set; }
         public string? ImageBorderCrop { get; set; }
 
-        public Price? Prices { get; set; }
+		
+		public decimal? Price { get; set; }
 
-        [ForeignKey("InventoryPrices")]
-        public string? PriceId { get; set; }
         public int? Quantity { get; set; }
     }
 
-
-
-    public class InventoryPrice
-    {
-        public string? Id { get; set; }
-        public decimal Usd { get; set; }
-    }
 }

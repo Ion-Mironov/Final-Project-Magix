@@ -1,4 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
+
+﻿using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations;
+
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
@@ -23,20 +26,11 @@ namespace Final___Magix.Models
         public string? ImageLarge { get; set; }
         [JsonPropertyName("imagebordercrop")]
         public string? ImageBorderCrop { get; set; }
+
+        [JsonProperty("priceusd")]
+        public string? Price { get; set; }
         
-        [JsonPropertyName("prices")]
-        public Price? Prices { get; set; }
-        [ForeignKey("Prices")]
-        public string? PriceId { get; set; }
-    }
+        
 
-
-
-    public class Price
-    {
-        [JsonPropertyName("id")]
-        public string? Id { get; set; }
-        [JsonPropertyName("usd")]
-        public decimal Usd { get; set; }
     }
 }
