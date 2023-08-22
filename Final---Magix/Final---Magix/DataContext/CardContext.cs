@@ -137,7 +137,7 @@ namespace Final___Magix.DataContext
         public void SeedData()
         {
             //Check if the database have already been seeded
-            if (BulkData.Any() /*|| BulkImage.Any()*/ /*|| BulkPrice.Any()*/)
+            if (BulkData.Any())
             {   //If the database has been seeded, exit this method
                 return;
             }
