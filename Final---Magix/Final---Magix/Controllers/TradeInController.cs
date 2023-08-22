@@ -101,4 +101,12 @@ namespace Final___Magix.Controllers
 				}
 			}
 		}
+
+		// Logic to retrieve matching cards based on card name
+		private IEnumerable<TradeInModel> GetMatchingCards(string cardName)
+		{
+			// Example query: Retrieve cards whose name contains the entered card name
+			return _context.TradeInModels.Where(card => card.CardName.Contains(cardName)).ToList();
+		}
+
 	}
