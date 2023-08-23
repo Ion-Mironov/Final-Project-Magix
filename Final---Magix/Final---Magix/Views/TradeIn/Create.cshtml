@@ -4,11 +4,6 @@
     ViewData["Title"] = "Create";
 }
 
-﻿@Model IEnumerable<TradeInModel>
-	@{
-		ViewData["Title"] = "Trading In!";
-	}
-
 	<!-- Main container that handles background image and all content within it. -->
 	<div class="tradein-container">
 
@@ -26,15 +21,23 @@
 					</div>
 
 
-				@*	<div class="matching-cards">
-						<h3>Matching Cards:</h3>
+
+				<div class="matching-cards">
+					<h3>Matching Cards:</h3>
+					@if (Model != null)
+					{
 						<ul>
 							@foreach (var card in Model)
 							{
-								<li>@card.CardName </li>
+								<li>@card.cardName</li>
 							}
 						</ul>
-					</div>*@
+					}
+					else
+					{
+						<p>No matching cards found.</p>
+					}
+				</div>
 
 					
 
