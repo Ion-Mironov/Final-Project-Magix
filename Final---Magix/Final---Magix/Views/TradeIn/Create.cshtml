@@ -26,7 +26,7 @@
 					</div>
 
 
-					<div class="matching-cards">
+				@*	<div class="matching-cards">
 						<h3>Matching Cards:</h3>
 						<ul>
 							@foreach (var card in Model)
@@ -34,8 +34,9 @@
 								<li>@card.CardName </li>
 							}
 						</ul>
-					</div>
+					</div>*@
 
+					
 
 
 					<!-- Tooltip modal for the Card Name field; triggered on click. See /wwwroot/js/site.js for JavaScript code. -->
@@ -63,7 +64,60 @@
 							Hope you like scrolling! This list contains every set in Magic: The Gathering history.
 						</div>
 					</div>
-					<select id="cardEdition" name="cardEdition" required>
+
+				
+
+					@{
+						var bulkDataEntries = ViewBag.BulkDataEntries as List<BulkData>;
+					}
+
+					<!-- Card Name Validation -->
+					<input type="text" id="cardNameInput" placeholder="Enter card name" oninput="validateCardName()">
+
+					<!-- Print Dropdown -->
+					<select id="printDropdown"></select>
+
+					<script>
+						function validateCardName() {
+							const cardNameInput = document.getElementById("cardNameInput").value;
+
+							const matchingCards = bulkDataEntries.filter(card => card.Name === cardNameInput);
+
+							const printDropdown = document.getElementById("printDropdown");
+							printDropdown.innerHTML = ""; // Clear existing options
+
+							if (matchingCards.length > 0) {
+								matchingCards.forEach(card => {
+									const option = document.createElement("option");
+									option.value = card.Id; // You might want to use a unique identifier here
+									option.textContent = card.Name; // Adjust this based on the property name in BulkData model
+									printDropdown.appendChild(option);
+								});
+							} else {
+								const option = document.createElement("option");
+								option.value = ""; // You can set a default value for no match
+								option.textContent = "No matching card found";
+								printDropdown.appendChild(option);
+							}
+						}
+					</script>
+
+					<!-- Existing form elements -->
+					<!-- Display matching cards -->
+					@if (ViewBag.MatchingCards != null && ViewBag.MatchingCards.Count() > 0)
+					{
+						<h4>Matching Cards:</h4>
+						<ul>
+							@foreach (var card in ViewBag.MatchingCards)
+							{
+								<li>@card.cardName</li>
+							}
+						</ul>
+					}
+
+
+
+					@*<select id="cardEdition" name="cardEdition" required>
 						<option value="Adventures in the Forgotten Realms">Adventures in the Forgotten Realms – 2021 – Expansion set</option>
 						<option value="Aether Revolt">Aether Revolt – 2017 – Expansion set</option>
 						<option value="Alara Reborn">Alara Reborn – 2009 – Expansion set</option>
@@ -240,7 +294,7 @@
 						<option value="Worldwake">Worldwake – 2010 – Expansion set</option>
 						<option value="Zendikar Rising">Zendikar Rising -2020 -Expansion set</option>
 						<option value="Zendikar">Zendikar – 2009 – Expansion set</option>
-					</select>
+					</select>*@
 				</div>
 				<div class="cardBorderWrapper">
 					<!-- <div> template for labels with tooltips -->

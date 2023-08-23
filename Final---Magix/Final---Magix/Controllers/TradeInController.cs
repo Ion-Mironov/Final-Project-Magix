@@ -31,8 +31,13 @@ namespace Final___Magix.Controllers
 		// GET: TradeInController/Create
 		public ActionResult Create()
 		{
+			var bulkDataEntries = _dbContext.BulkData.ToList(); // Fetch your BulkData entries from the database
+
+			ViewBag.BulkDataEntries = bulkDataEntries;
+
 			return View();
 		}
+
 
 
 		// POST: TradeInController/Create
@@ -42,20 +47,22 @@ namespace Final___Magix.Controllers
 		{
 			try
 			{
-				// Get the card name entered by the user from the form collection
 				string cardName = collection["cardName"];
 
-				// Your logic to retrieve matching cards based on the entered card name
 				IEnumerable<TradeInModel> matchingCards = GetMatchingCards(cardName);
 
-				// Pass the matching cards to the view
-				return View("Create", matchingCards); // You might want to rename the view to match your file name
+				ViewBag.BulkDataEntries = _dbContext.BulkData.ToList();
+				ViewBag.MatchingCards = matchingCards; // Add this line to pass matching cards to the view
+
+				return View();
 			}
 			catch
 			{
 				return View();
 			}
 		}
+
+
 
 		// GET: TradeInController/Edit/5
 		public ActionResult Edit(int id)
@@ -102,7 +109,7 @@ namespace Final___Magix.Controllers
 		private IEnumerable<TradeInModel> GetMatchingCards(string cardName)
 		{
 			// Example query: Retrieve cards whose name contains the entered card name
-			return _dbContext.TradeIns.Where(card => card.CardName.Contains(cardName)).ToList();
+			return _dbContext.TradeIns.Where(card => cardName.Contains(cardName)).ToList();
 		}
 	}
 }
