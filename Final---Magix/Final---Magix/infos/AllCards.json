@@ -9839,14 +9839,9 @@
       "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=209163",
       "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article\u0026game=magic\u0026partner=scryfall\u0026q=Hornet\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
       "tcgplayer_infinite_decks": "https://infinite.tcgplayer.com/search?contentMode=deck\u0026game=magic\u0026partner=scryfall\u0026q=Hornet\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
-      "edhrec": "https://edhrec.com/route/?cc=Hornet"
-    },
-    "purchase_uris": {
-      "tcgplayer": "https://www.tcgplayer.com/product/78564?page=1\u0026utm_campaign=affiliate\u0026utm_medium=api\u0026utm_source=scryfall",
-      "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall\u0026searchString=Hornet\u0026utm_campaign=card_prices\u0026utm_medium=text\u0026utm_source=scryfall",
-      "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall\u0026data%5Bsearch%5D=Hornet\u0026ref=card-profile\u0026utm_campaign=affiliate\u0026utm_medium=card\u0026utm_source=scryfall"
-    }
+      "edhrec": "https://edhrec.com/route/?cc=Hornet" 
   },
+
   {
     "object": "card",
     "id": "033afbd5-9937-4957-98ba-48e469a490bb",

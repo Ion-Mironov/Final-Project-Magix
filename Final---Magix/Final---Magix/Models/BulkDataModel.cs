@@ -28,7 +28,7 @@ namespace Final___Magix.Models
         public string? ImageBorderCrop { get; set; }
 
         [JsonProperty("priceusd")]
-        public string? Price { get; set; }
+        public decimal? Price { get; set; }
         
         
 
