@@ -28,22 +28,24 @@ namespace Final___Magix.Controllers
 			return View();
 		}
 
-		// GET: TradeInController/Create
-		//*//
-		public ActionResult GetMatchingCardNames(string term)
-		{
-			var matchingCardNames = _dbContext.BulkData
-				.Where(card => card.Name.Contains(term))
-				.Select(card => card.Name)
-				.ToList();
+        // GET: TradeInController/Create
+        //*//
+        [HttpGet]
+        public IActionResult GetMatchingCardNames(string term)
+        {
+            var matchingCardNames = _dbContext.Cards
+                .Where(card => card.Name.ToLower().Contains(term))
+                .Select(card => card.Name)
+                .ToList();
 
-			return Json(matchingCardNames);
-		}
+            return Json(matchingCardNames);
+        }
 
 
 
-		// POST: TradeInController/Create
-		[HttpPost]
+
+        // POST: TradeInController/Create
+        [HttpPost]
 		[ValidateAntiForgeryToken]
 		public ActionResult Create(IFormCollection collection)
 		{

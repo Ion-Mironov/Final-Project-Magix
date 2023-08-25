@@ -41,19 +41,20 @@ window.addEventListener('scroll', closeAllTooltips);
 	$(function() {
 		$("#cardNameInput").autocomplete({
 			source: function (request, response) {
+				var term = request.term.toLowerCase();
 				$.ajax({
-					url: '/TradeIn/GetMatchingCardNames',  // Change this URL to the correct action
-					dataType: 'json',
-					data: {
-						term: request.term
-					},
+					url: '/TradeIn/GetMatchingCardNames', // Replace with the correct URL
+					data: { term: term },
 					success: function (data) {
 						response(data);
 					}
 				});
 			},
-			minLength: 2 // Minimum characters before triggering autocomplete
+			minLength: 2
 		});
     });
 </script>
+
+
+
 //*//

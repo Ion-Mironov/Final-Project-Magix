@@ -12,14 +12,7 @@ namespace Final___Magix
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            public void ConfigureServices(IServiceCollection services)
-            {
-                // Other services...
-
-                services.AddDbContext<CardContext>(options =>
-                    options.UseSqlServer(ConnectionString("Data Source=YourServer;Initial Catalog=YourDatabase;User Id=YourUsername;Password=YourPassword;")));
-            }
-
+            builder.Services.AddDbContext<CardContext>();
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
