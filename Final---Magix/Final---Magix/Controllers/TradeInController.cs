@@ -29,13 +29,15 @@ namespace Final___Magix.Controllers
 		}
 
 		// GET: TradeInController/Create
-		public ActionResult Create()
+		//*//
+		public ActionResult GetMatchingCardNames(string term)
 		{
-			var bulkDataEntries = _dbContext.BulkData.ToList(); // Fetch your BulkData entries from the database
+			var matchingCardNames = _dbContext.BulkData
+				.Where(card => card.Name.Contains(term))
+				.Select(card => card.Name)
+				.ToList();
 
-			ViewBag.BulkDataEntries = bulkDataEntries;
-
-			return View();
+			return Json(matchingCardNames);
 		}
 
 

@@ -7,7 +7,7 @@
 namespace Final___Magix.Migrations
 {
     /// <inheritdoc />
-    public partial class Chilupe : Migration
+    public partial class data : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

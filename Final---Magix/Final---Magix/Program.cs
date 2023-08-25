@@ -1,5 +1,8 @@
 using Final___Magix.Api;
 using Final___Magix.DataContext;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using System.Configuration;
 
 namespace Final___Magix
 {
@@ -8,7 +11,15 @@ namespace Final___Magix
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            builder.Services.AddDbContext<CardContext>();
+
+            public void ConfigureServices(IServiceCollection services)
+            {
+                // Other services...
+
+                services.AddDbContext<CardContext>(options =>
+                    options.UseSqlServer(ConnectionString("Data Source=YourServer;Initial Catalog=YourDatabase;User Id=YourUsername;Password=YourPassword;")));
+            }
+
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
@@ -47,7 +58,14 @@ namespace Final___Magix
                 context.SeedData();
             }
 
-            app.Run();
+			
+
+			app.Run();
+        }
+
+        private static Action<SqlServerDbContextOptionsBuilder>? ConnectionString(string v)
+        {
+            throw new NotImplementedException();
         }
     }
 }
