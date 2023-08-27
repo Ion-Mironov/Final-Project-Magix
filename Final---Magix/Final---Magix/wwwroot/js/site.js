@@ -35,21 +35,5 @@ window.onclick = function (event) {
 window.addEventListener('scroll', closeAllTooltips);
 
 
-//I want to make it so when one clicks on the card name list inside the create view. As they type out a cards name a drop down appeasr displaying every card that matches their search. 
-//*//
-<script>
-	$(function() {
-		$("#cardNameInput").autocomplete({
-			source: function (request.term.toLowerCase();
-			$.ajax({
-				url: '/TradeIn/GetMatchingCardName', //could replace with an API endpoint
-				data: { term: term },
-				success: function (data) {
-					response(data)
-				}
-			}))
-		})
-	}
-</script>
 
 //*//

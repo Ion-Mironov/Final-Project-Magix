@@ -1,5 +1,7 @@
+/*var $j = jQuery.noConflict();*/
+
 function debounce(func, delay) {
-    let timoutId;
+    let timeoutId;
     return function () {
         clearTimeout(timeoutId);
         timeoutId = setTimeout(() => {
@@ -29,5 +31,6 @@ $(document).ready(function () {
 
     $("#cardName").on("input", function () {
         validateCardNameDebounced();
+        $("#error-message").hide();
     });
 });

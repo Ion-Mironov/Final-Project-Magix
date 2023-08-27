@@ -1,3 +1,5 @@
+/*var $j = jQuery.noConflict();*/
+
 $(document).ready(function () {
     // Listen for changes in the card name input field
     $("#cardName").on("input", function () {
@@ -15,9 +17,21 @@ function populatePrintDropdown(cardName) {
         .done(function (response) {
             response.forEach(function (printOption) {
                 const option = document.createElement("option");
-                option.value = printOption.Id; // Use the Id property as option value
-                option.textContent = `${printOption.ImageSmall} - ${printOption.SetName} (${printOption.SetCode})`;
+                const img = document.createElement("img");
+                const text = document.createElement("span");
 
+                option.value = printOption.Id; // Use the Id property as option value
+                option.classList.add("printOptionWrapper");
+
+                img.src = printOption.ImageSmall;
+                img.alt = printOption.SetName;
+                img.classList.add("printOptionsImage");
+
+                text.classList.add("printOptionText");
+                text.innerText = `${printOption.SetName} (${printOption.SetCode})`;
+
+                option.appendChild(img);
+                option.appendChild(text);
                 printDropdown.appendChild(option);
             });
         })
