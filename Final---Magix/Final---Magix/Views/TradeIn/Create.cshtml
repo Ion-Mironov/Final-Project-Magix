@@ -11,6 +11,7 @@
         </div>
 
         <form class="tradein-form-wrapper" method="post" asp-action="AddToTradeIn">
+            <!-- ********************************* CARD NAME *************************************-->
             <div class="cardNameWrapper">
                 <div class="label-with-tooltip">
                     <label for="cardName">Card Name</label>
@@ -24,30 +25,51 @@
                 </div>
                 <input type="text" id="cardName" name="cardName" required>
             </div>
+            <!-- ********************************* PRINT     *************************************-->
+            <div class="printTypeWrapper">
+                <div class="label-with-tooltip">
+                    <label for="cardPrint">Print</label>
+                    <span class="tooltip-icon" onclick="openTooltip('tooltip-cardPrint')">?</span>
+                </div>
+                <div class="tooltip-modal" id="tooltip-cardPrint">
+                    <div class="tooltip-content tooltip-content-box">
+                        Choose the card print from the list
+                    </div>
+                </div>
+                </div>
 
-            <!-- ... Other form fields ... -->
+                <!-- ********************************* CONDITION *************************************-->
+                <!-- ********************************* FOIL      *************************************-->
+                <!-- ********************************* QUANTITY  *************************************-->
 
-            <div class="tradein-button">
-                <button type="submit">Add to Trade-in</button>
-            </div>
+
+                <div class="tradein-button">
+                    <button id="add-to-tradein-button" type="submit">Add to Trade-in</button> <!-- Add event listener to Javascript for this button's functionality! -->
+                </div>
         </form>
 
         <div class="tradein-list-wrapper">
+            <!--Potentially rename this to container?-->
             <div class="tradein-list">
-                <!-- Add items dynamically here -->
+                <!--Potentially rename this to wrapper?-->
+                <ul>
+                    <!-- This is where the Javascript will append each new object created from the form -->
+                </ul>
             </div>
             <div class="tradein-total">
-                TOTAL: $<span id="total-price">0.00</span>
+                TOTAL: $<span id="total-price">0.00</span> <!-- #total-price will get updated by Javascript -->
             </div>
         </div>
 
         <div class="confirm-tradein-button">
-            <button type="submit">Confirm Trade-In</button>
+            <button id="confirm-tradein-button" type="submit">Confirm Trade-In</button>
         </div>
     </div>
 </div>
 
+<script src="~/js/validation.js"></script>
 <script src="~/js/site.js"></script>
+<script src="~/js/addtotradein.js"></script>
 
 @section Scripts {
     @{
