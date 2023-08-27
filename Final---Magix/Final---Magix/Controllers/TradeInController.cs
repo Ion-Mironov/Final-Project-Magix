@@ -2,6 +2,7 @@
 using Final___Magix.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 
 namespace Final___Magix.Controllers
 {
@@ -41,48 +42,25 @@ namespace Final___Magix.Controllers
             return Json(matchingCardNames);
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
-            try
-            {
-                string cardName = collection["cardName"];
-
-                IEnumerable<string> matchingCards = _dbContext.Cards
-                    .Where(card => card.Name.ToLower().Contains(cardName.ToLower()))
-                    .Select(card => card.Name)
-                    .ToList();
-
-                ViewBag.BulkDataEntries = _dbContext.BulkData.ToList();
-                ViewBag.MatchingCards = matchingCards;
-
-                // Add your trade-in creation logic here
-
-                return View();
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-
-
-        // GET: TradeInController/Edit/5
-        public ActionResult Edit(int id)
+		[HttpGet]
+		public IActionResult Create()
 		{
 			return View();
 		}
 
-		// POST: TradeInController/Edit/5
-		[HttpPost]
+
+        // POST: TradeInController/Create
+        [HttpPost]
 		[ValidateAntiForgeryToken]
-		public ActionResult Edit(int id, IFormCollection collection)
+		public ActionResult Create(IFormCollection collection)
 		{
 			try
 			{
-				return RedirectToAction(nameof(Index));
+				//fetch matching card data and add it to the trade-in
+
+
+				ViewBag.BulkDataEntries = _dbContext.BulkData.ToList();
+				return View();
 			}
 			catch
 			{
@@ -110,11 +88,12 @@ namespace Final___Magix.Controllers
 				return View();
 			}
 		}
-		// Logic to retrieve matching cards based on card name
-		private IEnumerable<TradeInModel> GetMatchingCards(string cardName)
+		// Get all Name properties from the BulkData db table and store them in a list
+		public IActionResult ValidateCardName(string cardName)
 		{
-			// Example query: Retrieve cards whose name contains the entered card name
-			return _dbContext.TradeIns.Where(card => cardName.Contains(cardName)).ToList();
+			var bulkDataNames = _dbContext.BulkData.Select(data => data.Name).ToList();
+			var isValid = bulkDataNames.Contains(cardName);
+			return Ok(new { isValid = isValid });
 		}
 	}
 }

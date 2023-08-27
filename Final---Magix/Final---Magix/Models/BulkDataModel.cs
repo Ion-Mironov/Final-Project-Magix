@@ -17,7 +17,10 @@ namespace Final___Magix.Models
         public string? Id { get; set; }
         [JsonPropertyName("name")]
         public string? Name { get; set; }
-
+        [JsonPropertyName("set_name")]
+        public string? SetName { get; set; }
+        [JsonPropertyName("set")]
+        public string? SetCode { get; set; }
         [JsonPropertyName("imagesmall")]
         public string? ImageSmall { get; set; }
         [JsonPropertyName("imagenormal")]
