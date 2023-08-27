@@ -41,35 +41,36 @@ namespace Final___Magix.Controllers
             return Json(matchingCardNames);
         }
 
-
-
-
-        // POST: TradeInController/Create
         [HttpPost]
-		[ValidateAntiForgeryToken]
-		public ActionResult Create(IFormCollection collection)
-		{
-			try
-			{
-				string cardName = collection["cardName"];
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(IFormCollection collection)
+        {
+            try
+            {
+                string cardName = collection["cardName"];
 
-				IEnumerable<TradeInModel> matchingCards = GetMatchingCards(cardName);
+                IEnumerable<string> matchingCards = _dbContext.Cards
+                    .Where(card => card.Name.ToLower().Contains(cardName.ToLower()))
+                    .Select(card => card.Name)
+                    .ToList();
 
-				ViewBag.BulkDataEntries = _dbContext.BulkData.ToList();
-				ViewBag.MatchingCards = matchingCards; // Add this line to pass matching cards to the view
+                ViewBag.BulkDataEntries = _dbContext.BulkData.ToList();
+                ViewBag.MatchingCards = matchingCards;
 
-				return View();
-			}
-			catch
-			{
-				return View();
-			}
-		}
+                // Add your trade-in creation logic here
+
+                return View();
+            }
+            catch
+            {
+                return View();
+            }
+        }
 
 
 
-		// GET: TradeInController/Edit/5
-		public ActionResult Edit(int id)
+        // GET: TradeInController/Edit/5
+        public ActionResult Edit(int id)
 		{
 			return View();
 		}

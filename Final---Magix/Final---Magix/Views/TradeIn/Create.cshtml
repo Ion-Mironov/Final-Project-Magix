@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Final___Magix.Models.TradeInModel>
+﻿@*@model IEnumerable<Final___Magix.Models.TradeInModel>
 
 @{
     ViewData["Title"] = "Create";
@@ -48,6 +48,105 @@
 </div>
 
 <script src="~/js/site.js"></script>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+*@
+
+
+@model IEnumerable<Final___Magix.Models.TradeInModel>
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="tradein-container">
+    <div class="alpha-tradein-wrapper">
+        <div class="tradein-greeting-text-image">
+            <img src="/Images/tradein_greeting.png" alt="Trade-In Greeting Text">
+        </div>
+
+        <form class="tradein-form-wrapper" method="post" asp-action="AddToTradeIn">
+            <div class="cardNameWrapper">
+                <div class="label-with-tooltip">
+                    <label for="cardName">Card Name</label>
+                    <span class="tooltip-icon" onclick="openTooltip('tooltip-cardName')">?</span>
+                </div>
+                <div class="tooltip-modal" id="tooltip-cardName">
+                    <div class="tooltip-content tooltip-content-box">
+                        Search by entering any word(s) found in the card title.<br>
+                        Partial matches will also provide results.
+                    </div>
+                </div>
+                <input type="text" id="cardName" name="cardName" required>
+            </div>
+
+            <!-- ... Other form fields ... -->
+
+            <div class="tradein-button">
+                <button type="submit">Add to Trade-in</button>
+            </div>
+        </form>
+
+        <div class="tradein-list-wrapper">
+            <div class="tradein-list">
+                <!-- Add items dynamically here -->
+            </div>
+            <div class="tradein-total">
+                TOTAL: $<span id="total-price">0.00</span>
+            </div>
+        </div>
+
+        <div class="confirm-tradein-button">
+            <button type="submit">Confirm Trade-In</button>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script>
+    $(function () {
+        function openTooltip(id) {
+            // Tooltip related code
+        }
+
+        function closeTooltip(id) {
+            // Tooltip related code
+        }
+
+        function closeAllTooltips() {
+            // Tooltip related code
+        }
+
+        $(document).on('click', function (event) {
+            if (!$(event.target).hasClass('tooltip-icon')) {
+                closeAllTooltips();
+            }
+        });
+
+        $(window).on('scroll', closeAllTooltips);
+
+        $("#cardName").autocomplete({
+            source: function (request, response) {
+                var term = request.term.toLowerCase();
+                $.ajax({
+                    url: '@Url.Action("GetMatchingCardNames", "TradeIn")',
+                    data: { term: term },
+                    success: function (data) {
+                        response(data);
+                    }
+                });
+            },
+            minLength: 2
+        });
+    });
+</script>
 
 @section Scripts {
     @{
