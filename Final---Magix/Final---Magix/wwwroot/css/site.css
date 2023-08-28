@@ -324,21 +324,11 @@ navbar {
 			grid-column: 1;
 			grid-row: 2;
 		}
-			.printOptionWrapper {
-				display: grid;
-				grid-template-columns: auto 1fr;
-			}
-				.printOptionImage {
-					grid-column: 1;
-				}
-				.printOptionText {
-					grid-column: 2;
-				}
 		.cardBorderWrapper {
 			grid-column: 2;
 			grid-row: 2;
 		}
-		.printTypeWrapper {
+		.setWrapper {
 			grid-column: 1;
 			grid-row: 3;
 		}
