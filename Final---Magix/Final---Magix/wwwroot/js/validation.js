@@ -1,5 +1,3 @@
-/*var $j = jQuery.noConflict();*/
-
 function debounce(func, delay) {
     let timeoutId;
     return function () {
@@ -20,6 +18,8 @@ function validateCardName() {
             } else {
                 $("#error-message").show();
             }
+            //Trigger cardPrintPopulation check to allow the script to run to populate the dropdown
+            $(document).trigger("validationComplete"); 
         })
         .fail(function () {
             //handle errors here
