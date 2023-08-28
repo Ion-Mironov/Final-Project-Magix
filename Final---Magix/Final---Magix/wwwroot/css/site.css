@@ -320,15 +320,15 @@ navbar {
 			grid-column: 1/3;
 			grid-row: 1;
 		}
-		.cardEditionWrapper {
+		.cardSetWrapper {
 			grid-column: 1;
 			grid-row: 2;
 		}
-		.cardBorderWrapper {
+		.cardQuantityWrapper {
 			grid-column: 2;
 			grid-row: 2;
 		}
-		.setWrapper {
+		.cardFoilWrapper {
 			grid-column: 1;
 			grid-row: 3;
 		}
