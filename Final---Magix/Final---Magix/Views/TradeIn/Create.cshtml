@@ -1,4 +1,4 @@
-﻿model IEnumerable<Final___Magix.Models.TradeInModel>
+﻿@model IEnumerable<Final___Magix.Models.TradeInModel>
 
 @{
     ViewData["Title"] = "Create";
@@ -24,6 +24,7 @@
                     </div>
                 </div>
                 <input type="text" id="cardName" name="cardName" required>
+                <div class="error-message" style="color: red; display: none;">Invalid card name, please try again.</div>
             </div>
             <!-- ********************************* PRINT     *************************************-->
             <div class="printTypeWrapper">
@@ -36,16 +37,38 @@
                         Choose the card print from the list
                     </div>
                 </div>
+                <select id="cardPrint">
+                   <!-- Options will be dynamically populated by cardPrintPopulation.js -->
+                </select>
+            </div>
+
+            <!-- ********************************* CONDITION *************************************-->
+            <div class="cardConditionWrapper">
+                <div class="label-with-tooltip">
+                    <label for="cardCondition">Print</label>
+                    <span class="tooltip-icon" onclick="openTooltip('tooltip-cardCondition')">?</span>
                 </div>
-
-                <!-- ********************************* CONDITION *************************************-->
-                <!-- ********************************* FOIL      *************************************-->
-                <!-- ********************************* QUANTITY  *************************************-->
-
-
-                <div class="tradein-button">
-                    <button id="add-to-tradein-button" type="submit">Add to Trade-in</button> <!-- Add event listener to Javascript for this button's functionality! -->
+                <div class="tooltip-modal" id="tooltip-cardCondition">
+                    <div class="tooltip-content tooltip-content-box">
+                        Choose the card print from the list
+                    </div>
                 </div>
+                <select>
+                    <option>Near Mint (NM)</option>
+                    <option>Lightly Played (LP)</option>
+                    <option>Moderately Played (MP)</option>
+                    <option>Heavily Played (HP)</option>
+                    <option>Damaged (D)</option>
+                </select>
+            </div>
+
+            <!-- ********************************* FOIL      *************************************-->
+            <!-- ********************************* QUANTITY  *************************************-->
+
+
+            <div class="tradein-button">
+                <button id="add-to-tradein-button" type="submit">Add to Trade-in</button> <!-- Add event listener to Javascript for this button's functionality! -->
+            </div>
         </form>
 
         <div class="tradein-list-wrapper">
@@ -67,8 +90,9 @@
     </div>
 </div>
 
-<script src="~/js/validation.js"></script>
 <script src="~/js/site.js"></script>
+<script src="~/js/validation.js"></script>
+<script src="~/js/cardPrintPopulation.js"></script>
 <script src="~/js/addtotradein.js"></script>
 
 @section Scripts {

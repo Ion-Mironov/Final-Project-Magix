@@ -31,16 +31,6 @@ namespace Final___Magix.Controllers
 
         // GET: TradeInController/Create
         //*//
-        [HttpGet]
-        public IActionResult GetMatchingCardNames(string term)
-        {
-            var matchingCardNames = _dbContext.Cards
-                .Where(card => card.Name.ToLower().Contains(term))
-                .Select(card => card.Name)
-                .ToList();
-
-            return Json(matchingCardNames);
-        }
 
 		[HttpGet]
 		public IActionResult Create()
@@ -95,5 +85,31 @@ namespace Final___Magix.Controllers
 			var isValid = bulkDataNames.Contains(cardName);
 			return Ok(new { isValid = isValid });
 		}
-	}
+		//Get matching prints to populate the dropdown
+		public IActionResult GetMatchingPrints(string cardName)
+		{
+			var matchingPrints = _dbContext.BulkData
+				.Where(print => print.Name.Contains(cardName))
+				.Select(print => new
+				{
+					Id = print.Id,
+					ImageSmall = print.ImageSmall,
+					SetName = print.SetName,
+					SetCode = print.SetCode
+				})
+				.ToList();
+			return Json(matchingPrints);
+		}
+        [HttpGet]
+        public IActionResult GetMatchingCardNames(string term)
+        {
+            var matchingCardNames = _dbContext.Cards
+                .Where(card => card.Name.ToLower().Contains(term))
+                .Select(card => card.Name)
+                .ToList();
+
+            return Json(matchingCardNames);
+        }
+
+    }
 }

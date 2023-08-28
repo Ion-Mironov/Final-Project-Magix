@@ -296,14 +296,15 @@ navbar {
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 245px 1fr auto;
 }
-	/* ▼ alpha-tradein-wrapper children ▼ */
-	.tradein-greeting-text-image {
-		grid-column: 1/3;							/* Used to span across both columns; 1 tells it where to start and 3 tells it to stop at the end of column 2 */
-		grid-row: 1;									/* Set to first row of tradein-container */
-		display: flex;
-		justify-content: center;
-		padding-top: 180px;
-	}
+
+/* ▼ alpha-tradein-wrapper children ▼ */
+.tradein-greeting-text-image {
+	grid-column: 1/3; /* Used to span across both columns; 1 tells it where to start and 3 tells it to stop at the end of column 2 */
+	grid-row: 1; /* Set to first row of tradein-container */
+	display: flex;
+	justify-content: center;
+	padding-top: 180px;
+}
  
 	.tradein-form-wrapper {
 		grid-column: 1;								/* Place in the first column of alpha-tradein-wrapper */
@@ -323,6 +324,16 @@ navbar {
 			grid-column: 1;
 			grid-row: 2;
 		}
+			.printOptionWrapper {
+				display: grid;
+				grid-template-columns: auto 1fr;
+			}
+				.printOptionImage {
+					grid-column: 1;
+				}
+				.printOptionText {
+					grid-column: 2;
+				}
 		.cardBorderWrapper {
 			grid-column: 2;
 			grid-row: 2;

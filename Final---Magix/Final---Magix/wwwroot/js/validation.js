@@ -1,5 +1,5 @@
 function debounce(func, delay) {
-    let timoutId;
+    let timeoutId;
     return function () {
         clearTimeout(timeoutId);
         timeoutId = setTimeout(() => {
@@ -18,6 +18,8 @@ function validateCardName() {
             } else {
                 $("#error-message").show();
             }
+            //Trigger cardPrintPopulation check to allow the script to run to populate the dropdown
+            $(document).trigger("validationComplete"); 
         })
         .fail(function () {
             //handle errors here
@@ -29,5 +31,6 @@ $(document).ready(function () {
 
     $("#cardName").on("input", function () {
         validateCardNameDebounced();
+        $("#error-message").hide();
     });
 });
