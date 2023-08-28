@@ -20,9 +20,9 @@ namespace Final___Magix.Models
 		public string Set { get; set; }         // Which group the card belongs to
 
 		[Required]
-		public string Print { get; set; }		// Regular or Special printing
-
-		[Required]
 		public bool Foil { get; set; }			// Whether the card is shiny or not
+
+		//Potentially need to add a quantity property to hold the number of the specific card during tradein
+		//Might not need to if we implement it properly in the confirmtradein.js
 		}
 	}
