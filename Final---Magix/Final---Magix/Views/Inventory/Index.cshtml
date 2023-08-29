@@ -1,10 +1,9 @@
-﻿@Model IEnumerable<Final___Magix.Models.Inventory>
-
+﻿
+					<!---- ↓↓↓↓ TESTING CODE CHUNK ↓↓↓↓ ---->
+@* 
 @{
 	ViewData["Title"] = "Browse our wares!";
 }
-
-					<!---- ↓↓↓↓ TESTING CODE CHUNK ↓↓↓↓ ---->
 
 <div class="inventory-bg-container">
 
@@ -69,11 +68,16 @@
 		</div>
 	</div>
 </div>
+ *@
 					<!---- ↑↑↑↑ TESTING CODE CHUNK ↑↑↑↑ ---->
 
 
 
 				<!---- ↓↓↓↓ ACTUAL PROJECT CODE CHUNK ↓↓↓↓ ---->
+@Model IEnumerable<Final___Magix.Models.Inventory>
+@{
+	ViewData["Title"] = "Browse our wares!";
+}
 
 <div class="inventory-bg-container">
 
@@ -103,3 +107,4 @@
 	</div>
 </div>
 				<!---- ↑↑↑↑ ACTUAL PROJECT CODE CHUNK ↑↑↑↑ ---->
+ 
