@@ -4,7 +4,7 @@
     ViewData["Title"] = "Create";
 }
 
-<div class="tradein-container">
+<div class="tradein-bg-container">
     <div class="alpha-tradein-wrapper">
         <div class="tradein-greeting-text-image">
             <img src="/Images/tradein_greeting.png" alt="Trade-In Greeting Text">
@@ -38,6 +38,7 @@
                     </div>
                 </div>
 				<select id="cardSet" name="cardSet" required>
+					<option value="">-----</option>
 					<option value="Adventures in the Forgotten Realms">Adventures in the Forgotten Realms</option>
 					<option value="Aether Revolt">Aether Revolt</option>
 					<option value="Alara Reborn">Alara Reborn</option>
@@ -230,6 +231,7 @@
                     </div>
                 </div>
 				<select id="cardCondition">
+					<option value="">-----</option>
                     <option value="NM">Near Mint (NM)</option>
                     <option value="LP">Lightly Played (LP)</option>
                     <option value="MP">Moderately Played (MP)</option>
@@ -252,6 +254,7 @@
 					</div>
 				</div>
 				<select id="foil" name="foil">
+					<option value="">-----</option>
 					<option value="false">Non-Foil</option>
 					<option value="true">Foil</option>
 				</select>

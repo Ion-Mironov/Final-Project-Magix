@@ -6,6 +6,7 @@ const cardNameInput = document.getElementById("cardName");
 const tradeInObjects = []; //init empty array to hold tradein objects
 const tradeInList = document.querySelector(".tradein-list ul");
 const totalPriceSpan = document.getElementById("total-price");
+const formEntire = document.querySelector(".tradein-form-wrapper");
 
 const addToTradeInButton = document.getElementById("add-to-tradein-button");
 //add event listener to Add To Tradein Button
@@ -49,6 +50,7 @@ function handleAddToTradeIn() {
             //update UI
             updateTradeInList();
             updateTotalPrice();
+            formEntire.reset();
         });
     });
 }
@@ -61,25 +63,25 @@ function fetchMatchingCardData(cardName) {
 }
 function validateCardSet(cardSet) {
     if (cardSet === "") {
-        alert("Please select a card set.");
+        $("#error-message-set").show();
         return;
     }
 }
 function validateCardCondition(cardCondition) {
     if (cardCondition === "") {
-        alert("Please select a card condition.");
+        $("#error-message-condition").show();
         return;
     }
 }
 function validateCardFoil(cardFoil) {
     if (cardFoil === "") {
-        alert("Please select an option for Foil");
+        $("#error-message-foil").show();
         return;
     }
 }
 function validateCardQuantity(cardQuantity) {
     if (cardQuantity === "" || isNaN(cardQuantity) || cardQuantity <= 0) {
-        alert("Please enter a valid card quantity");
+        $("#error-message-qty").show();
         return;
     }
 }
@@ -88,7 +90,7 @@ function findExistingObject(cardName, cardSet, cardCondition, cardFoil) {
         obj.cardName === cardName &&
         obj.cardSet === cardSet &&
         obj.cardCondition === cardCondition &&
-        obj.cardFoil === cardFoil,
+        obj.cardFoil === cardFoil
     );
 }
 function updateTradeInList() {
