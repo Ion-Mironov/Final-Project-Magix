@@ -98,7 +98,7 @@ function updateTradeInList() {
 
     tradeInObjects.forEach(obj => {
         const listItem = document.createElement("li");
-        listItem.textContent = `${obj.cardName} - ${obj.cardSet} - ${obj.cardCondition} - Foil: ${obj.cardFoil ? "Yes" : "No"} - Qty: ${obj.cardQuantity} - Price: ${obj.cardPrice}`;
+        listItem.textContent = `${obj.cardName} - ${obj.cardSet} - ${obj.cardCondition} - Foil: ${obj.cardFoil == "true" ? "Yes" : "No"} - Qty: ${obj.cardQuantity} - Price: ${obj.cardPrice}`;
         tradeInList.appendChild(listItem);
     });
 }
