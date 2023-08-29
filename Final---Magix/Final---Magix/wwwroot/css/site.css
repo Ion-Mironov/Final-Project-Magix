@@ -1,5 +1,4 @@
 ﻿/* Content is laid out as follows:
-
 	• Shared/_Layout.cshtml			← (Responsible for setting initial design layout for all pages)
 	• Home/Privacy.cshtml
 	• Home/Index.cshtml				← (Home page)
@@ -115,15 +114,12 @@ navbar {
     }
 /* ▲ Nav-bar buttons ▲ */
 
-
 /* ↑↑ Shared/_Layout.cshtml ↑↑ */
 
 
 /* ↓↓ Home/Privacy.cshtml ↓↓ */
 .privacy-content {
-
     padding: 20px;
-
 }
 /* ↑↑ Home/Privacy.cshtml ↑↑ */
 
@@ -263,7 +259,6 @@ navbar {
         transform: scale(0.8);
     }
 /* ▲ Wrappers ▲ */
-
 
 /* ↑↑ Home/Index.cshtml ↑↑ */
 
