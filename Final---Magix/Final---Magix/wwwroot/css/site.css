@@ -1,9 +1,9 @@
 ﻿/* Content is laid out as follows:
-	• Shared/_Layout.cshtml			← (Responsible for setting initial design layout for all pages)
-	• Home/Privacy.cshtml
-	• Home/Index.cshtml				← (Home page)
-	• Inventory/Index.cshtml		← (Browse inventory page)
-	• TradeIn/Index.cshtml			← (Trade-in page)
+	• Shared/_Layout.cshtml			← Sets design layout for all pages	►Lines 13-112
+	• Home/Privacy.cshtml			←									►Lines 115-119
+	• Home/Index.cshtml				← Home page							►Lines 122-252
+	• Inventory/Index.cshtml		← Browse inventory page				►Lines 255-300
+	• TradeIn/Index.cshtml			← Trade-in page						►Lines 303-500
 
 	NOTE: All pages are wrapped in a <div class="container"> tag, which is responsible for setting the content layout of the page. It also contains the background image of the page. All other elements are wrapped in a subsequent <div class="wrapper"> tag which handles the layout of the content within the page.
 */
@@ -35,7 +35,7 @@ header {
 	border-bottom: 10px solid transparent;
 	border-image-source: url(/Images/border_image.png);
 	border-image-slice: 100;
-	z-index: 4;					/* Ensure that header is always displayed on top of everything else */
+	z-index: 4;					/* Ensures that header is always displayed on top of everything else */
 }
 
 footer {
@@ -52,8 +52,8 @@ footer {
 }
 
 h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
+	font-size: 2em;
+	margin-bottom: 20px;
 }
 
 h4 {
@@ -66,10 +66,10 @@ h4 {
 
 /* ▼ Nav-bar buttons ▼ */
 navbar {
-    display: flex;
-    justify-content: space-between;
-    width: 465px;
-    padding-left: 80px;
+	display: flex;
+	justify-content: space-between;
+	width: 465px;
+	padding-left: 80px;
 }
 	.navbar-buttons {
 		display: flex;
@@ -89,6 +89,7 @@ navbar {
 				background-image: url('/Images/home_hover.png');
 				width: 90px;
 			}
+
 		#browse-button {
 			background-image: url('/Images/browse_no_hover.png');
 			width: 116px;
@@ -97,6 +98,7 @@ navbar {
 				background-image: url('/Images/browse_hover.png');
 				width: 116px;
 			}
+
 		#tradein-button {
 			background-image: url('/Images/tradein_no_hover.png');
 			width: 128px;
@@ -106,7 +108,6 @@ navbar {
 				width: 128px;
 			}
 /* ▲ Nav-bar buttons ▲ */
-
 
 /* ↑↑ Shared/_Layout.cshtml ↑↑ */
 
@@ -120,13 +121,13 @@ navbar {
 
 /* ↓↓ Home/Index.cshtml ↓↓ */
 .home-bg-container {
-    display: flex;
-    justify-content: center;
-    background-image: url('/Images/home_background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 2036px;
+	display: flex;
+	justify-content: center;
+	background-image: url('/Images/home_background.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 2036px;
 }
 
 	/* ▼ Wrappers ▼ */
@@ -181,7 +182,7 @@ navbar {
 							
 				/*	↓↓↓		The ‘hsla’ function is called a color stop, and it stands for “Hue, Saturation, Lightness, and Alpha”.	↓↓↓
 					↓↓↓		The syntax for it is “hsla(hue, saturation%, lightness%, alpha)”; ►hue◄ is a value between 0 ←→ 360,	↓↓↓
-					↓↓↓		►saturation◄ and ►lightness◄ are percentages between 0% ←→ 100%, ►alpha◄ is a value between 0 ←→ 1.		↓↓↓		*/
+					↓↓↓		►saturation◄ and ►lightness◄ are percentages between 0% ←→ 100%, ►alpha◄ is a value between 0 ←→ 1.		↓↓↓	*/
 					background: linear-gradient(90deg,
 						hsla(0, 0%, 100%, .1) 0,
 						hsla(0, 0%, 100%, .1) 40%,
@@ -200,17 +201,16 @@ navbar {
 						transition-timing-function: cubic-bezier(.02, .04, .75, .75), cubic-bezier(.02, .04, .75, .75);
 					}
 
-.featured-images-cardA {
-    grid-column: 1;
-    display: flex;
-    justify-content: center;
-}
-
-.featured-images-cardB {
-    grid-column: 2;
-    display: flex;
-    justify-content: center;
-}
+			.featured-images-cardA {
+				grid-column: 1;
+				display: flex;
+				justify-content: center;
+			}
+			.featured-images-cardB {
+				grid-column: 2;
+				display: flex;
+				justify-content: center;
+			}
 
 		.new-additions-text-wrapper {
 			grid-row: 4;
@@ -345,6 +345,7 @@ navbar {
 				.cardNameWrapper input {
 					height: 37px;
 				}
+
 			.cardEditionWrapper {
 				grid-column: 1;
 				grid-row: 2;
@@ -356,6 +357,7 @@ navbar {
 				.cardQuantityWrapper input {
 					height: 37px;
 				}
+
 			.printTypeWrapper {
 				grid-column: 1;
 				grid-row: 3;
@@ -389,11 +391,9 @@ navbar {
 			grid-template-rows: 275px 25px;					/* Create 2 rows */
 			font-weight: bold;
 		}
-
 			ul {
 				padding: 0.5rem;
 			}
-
 			.tradein-list {
 				grid-column: 1/4;				/* Place in the first column of tradein-list-wrapper and spread across all columns */
 				grid-row: 1/4;					/* Place in the second row of tradein-list-wrapper and span all rows */
