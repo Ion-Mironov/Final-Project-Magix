@@ -1,25 +1,528 @@
-html {
-  font-size: 14px;
-}
+﻿/* Content is laid out as follows:
+	• Shared/_Layout.cshtml			← (Responsible for setting initial design layout for all pages)
+	• Home/Privacy.cshtml
+	• Home/Index.cshtml				← (Home page)
+	• Inventory/Index.cshtml		← (Browse inventory page)
+	• TradeIn/Index.cshtml			← (Trade-in page)
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
+	NOTE: All pages are wrapped in a <div class="container"> tag, which is responsible for setting the content layout of the page. It also contains the background image of the page. All other elements are wrapped in a subsequent <div class="wrapper"> tag which handles the layout of the content within the page.
+*/
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
 
-html {
-  position: relative;
-  min-height: 100%;
+/* ↓↓ Shared/_Layout.cshtml ↓↓ */
+a {
+    color: #0077cc;
+    text-decoration: none;
 }
 
 body {
-  margin-bottom: 60px;
+    display: grid; /* This is set to [display: grid] to override Bootstrap's default [display: block] */
+    padding-top: 52px;
+    padding-bottom: 38px;
+    overflow-x: auto; /* Automatically display a scrollbar if the viewable content is wider than what can be initially seen */
+    overflow-y: auto; /* Automatically display a scrollbar if the viewable content is taller than what can be initially seen */
 }
-* {
-    color: orange;
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 52px;
+    background-image: url(/Images/mahogany_wood.jpg);
+    padding-top: 2px;
+    padding-bottom: 40px;
+    border-bottom: 10px solid transparent;
+    border-image-source: url(/Images/border_image.png);
+    border-image-slice: 100;
+    z-index: 4; /* Ensure that header is always displayed on top of everything else */
 }
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-image: url(/Images/mahogany_wood.jpg);
+    color: #ffffff;
+    text-align: center;
+    border-top: 10px solid transparent;
+    border-image-source: url(/Images/border_image.png);
+    border-image-slice: 100;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-size: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #dddddd;
+    padding-bottom: 10px;
+}
+
+/* ▼ Nav-bar buttons ▼ */
+navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 465px;
+    padding-left: 80px;
+}
+
+.navbar-buttons {
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-indent: -9999px; /* Position the link text off-screen */
+    padding: 0.5rem 1rem;
+    color: #0d6efd;
+    text-decoration: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
+
+#home-button {
+    background-image: url('/Images/home_no_hover.png');
+    width: 90px;
+}
+
+    #home-button:hover {
+        background-image: url('/Images/home_hover.png');
+        width: 90px;
+    }
+
+#browse-button {
+    background-image: url('/Images/browse_no_hover.png');
+    width: 116px;
+}
+
+    #browse-button:hover {
+        background-image: url('/Images/browse_hover.png');
+        width: 116px;
+    }
+
+#tradein-button {
+    background-image: url('/Images/tradein_no_hover.png');
+    width: 128px;
+}
+
+    #tradein-button:hover {
+        background-image: url('/Images/tradein_hover.png');
+        width: 128px;
+    }
+/* ▲ Nav-bar buttons ▲ */
+
+/* ↑↑ Shared/_Layout.cshtml ↑↑ */
+
+
+/* ↓↓ Home/Privacy.cshtml ↓↓ */
+.privacy-content {
+    padding: 20px;
+}
+/* ↑↑ Home/Privacy.cshtml ↑↑ */
+
+
+/* ↓↓ Home/Index.cshtml ↓↓ */
+.home-bg-container {
+    display: flex;
+    justify-content: center;
+    background-image: url('/Images/home_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 2036px;
+}
+
+/* ▼ Wrappers ▼ */
+.home-alpha-wrapper {
+    display: grid;
+    grid-template-rows: 200px 300px 500px 250px 250px; /* Create five rows at specified sizes */
+    justify-content: center;
+}
+
+.welcome-text-wrapper {
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.featured-text-wrapper {
+    grid-row: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+    .featured-text-wrapper img {
+        height: 125px;
+    }
+
+.featured-images-wrapper {
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: 358px 358px;
+    justify-content: center;
+    align-items: center;
+    height: 500px; /* Set the exact height of the featured card images */
+    column-gap: 5rem;
+}
+
+.featured-images-cardA,
+.featured-images-cardB {
+    height: 500px; /* Match the size defined in the parent wrapper */
+    width: auto; /* Maintain aspect ratio of the featured card images */
+    position: relative; /* Ensures that the '::after' pseudo-element contains itself within the parent wrapper columns */
+    overflow: hidden; /* Hide the overflow of the shine effect */
+}
+
+    .featured-images-cardA::after, /* This creates a shine effect on the images when hovered over */
+    .featured-images-cardB::after {
+        content: "";
+        position: absolute;
+        top: -13%; /* Position the effect from the top */
+        left: -104%; /* Position the effect's starting point to the left of the image */
+        opacity: 0; /* Make the effect transparent */
+        width: 10%; /* Set the width of the effect */
+        height: 125%; /* Set the height of the effect */
+        transform: rotate(30deg); /* Set the rotation of the effect */
+        /*	↓↓↓		The ‘hsla’ function is called a color stop, and it stands for “Hue, Saturation, Lightness, and Alpha”.	↓↓↓
+					↓↓↓		The syntax for it is “hsla(hue, saturation%, lightness%, alpha)”; ►hue◄ is a value between 0 ←→ 360,	↓↓↓
+					↓↓↓		►saturation◄ and ►lightness◄ are percentages between 0% ←→ 100%, ►alpha◄ is a value between 0 ←→ 1.		↓↓↓		*/
+        background: linear-gradient(90deg, hsla(0, 0%, 100%, .1) 0, hsla(0, 0%, 100%, .1) 40%, hsla(0, 0%, 100%, .4) 77%, hsla(0, 0%, 100%, .5) 92%, hsla(0, 0%, 100%, 0));
+    }
+
+    .featured-images-cardA:hover::after,
+    .featured-images-cardB:hover::after {
+        left: 150%; /* Set the endpoint of the effect */
+        opacity: 1; /* Make the effect opaque when it completes the transition */
+        transition-property: left, opacity; /* Set what properties of the effect are affected */
+        transition-duration: .6s, .6s; /* How quickly the effect animates */
+        /*	↓↓↓	The ‘cubic-bezier’ function is a timing function that allows you to control the speed of the animation.	↓↓↓ */
+        transition-timing-function: cubic-bezier(.02, .04, .75, .75), cubic-bezier(.02, .04, .75, .75);
+    }
+
+.featured-images-cardA {
+    grid-column: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.featured-images-cardB {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.new-additions-text-wrapper {
+    grid-row: 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+    .new-additions-text-wrapper img {
+        height: 93px;
+    }
+
+.home-cards-wrapper {
+    grid-row: 5;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-cards {
+    position: relative;
+    z-index: 0;
+}
+
+    .home-cards:hover {
+        z-index: 1;
+    }
+
+    .home-cards img {
+        width: 125px;
+        transition: transform 0.3s ease;
+    }
+
+    .home-cards:hover img {
+        transform: scale(1.5);
+    }
+
+    .home-cards:not(:hover) img {
+        transform: scale(0.8);
+    }
+/* ▲ Wrappers ▲ */
+
+/* ↑↑ Home/Index.cshtml ↑↑ */
+
+
+/* ↓↓ Inventory/Index.cshtml ↓↓ */
+.inventory-bg-container {
+    grid-row: 2;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background-image: url('/Images/scroll_background.png');
+    background-size: cover;
+    height: 1300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    padding-top: 35px;
+}
+
+.inventory-greeting-text-image {
+    display: flex;
+    position: absolute;
+    top: 15%;
+    justify-content: center;
+}
+
+    .inventory-greeting-text-image img {
+        width: 75%;
+    }
+
+/* ▼ Wrappers ▼ */
+.inventory-alpha-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    top: 250px;
+    gap: 40px;
+}
+
+.inventory-row-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.inventory-cards {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+}
+/* ▲ Wrappers ▲ */
+
+/* ↑↑ Inventory/Index.cshtml ↑↑ */
+
+
+/* ↓↓ TradeIn/Index.cshtml ↓↓ */
+.tradein-bg-container {
+    grid-row: 2;
+    position: relative;
+    background-image: url('/Images/scroll_background.png');
+    background-size: cover;
+    height: 1300px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ▼ Wrappers ▼ */
+.tradein-alpha-wrapper {
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: 140px 400px auto;
+    justify-content: center;
+    align-items: center;
+    column-gap: 4rem;
+    margin-top: 150px;
+}
+
+.tradein-greeting-text-image {
+    grid-column: 1/3; /* Used to span across both columns; 1 tells it where to start and 3 tells it to stop at the end of column 2 */
+    grid-row: 1; /* Place in the first row of tradein-container */
+    display: flex;
+    justify-content: center;
+}
+
+.tradein-form-wrapper {
+    grid-column: 1; /* Place in the first column of alpha-tradein-wrapper */
+    grid-row: 2; /* Place in the second row of alpha-tradein-wrapper */
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Create 2 columns */
+    grid-template-rows: 75px 75px 75px 75px; /* Create 4 rows */
+    font-weight: bold;
+    column-gap: 10px;
+}
+
+.cardNameWrapper {
+    grid-column: 1/3;
+    grid-row: 1;
+}
+
+    .cardNameWrapper input {
+        height: 37px;
+    }
+
+.cardEditionWrapper {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.cardQuantityWrapper {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+    .cardQuantityWrapper input {
+        height: 37px;
+    }
+
+.printTypeWrapper {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.cardConditionWrapper {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.tradein-button {
+    display: flex;
+    grid-column: 1;
+    grid-row: 4;
+    padding: 15px;
+}
+
+    .tradein-button button {
+        background-color: #20bcc5;
+        color: #000000;
+        padding: 10px;
+        border: none;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 15px;
+    }
+
+.tradein-list-wrapper {
+    grid-column: 2; /* Place in the second column of alpha-tradein-wrapper */
+    grid-row: 2; /* Place in the second row of alpha-tradein-wrapper */
+    position: relative;
+    display: grid;
+    grid-template-columns: 2.5fr 0.5fr 0.8fr; /* Create 3 columns */
+    grid-template-rows: 275px 25px; /* Create 2 rows */
+    font-weight: bold;
+}
+
+ul {
+    padding: 0.5rem;
+}
+
+.tradein-list {
+    grid-column: 1/4; /* Place in the first column of tradein-list-wrapper and spread across all columns */
+    grid-row: 1/4; /* Place in the second row of tradein-list-wrapper and span all rows */
+    display: flex;
+    flex-direction: column;
+    background: white; /* Create a white box to display the lsit of cards being traded in */
+    height: 275px;
+    overflow-y: scroll;
+    font-weight: normal; /* Set the font style for the card information back to normal */
+}
+
+    .tradein-list li {
+        display: grid;
+        grid-template-columns: 2.5fr 0.5fr 0.8fr;
+        padding: 0px 0px 4px 4px;
+    }
+
+.price {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 4px;
+}
+
+.tradein-total {
+    grid-column: 1/4; /* Place in the first column of tradein-list-wrapper and spread across all columns */
+    grid-row: 2; /* Place in the second row of tradein-list-wrapper */
+    display: flex;
+    justify-content: flex-end;
+    border-top: 2px solid #000000;
+    background: lightblue;
+    height: 25px;
+    padding-right: 20px;
+}
+
+.confirm-tradein-button {
+    display: flex;
+    grid-column: 1/3;
+    grid-row: 3;
+    justify-content: center;
+}
+
+    .confirm-tradein-button button {
+        background-color: #e2ff00;
+        color: #000000;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 25px;
+    }
+/* ▲ Wrappers ▲ */
+
+/* ▼ Form fields ▼ */
+input { /* This relates to the input box where you enter in the Card Name */
+    background: #ffffff;
+    border: 2px solid #203fcb;
+    width: 100%;
+}
+
+.label-with-tooltip { /* This relates to the label name (Card Name, Edition, etc.) for all card fields */
+    display: flex;
+}
+
+select { /* This relates to the 'select' function for the dropdown menus */
+    width: 100%;
+    padding: 5px;
+    border: 2px solid #203fcb;
+}
+/* ▲ Form fields ▲ */
+
+/* ▼ Question mark modal ▼ */
+.tooltip-content {
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.tooltip-icon {
+    position: relative; /* This is needed in order to position the tooltip */
+    cursor: help; /* This turns the mouse pointer into different icons. 'help' is a pointer with question mark. */
+    font-size: 16px;
+    color: #ffffff; /* White color for the question mark */
+    background-color: #0077cc; /* Blue background */
+    border-radius: 50%; /* This causes the borders to become more rounded, turning a square into a circle */
+    width: 15px; /* Width of the circle */
+    height: 15px; /* Height of the circle */
+    display: flex; /* Align the question mark to the center */
+    align-items: center; /* Vertically aligns question mark in the center of blue circle */
+    justify-content: center; /* Horizontally aligns question mark in the center of blue circle */
+    margin-left: 7px; /* Add left margin to create some space. */
+}
+
+.tooltip-modal {
+    display: none; /* Set to [display: none] so that the modal only displays when tooltip is clicked on */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5; /* Ensures that the modal appears on top of everything else on the page */
+}
+/* ▲ Question mark modal ▲ */
+
+/* ↑↑ TradeIn/Index.cshtml ↑↑ */
