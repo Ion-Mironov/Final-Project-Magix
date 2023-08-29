@@ -288,13 +288,16 @@ navbar {
 		.inventory-row-wrapper {
 			display: flex;
 			justify-content: center;
-			gap: 20px;
+			gap: 40px;
 		}
 			.inventory-cards {
 			display: flex;
 			flex-direction: column;
 			width: 100px;
 			}
+				.inventory-cards img {
+					width: 125%;
+				}
 	/* ▲ Wrappers ▲ */
 
 /* ↑↑ Inventory/Index.cshtml ↑↑ */

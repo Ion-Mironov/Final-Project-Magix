@@ -74,7 +74,8 @@
 
 
 				<!---- ↓↓↓↓ ACTUAL PROJECT CODE CHUNK ↓↓↓↓ ---->
-@Model IEnumerable<Final___Magix.Models.Inventory>
+
+<!-- @Model IEnumerable<Final___Magix.Models.Inventory> -->
 @{
 	ViewData["Title"] = "Browse our wares!";
 }
@@ -94,10 +95,10 @@
 			@for (var j = i; j < i + 8 && j < Model.Count; j++)
 			{
 				<div class="inventory-cards">
-					<img src="@Model[j].ImageSmall" alt="Small Image of Card @j">
+					@* <img src="@Model[j].ImageSmall" alt="Small Image of Card @j"> *@
 					<img src="@Model[j].ImageNormal" alt="Normal Image of Card @j">
-					<img src="@Model[j].ImageLarge" alt="Large Image of Card @j">
-					<img src="@Model[j].ImageBorderCrop" alt="Border Crop Image of Card @j">
+					@* <img src="@Model[j].ImageLarge" alt="Large Image of Card @j"> *@
+					@* <img src="@Model[j].ImageBorderCrop" alt="Border Crop Image of Card @j"> *@
 					<p>Price: $@Model[j].Price</p>
 					<p>Stock: @Model[j].Quantity</p>
 				</div>
