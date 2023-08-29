@@ -88,7 +88,7 @@ function findExistingObject(cardName, cardSet, cardCondition, cardFoil) {
         obj.cardName === cardName &&
         obj.cardSet === cardSet &&
         obj.cardCondition === cardCondition &&
-        obj.cardFoil === cardFoil
+        obj.cardFoil === cardFoil,
     );
 }
 function updateTradeInList() {
@@ -96,13 +96,15 @@ function updateTradeInList() {
 
     tradeInObjects.forEach(obj => {
         const listItem = document.createElement("li");
-        listItem.textContent = `${obj.cardName} - ${obj.cardSet} - ${obj.cardCondition} - Foil: ${obj.cardFoil ? "Yes" : "No"} - Qty: ${obj.cardQuantity}`;
+        listItem.textContent = `${obj.cardName} - ${obj.cardSet} - ${obj.cardCondition} - Foil: ${obj.cardFoil ? "Yes" : "No"} - Qty: ${obj.cardQuantity} - Price: ${obj.cardPrice}`;
         tradeInList.appendChild(listItem);
     });
 }
-function calculateObjectTotalPrice() {
+function calculateObjectTotalPrice(cardModel) {
     //Need to figure out this function's logic
-    return Math.Random() * 10 + 1; //TEMPORARY LOGIC JUST TO MAKE SURE OUR OBJECTS HAVE PRICE DATA LOL!
+    //We have access to cardPrice I think... Lets use that
+    return cardModel.cardPrice * cardModel.cardQuantity;
+    
 }
 function updateTotalPrice() {
     const totalPrice = tradeInObjects.reduce((total, obj) => {

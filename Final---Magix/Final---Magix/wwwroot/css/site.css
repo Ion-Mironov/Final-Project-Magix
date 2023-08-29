@@ -295,6 +295,10 @@ navbar {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 245px 1fr auto;
+	height: 90%;
+	width: 90%;
+	padding-left: 10%;
+	grid-gap: 45px;
 }
 
 /* ▼ alpha-tradein-wrapper children ▼ */
@@ -314,6 +318,7 @@ navbar {
 		grid-template-columns: 1fr 1fr;				/* 2 columns */
 		grid-template-rows: 75px 75px 75px 75px;		/* 4 rows */
 		font-weight: bold;
+		margin-top: 25px;
 	}
 		/* ▼ tradein-form-wrapper children ▼ */
 		.cardNameWrapper {
@@ -360,6 +365,7 @@ navbar {
 		grid-template-columns: 1fr 1fr 1fr;			/* 3 columns */
 		grid-template-rows: auto 75px;				/* 2 rows */
 		font-weight: bold;
+		height: 80%;
 	}
 		/* ▼ tradein-list-wrapper children ▼ */
 		.tradein-list {
