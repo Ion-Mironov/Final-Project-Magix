@@ -24,7 +24,7 @@
                     </div>
                 </div>
                 <input type="text" id="cardName" name="cardName" required>
-                <div id="error-message" style="color: red; display: none;">Invalid card name, please try again.</div>
+                <div id="error-message-name" style="color: red; display: none;">Invalid card name, please try again.</div>
             </div>
             <!-- ********************************* SET     *************************************-->
             <div class="cardSetWrapper">
@@ -215,6 +215,7 @@
 					<option value="Zendikar Rising">Zendikar Rising</option>
 					<option value="Zendikar">Zendikar</option>
 				</select>
+				<div id="error-message-set" style="color: red; display: none;">Please select a set from the dropdown menu.</div>
 			</div>
 
             <!-- ********************************* CONDITION *************************************-->
@@ -228,13 +229,15 @@
                         Choose the card print from the list
                     </div>
                 </div>
-                <select>
-                    <option>Near Mint (NM)</option>
-                    <option>Lightly Played (LP)</option>
-                    <option>Moderately Played (MP)</option>
-                    <option>Heavily Played (HP)</option>
-                    <option>Damaged (D)</option>
+				<select id="cardCondition">
+                    <option value="NM">Near Mint (NM)</option>
+                    <option value="LP">Lightly Played (LP)</option>
+                    <option value="MP">Moderately Played (MP)</option>
+                    <option value="HP">Heavily Played (HP)</option>
+                    <option value="D">Damaged (D)</option>
                 </select>
+				<div id="error-message-condition" style="color: red; display: none;">Please select a condition from the dropdown menu.</div>
+
             </div>
 
             <!-- ********************************* FOIL      *************************************-->
@@ -252,6 +255,8 @@
 					<option value="false">Non-Foil</option>
 					<option value="true">Foil</option>
 				</select>
+				<div id="error-message-foil" style="color: red; display: none;">Please select an option from the dropdown menu.</div>
+
 			</div>
             <!-- ********************************* QUANTITY  *************************************-->
 			<div class="cardQuantityWrapper">
@@ -265,13 +270,15 @@
 					</div>
 				</div>
 				<input type="number" id="cardQuantity" name="cardQuantity" min="1" required>
-				<div class="error-message" style="color: red; display: none;">Invalid quantity, please try again.</div>
+				<div class="error-message-quantity" style="color: red; display: none;">Invalid quantity, please try again.</div>
 			</div>
 
+			<!-- ********************************* Add To Tradein Button  *************************************-->
             <div class="tradein-button">
                 <button id="add-to-tradein-button" type="button">Add to Trade-in</button> <!-- Add event listener to Javascript for this button's functionality! -->
             </div>
         </form>
+		<!-- ********************************* TradeIn List  *************************************-->
 
         <div class="tradein-list-wrapper">
             <!--Potentially rename this to container?-->
@@ -285,6 +292,7 @@
                 TOTAL: $<span id="total-price">0.00</span> <!-- #total-price will get updated by Javascript -->
             </div>
         </div>
+		<!-- ********************************* Confirm Tradein Button  *************************************-->
 
         <div class="confirm-tradein-button">
             <button id="confirm-tradein-button" type="button">Confirm Trade-In</button>
@@ -293,9 +301,7 @@
 </div>
 
 
-<script src="~/js/validation.js"></script>
-<script src="~/js/addtotradein.js"></script>
-<script src="~/js/confirmbutton.js"></script>
+
 
 @section Scripts {
     @{

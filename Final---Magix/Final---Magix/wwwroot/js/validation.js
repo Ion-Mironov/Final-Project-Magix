@@ -11,16 +11,12 @@ function debounce(func, delay) {
 function validateCardName() {
     const cardName = $("#cardName").val();
 
-    $.post("/TradeIn/ValidateCardName", { cardName: cardName })
-        .done(function (response) {
-            if (response.isValid) {
-                $("#error-message").hide();
-            } else {
-                $("#error-message").show();
-            }
+    return $.post("/TradeIn/ValidateCardName", { cardName: cardName })
+        .then(function (response) {
+            return response.isValid;
         })
         .fail(function () {
-            //handle errors here
+            return false;
         });
 }
 
@@ -28,7 +24,12 @@ $(document).ready(function () {
     const validateCardNameDebounced = debounce(validateCardName, 2000);
 
     $("#cardName").on("input", function () {
-        validateCardNameDebounced();
-        $("#error-message").hide();
+        validateCardNameDebounced().then(function (isValid) {
+            if (isValid) {
+                $("#error-message-name").hide();
+            } else {
+                $("#error-message-name").show();
+            }
+        });
     });
 });
