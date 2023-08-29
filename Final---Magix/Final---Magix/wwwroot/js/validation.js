@@ -24,7 +24,9 @@ $(document).ready(function () {
     const validateCardNameDebounced = debounce(validateCardName, 2000);
 
     $("#cardName").on("input", function () {
-        validateCardNameDebounced().then(function (isValid) {
+        console.log("Input event triggered");
+        validateCardName().then(function (isValid) {
+            console.log("Validation result:", isValid);
             if (isValid) {
                 $("#error-message-name").hide();
             } else {
