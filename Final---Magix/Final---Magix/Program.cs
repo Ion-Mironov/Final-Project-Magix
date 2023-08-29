@@ -1,3 +1,9 @@
+using Final___Magix.Api;
+using Final___Magix.DataContext;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using System.Configuration;
+
 namespace Final___Magix
 {
     public class Program
@@ -6,8 +12,16 @@ namespace Final___Magix
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Services.AddDbContext<CardContext>();
+
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            // Register ScryfallApiClient with dependency injection.
+            builder.Services.AddHttpClient<ScryfallApiClient>(client =>
+            {
+                client.BaseAddress = new Uri("https://api.scryfall.com/");
+            });
 
             var app = builder.Build();
 
@@ -15,7 +29,6 @@ namespace Final___Magix
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
@@ -30,7 +43,22 @@ namespace Final___Magix
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
 
-            app.Run();
+            //Call the data seeding method
+            using (var scope = app.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                var context = services.GetRequiredService<CardContext>();
+                context.SeedData();
+            }
+
+			
+
+			app.Run();
+        }
+
+        private static Action<SqlServerDbContextOptionsBuilder>? ConnectionString(string v)
+        {
+            throw new NotImplementedException();
         }
     }
 }
