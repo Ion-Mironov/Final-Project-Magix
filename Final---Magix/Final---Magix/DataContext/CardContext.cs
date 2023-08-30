@@ -36,36 +36,36 @@ namespace Final___Magix.DataContext
 			modelBuilder.Entity<Inventory>().HasData(
 				new Inventory
 				{
-					Id = "655c489f-bffb-45a4-8e7c-2d1a35220197",
-					Name = "Smash to Smithereens",
-					ImageSmall = "https://cards.scryfall.io/small/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-					ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-					ImageLarge = "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-					ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-					Quantity = 10,
-					Price = (decimal)4.99M
+					Id = "ed4cc273-adc3-4f46-9743-134b552d1d56",
+					Name = "Balthor the Defiled",
+					ImageSmall = "https://cards.scryfall.io/small/front/e/d/ed4cc273-adc3-4f46-9743-134b552d1d56.jpg?1562632510",
+					ImageNormal = "https://cards.scryfall.io/normal/front/e/d/ed4cc273-adc3-4f46-9743-134b552d1d56.jpg?1562632510",
+					ImageLarge = "https://cards.scryfall.io/large/front/e/d/ed4cc273-adc3-4f46-9743-134b552d1d56.jpg?1562632510",
+					ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/e/d/ed4cc273-adc3-4f46-9743-134b552d1d56.jpg?1562632510",
+					Quantity = 2,
+					Price = (decimal)11.89M
+                },
+				new Inventory
+				{
+					Id = "b0244a1f-e696-4223-9c14-22c2ca3cb738",
+					Name = "Herd Migration",
+					ImageSmall = "https://cards.scryfall.io/small/front/b/0/b0244a1f-e696-4223-9c14-22c2ca3cb738.jpg?1673307696",
+					ImageNormal = "https://cards.scryfall.io/normal/front/b/0/b0244a1f-e696-4223-9c14-22c2ca3cb738.jpg?1673307696",
+					ImageLarge = "https://cards.scryfall.io/large/front/b/0/b0244a1f-e696-4223-9c14-22c2ca3cb738.jpg?1673307696",
+					ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/b/0/b0244a1f-e696-4223-9c14-22c2ca3cb738.jpg?1673307696",
+					Quantity = 18,
+					Price = (decimal)0.10M
 				},
 				new Inventory
 				{
-					Id = "655c489f-bffb-45a4-8e7c-2d1a35220196",
-					Name = "Smash to Smithereens",
-					ImageSmall = "https://cards.scryfall.io/small/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-					ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-					ImageLarge = "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-					ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-					Quantity = 10,
-					Price = (decimal)4.99M
-				},
-				new Inventory
-				{
-					Id = "655c489f-bffb-45a4-8e7c-2d1a35220195",
-					Name = "Smash to Smithereens",
-					ImageSmall = "https://cards.scryfall.io/small/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-					ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-					ImageLarge = "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-					ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-					Quantity = 10,
-					Price = (decimal)4.99M
+					Id = "7bd0e025-7a75-4641-a51a-27df9dcde05f",
+					Name = "Crawling Barrens",
+					ImageSmall = "https://cards.scryfall.io/small/front/7/b/7bd0e025-7a75-4641-a51a-27df9dcde05f.jpg?1604264359",
+					ImageNormal = "https://cards.scryfall.io/normal/front/7/b/7bd0e025-7a75-4641-a51a-27df9dcde05f.jpg?1604264359",
+					ImageLarge = "https://cards.scryfall.io/large/front/7/b/7bd0e025-7a75-4641-a51a-27df9dcde05f.jpg?1604264359",
+					ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/7/b/7bd0e025-7a75-4641-a51a-27df9dcde05f.jpg?1604264359",
+					Quantity = 4,
+					Price = (decimal)0.18M
 				},
 				new Inventory
 				{
@@ -76,63 +76,63 @@ namespace Final___Magix.DataContext
 					ImageLarge = "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
 					ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
 					Quantity = 10,
-					Price = (decimal)4.99M
+					Price = (decimal)0.22M
 				},
 				new Inventory
 				{
-					Id = "655c489f-bffb-45a4-8e7c-2d1a35220193",
-					Name = "Smash to Smithereens",
-					ImageSmall = "https://cards.scryfall.io/small/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-					ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-					ImageLarge = "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-					ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-					Quantity = 10,
-					Price = (decimal)4.99M
+					Id = "e6246cf3-76bd-476b-9cd9-789b6ad48887",
+					Name = "Kheru Mind-Eater",
+					ImageSmall = "https://cards.scryfall.io/small/front/e/6/e6246cf3-76bd-476b-9cd9-789b6ad48887.jpg?1562626991",
+					ImageNormal = "https://cards.scryfall.io/normal/front/e/6/e6246cf3-76bd-476b-9cd9-789b6ad48887.jpg?1562626991",
+					ImageLarge = "https://cards.scryfall.io/large/front/e/6/e6246cf3-76bd-476b-9cd9-789b6ad48887.jpg?1562626991",
+					ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/e/6/e6246cf3-76bd-476b-9cd9-789b6ad48887.jpg?1562626991",
+					Quantity = 2,
+					Price = (decimal)0.91M
 				},
 				new Inventory
 				{
-					Id = "655c489f-bffb-45a4-8e7c-2d1a35220192",
-					Name = "Smash to Smithereens",
-					ImageSmall = "https://cards.scryfall.io/small/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-					ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-					ImageLarge = "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-					ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-					Quantity = 10,
-					Price = (decimal)4.99M
-				},
+					Id = "bf42524c-97e5-40b2-8a6d-d2a1f0a9eb65",
+					Name = "Keldon Marauders",
+					ImageSmall = "https://cards.scryfall.io/small/front/b/f/bf42524c-97e5-40b2-8a6d-d2a1f0a9eb65.jpg?1618940501",
+					ImageNormal = "https://cards.scryfall.io/normal/front/b/f/bf42524c-97e5-40b2-8a6d-d2a1f0a9eb65.jpg?1618940501",
+					ImageLarge = "https://cards.scryfall.io/large/front/b/f/bf42524c-97e5-40b2-8a6d-d2a1f0a9eb65.jpg?1618940501",
+					ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/b/f/bf42524c-97e5-40b2-8a6d-d2a1f0a9eb65.jpg?1618940501",
+					Quantity = 20,
+					Price = (decimal)0.09M
+                },
 				new Inventory
 				{
-					Id = "655c489f-bffb-45a4-8e7c-2d1a35220191",
-					Name = "Smash to Smithereens",
-					ImageSmall = "https://cards.scryfall.io/small/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-					ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-					ImageLarge = "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-					ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
+					Id = "0e0fa5ab-c4d1-4b2d-ad62-feb651e4b11c",
+					Name = "Thraben Doomsayer",
+					ImageSmall = "https://cards.scryfall.io/small/front/0/e/0e0fa5ab-c4d1-4b2d-ad62-feb651e4b11c.jpg?1591320182",
+					ImageNormal = "https://cards.scryfall.io/normal/front/0/e/0e0fa5ab-c4d1-4b2d-ad62-feb651e4b11c.jpg?1591320182",
+					ImageLarge = "https://cards.scryfall.io/large/front/0/e/0e0fa5ab-c4d1-4b2d-ad62-feb651e4b11c.jpg?1591320182",
+					ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/0/e/0e0fa5ab-c4d1-4b2d-ad62-feb651e4b11c.jpg?1591320182",
 					Quantity = 10,
-					Price = (decimal)4.99M
-				},
+					Price = (decimal)0.19M
+                },
 				new Inventory
 				{
-					Id = "655c489f-bffb-45a4-8e7c-2d1a35220190",
-					Name = "Smash to Smithereens",
-					ImageSmall = "https://cards.scryfall.io/small/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-					ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-					ImageLarge = "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-					ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-					Quantity = 10,
-					Price = (decimal)4.99M
-				},
+					Id = "033afbd5-9937-4957-98ba-48e469a490bb",
+					Name = "Miscast",
+					ImageSmall = "https://cards.scryfall.io/small/front/0/3/033afbd5-9937-4957-98ba-48e469a490bb.jpg?1594735579",
+					ImageNormal = "https://cards.scryfall.io/normal/front/0/3/033afbd5-9937-4957-98ba-48e469a490bb.jpg?1594735579",
+					ImageLarge = "https://cards.scryfall.io/large/front/0/3/033afbd5-9937-4957-98ba-48e469a490bb.jpg?1594735579",
+					ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/0/3/033afbd5-9937-4957-98ba-48e469a490bb.jpg?1594735579",
+					Quantity = 2,
+					Price = (decimal)1.19M
+                },
 
 				 new Inventory
 				 {
-					 Id = "655c489f-bffb-45a4-8e7c-2d1a352201788",
-					 Name = "Smash to Smithereens",
-					 ImageSmall = "https://cards.scryfall.io/small/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-					 ImageNormal = "https://cards.scryfall.io/normal/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-					 ImageLarge = "https://cards.scryfall.io/large/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-					 ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/6/5/655c489f-bffb-45a4-8e7c-2d1a35220197.jpg?1562023107",
-					 Quantity = 11,
-					 Price = (decimal)4.99M
+					 Id = "374b5d57-fd20-4062-9ec2-24ac557d9dde",
+					 Name = "Mina and Denn, Wildborn",
+					 ImageSmall = "https://cards.scryfall.io/small/front/3/7/374b5d57-fd20-4062-9ec2-24ac557d9dde.jpg?1604195020",
+					 ImageNormal = "https://cards.scryfall.io/normal/front/3/7/374b5d57-fd20-4062-9ec2-24ac557d9dde.jpg?1604195020",
+					 ImageLarge = "https://cards.scryfall.io/large/front/3/7/374b5d57-fd20-4062-9ec2-24ac557d9dde.jpg?1604195020",
+					 ImageBorderCrop = "https://cards.scryfall.io/border_crop/front/3/7/374b5d57-fd20-4062-9ec2-24ac557d9dde.jpg?1604195020",
+					 Quantity = 4,
+					 Price = (decimal)0.58M
 				 });
 		}
 

@@ -5,7 +5,7 @@
 namespace Final___Magix.Migrations
 {
     /// <inheritdoc />
-    public partial class value2 : Migration
+    public partial class PopulateListInTradeInDB : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

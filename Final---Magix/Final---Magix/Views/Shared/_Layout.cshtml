@@ -40,8 +40,8 @@
 	<!-- Include jQuery, Bootstrap's JavaScript bundle, and custom site.js -->
 	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="~/js/validation.js"></script>
-	<script src="~/js/addtotradein.js"></script>
-	<script src="~/js/confirmbutton.js"></script>
+	<script type="module" src="~/js/addtotradein.js"></script>
+	<script type="module" src="~/js/confirmbutton.js"></script>
 	<script src="~/js/site.js" asp-append-version="true"></script>
 	@* Additional scripts section *@
 	@await RenderSectionAsync("Scripts", required: false)

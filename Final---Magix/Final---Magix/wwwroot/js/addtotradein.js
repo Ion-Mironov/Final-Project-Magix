@@ -37,6 +37,7 @@ function handleAddToTradeIn() {
             //Create the CardModel objects
             const cardModels = matchingCardData.matchingCardNames.map(match => {
                 return {
+                    cardId: match.id,
                     cardName: match.name,
                     cardSet: cardSet,
                     cardCondition: cardCondition,
@@ -114,3 +115,5 @@ function updateTotalPrice() {
     }, 0);
     totalPriceSpan.textContent = totalPrice.toFixed(2); //updates TOTAL price span element text to be in $0.XX format
 }
+
+export default tradeInObjects;

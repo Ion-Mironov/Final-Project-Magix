@@ -3,6 +3,6 @@
 	public class TradeInModel
 		{
 		public int Id { get; set; }
-		public virtual IEnumerable<CardModel>? Cards { get; set; }
+		public IEnumerable<CardModel>? Cards { get; set; }
 		}
 	}
