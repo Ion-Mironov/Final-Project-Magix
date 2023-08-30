@@ -1,9 +1,9 @@
 ﻿/* Content is laid out as follows:
-	• Shared/_Layout.cshtml			← Sets design layout for all pages	►Lines 13-112
-	• Home/Privacy.cshtml			←									►Lines 115-119
-	• Home/Index.cshtml				← Home page							►Lines 122-252
-	• Inventory/Index.cshtml		← Browse inventory page				►Lines 255-303
-	• TradeIn/Index.cshtml			← Trade-in page						►Lines 306-503
+	• Shared/_Layout.cshtml			← Sets design layout for all pages	►Lines  13-113
+	• Home/Privacy.cshtml			←									►Lines 116-120
+	• Home/Index.cshtml				← Home page							►Lines 123-253
+	• Inventory/Index.cshtml		← Browse inventory page				►Lines 256-304
+	• TradeIn/Index.cshtml			← Trade-in page						►Lines 307-504
 
 	NOTE: All pages are wrapped in a <div class="container"> tag, which is responsible for setting the content layout of the page. It also contains the background image of the page. All other elements are wrapped in a subsequent <div class="wrapper"> tag which handles the layout of the content within the page.
 */
@@ -35,7 +35,7 @@ header {
 	border-bottom: 10px solid transparent;
 	border-image-source: url(/Images/border_image.png);
 	border-image-slice: 100;
-	z-index: 4;					/* Ensures that header is always displayed on top of everything else */
+	z-index: 4;					/* Ensures that the header is always displayed on top of everything else */
 }
 
 footer {
@@ -49,6 +49,7 @@ footer {
 	border-top: 10px solid transparent;
 	border-image-source: url(/Images/border_image.png);
 	border-image-slice: 100;
+	z-index: 4;					/* Ensures that the footer is always displayed on top of everything else */
 }
 
 h2 {

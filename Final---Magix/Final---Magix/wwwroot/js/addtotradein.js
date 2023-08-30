@@ -22,7 +22,7 @@ function handleAddToTradeIn() {
 	// Validate the card name
 	validateCardName().then(function (isValidCardName) {
 		if (!isValidCardName) {
-			return; // Stops if validation failed
+			return;		// Stops if validation failed
 		}
 		
 	// Fetch matching card data //
@@ -54,10 +54,6 @@ function handleAddToTradeIn() {
 					/*cardImage: match.ImageNormal*/
 				};
 			});
-
-			// Create a similar ⌠cardModels⌡ object using controller method
-			// Call the method here ↓
-
 
 			// Add ⌠cardModels⌡ to the ⌠tradeInObjects⌡ array
 			tradeInObjects.push(...cardModels);
@@ -119,8 +115,7 @@ function calculateObjectTotalPrice(cardModel) {				// Need to figure out this fu
 
 function updateTotalPrice() {
 	const totalPrice = tradeInObjects.reduce((total, obj) => {
-		return total + calculateObjectTotalPrice(obj);
-	}, 0);
+		return total + calculateObjectTotalPrice(obj)}, 0);
 	totalPriceSpan.textContent = totalPrice.toFixed(2);		// Updates/converts the TOTAL price <span> element text to be in $0.XX format
 }
 
