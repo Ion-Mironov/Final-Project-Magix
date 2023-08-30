@@ -5,16 +5,11 @@ const confirmTradeInButton = document.getElementById("confirm-tradein-button");
 confirmTradeInButton.addEventListener("click", CreateTradeIn);
 
 function CreateTradeIn() {
-    $.post("/TradeIn/CreateTradeIn", { cards: tradeInObjects }, function (data) {
-        const tradeInId = data.tradeInId;
-
-        tradeInObjects.length = 0;
-        UpdateStoreInventory(tradeInId);
-    });
+    UpdateStoreInventory(tradeInObjects);
 }
 
-function UpdateStoreInventory(tradeInId) {
-    $.post("/Inventory/UpdateInventory", { tradeInId: tradeInId }, function (data) {
+function UpdateStoreInventory(tradeInObjects) {
+    $.post("/Inventory/UpdateInventory", tradeInObjects, function (data) {
         if (data.success) {
             console.log(data.message);
         } else {

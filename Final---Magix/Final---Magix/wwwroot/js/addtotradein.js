@@ -86,14 +86,6 @@ function validateCardQuantity(cardQuantity) {
         return;
     }
 }
-function findExistingObject(cardName, cardSet, cardCondition, cardFoil) {
-    return tradeInObjects.find(obj =>
-        obj.cardName === cardName &&
-        obj.cardSet === cardSet &&
-        obj.cardCondition === cardCondition &&
-        obj.cardFoil === cardFoil
-    );
-}
 function updateTradeInList() {
     tradeInList.innerHTML = "";
 
