@@ -43,10 +43,7 @@ namespace Final___Magix.Controllers
         {
             try
             {
-                //fetch matching card data and add it to the trade-in
-
-
-                ViewBag.BulkDataEntries = _dbContext.BulkData.ToList();
+                IncrementQuantity();
                 return View();
             }
             catch
