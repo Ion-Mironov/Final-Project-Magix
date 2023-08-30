@@ -31,22 +31,21 @@ namespace Final___Magix.Controllers
 			return View();
 			}
 
-
-        // POST: TradeInController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
-            try
-            {
-                IncrementQuantity();
-                return View();
-            }
-            catch
-            {
-                return View();
-            }
-        }
+		// POST: TradeInController/Create
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+		public ActionResult Create(IFormCollection collection)
+			{
+			try
+				{
+				IncrementQuantity();
+				return View();
+				}
+			catch
+				{
+				return View();
+				}
+			}
 
 		// GET: TradeInController/Delete/5
 		public ActionResult Delete(int id)
@@ -84,22 +83,25 @@ namespace Final___Magix.Controllers
 				.Where(card => card.Name.ToLower().Contains(cardName))
 				.ToList();
 
-            return Json(new { matchingCardNames });
-        }
+			return Json(new { matchingCardNames });
+			}
 
-        [HttpPost]
-        public IActionResult IncrementQuantity()
-        {
-            var inventoryItem = _dbContext.StoreInventory.FirstOrDefault(cards => cards.Name == "Balthor the Defiled");
-            var inventoryItem1 = _dbContext.StoreInventory.FirstOrDefault(cards => cards.Name == "Herd Migration");
+		[HttpPost]
+		public IActionResult IncrementQuantity()
+			{
+			var inventoryItem = _dbContext.StoreInventory.FirstOrDefault(cards => cards.Name == "Balthor the Defiled");
+			var inventoryItem1 = _dbContext.StoreInventory.FirstOrDefault(cards => cards.Name == "Herd Migration");
 
-            if (inventoryItem != null && inventoryItem1 != null)
-            {
-                inventoryItem.Quantity += 2;
-                inventoryItem1.Quantity += 3;
-                _dbContext.SaveChanges();
-            }
-            return RedirectToAction("Index", "StoreInventory"); // Redirect to store inventory page
-        }
-    }
-}
+			if (inventoryItem != null && inventoryItem1 != null)
+				{
+				inventoryItem.Quantity += 2;
+				inventoryItem1.Quantity += 3;
+				_dbContext.SaveChanges();
+				}
+
+			return RedirectToAction("Index", "StoreInventory");		// Redirect to store inventory page
+			}
+
+		}   // Closing public class TradeInController : Controller
+
+	}   // Closing namespace Final___Magix.Controllers
