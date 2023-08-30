@@ -3,7 +3,7 @@
 	• Home/Privacy.cshtml			←									►Lines 115-119
 	• Home/Index.cshtml				← Home page							►Lines 122-252
 	• Inventory/Index.cshtml		← Browse inventory page				►Lines 255-300
-	• TradeIn/Index.cshtml			← Trade-in page						►Lines 303-500
+	• TradeIn/Index.cshtml			← Trade-in page						►Lines 303-508
 
 	NOTE: All pages are wrapped in a <div class="container"> tag, which is responsible for setting the content layout of the page. It also contains the background image of the page. All other elements are wrapped in a subsequent <div class="wrapper"> tag which handles the layout of the content within the page.
 */
@@ -349,9 +349,17 @@ navbar {
 					height: 37px;
 				}
 
-			.cardEditionWrapper {
+			.cardSetWrapper {
 				grid-column: 1;
 				grid-row: 2;
+			}
+			.cardConditionWrapper {
+				grid-column: 2;
+				grid-row: 3;
+			}
+			.cardFoilWrapper {
+				grid-column: 1;
+				grid-row: 3;
 			}
 			.cardQuantityWrapper {
 				grid-column: 2;
@@ -361,14 +369,6 @@ navbar {
 					height: 37px;
 				}
 
-			.printTypeWrapper {
-				grid-column: 1;
-				grid-row: 3;
-			}
-			.cardConditionWrapper {
-				grid-column: 2;
-				grid-row: 3;
-			}
 			.tradein-button {
 				display: flex;
 				grid-column: 1;
@@ -452,7 +452,7 @@ input {									/* This relates to the input box where you enter in the Card Nam
 	width: 100%;
 }
 
-.label-with-tooltip {					/* This relates to the label name (Card Name, Edition, etc.) for all card fields */
+.label-with-tooltip {					/* This relates to the label name (Card Name, Set	, etc.) for all card fields */
 	display: flex;
 }
 

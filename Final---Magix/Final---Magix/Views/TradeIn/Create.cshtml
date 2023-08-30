@@ -1,42 +1,58 @@
 ﻿@model IEnumerable<Final___Magix.Models.TradeInModel>
-
 @{
-    ViewData["Title"] = "Create";
+	ViewData["Title"] = "Trading In!";
 }
 
 <div class="tradein-bg-container">
-    <div class="alpha-tradein-wrapper">
-        <div class="tradein-greeting-text-image">
-            <img src="/Images/tradein_greeting.png" alt="Trade-In Greeting Text">
-        </div>
 
-        <form class="tradein-form-wrapper" method="post" asp-action="AddToTradeIn">
-            <!-- ********************************* CARD NAME *************************************-->
-            <div class="cardNameWrapper">
-                <div class="label-with-tooltip">
-                    <label for="cardName">Card Name</label>
-                    <span class="tooltip-icon" onclick="openTooltip('tooltip-cardName')">?</span>
-                </div>
-                <div class="tooltip-modal" id="tooltip-cardName">
-                    <div class="tooltip-content tooltip-content-box">
-                        Search by entering any word(s) found in the card title.<br>
-                        Partial matches will also provide results.
-                    </div>
-                </div>
-                <input type="text" id="cardName" name="cardName" required>
-                <div id="error-message-name" style="color: red; display: none;">Invalid card name, please try again.</div>
-            </div>
-            <!-- ********************************* SET     *************************************-->
-            <div class="cardSetWrapper">
-                <div class="label-with-tooltip">
-                    <label for="cardSet">Print</label>
-                    <span class="tooltip-icon" onclick="openTooltip('tooltip-cardPrint')">?</span>
-                </div>
-                <div class="tooltip-modal" id="tooltip-cardPrint">
-                    <div class="tooltip-content tooltip-content-box">
-                        Choose the card print from the list
-                    </div>
-                </div>
+	<div class="tradein-alpha-wrapper">
+
+		<div class="tradein-greeting-text-image">
+			<img src="/Images/tradein_greeting.png" alt="Trade-In Greeting Text">
+		</div>
+
+		<!-- The 'form' element has its own Bootstrap template which causes styling conflicts. Giving it a class overrides its default template. -->
+		<form class="tradein-form-wrapper" method="post" asp-action="AddToTradeIn">
+
+			<!-- ══════════════════════════════ CARD NAME ══════════════════════════════ -->
+			<div class="cardNameWrapper">
+
+				<!-- <div> template for labels with modal tooltips -->
+				<div class="label-with-tooltip">
+					<label for="cardName">Card Name</label>
+					<span class="tooltip-icon" onclick="openTooltip('tooltip-cardName')">?</span>
+				</div>
+
+				<!-- Tooltip modal for the Card Name field; triggered on click. See /wwwroot/js/site.js for JavaScript code. -->
+				<div class="tooltip-modal" id="tooltip-cardName">
+
+					<!-- Content of the tooltip; styled and positioned as a tooltip box -->
+					<div class="tooltip-content tooltip-content-box">
+						Search by entering any word(s) found in the card title.<br>
+						Partial matches will also provide results.
+					</div>
+
+				</div>
+				
+				<input type="text" id="cardName" name="cardName" required>
+				@* <div id="error-message-name">Invalid card name, please try again.</div> *@
+			</div>
+
+			<!-- ═════════════════════════════════ SET ═════════════════════════════════ -->
+			<div class="cardSetWrapper">
+
+				<div class="label-with-tooltip">
+					<label for="cardSet">Set</label>
+					<span class="tooltip-icon" onclick="openTooltip('tooltip-cardSet')">?</span>
+				</div>
+
+				<div class="tooltip-modal" id="tooltip-cardSet">
+					<div class="tooltip-content tooltip-content-box">
+						Hope you like scrolling!<br>
+						Choose the set the card belongs to from the list.
+					</div>
+				</div>
+
 				<select id="cardSet" name="cardSet" required>
 					<option value="">-----</option>
 					<option value="Adventures in the Forgotten Realms">Adventures in the Forgotten Realms</option>
@@ -216,34 +232,36 @@
 					<option value="Zendikar Rising">Zendikar Rising</option>
 					<option value="Zendikar">Zendikar</option>
 				</select>
-				<div id="error-message-set" style="color: red; display: none;">Please select a set from the dropdown menu.</div>
 			</div>
 
-            <!-- ********************************* CONDITION *************************************-->
-            <div class="cardConditionWrapper">
-                <div class="label-with-tooltip">
-                    <label for="cardCondition">Print</label>
-                    <span class="tooltip-icon" onclick="openTooltip('tooltip-cardCondition')">?</span>
-                </div>
-                <div class="tooltip-modal" id="tooltip-cardCondition">
-                    <div class="tooltip-content tooltip-content-box">
-                        Choose the card print from the list
-                    </div>
-                </div>
+			<!-- ══════════════════════════════ CONDITION ══════════════════════════════ -->
+			<div class="cardConditionWrapper">
+
+				<div class="label-with-tooltip">
+					<label for="cardCondition">Condition</label>
+					<span class="tooltip-icon" onclick="openTooltip('tooltip-cardCondition')">?</span>
+				</div>
+				<div class="tooltip-modal" id="tooltip-cardCondition">
+					<div class="tooltip-content tooltip-content-box">
+						Is it brand new? Or, does it look like it's been through a war?<br>
+						Choose the condition of the card here.
+					</div>
+				</div>
+
 				<select id="cardCondition">
 					<option value="">-----</option>
-                    <option value="NM">Near Mint (NM)</option>
-                    <option value="LP">Lightly Played (LP)</option>
-                    <option value="MP">Moderately Played (MP)</option>
-                    <option value="HP">Heavily Played (HP)</option>
-                    <option value="D">Damaged (D)</option>
-                </select>
-				<div id="error-message-condition" style="color: red; display: none;">Please select a condition from the dropdown menu.</div>
+					<option value="NM">Near Mint (NM)</option>
+					<option value="LP">Lightly Played (LP)</option>
+					<option value="MP">Moderately Played (MP)</option>
+					<option value="HP">Heavily Played (HP)</option>
+					<option value="D">Damaged (D)</option>
+				</select>
 
-            </div>
+			</div>
 
-            <!-- ********************************* FOIL      *************************************-->
+			<!-- ════════════════════════════════ FOIL ════════════════════════════════ -->
 			<div class="cardFoilWrapper">
+
 				<div class="label-with-tooltip">
 					<label for="foil">Foil</label>
 					<span class="tooltip-icon" onclick="openTooltip('tooltip-foil')">?</span>
@@ -253,61 +271,67 @@
 						Choose whether the card is Foil or not.
 					</div>
 				</div>
+
 				<select id="foil" name="foil">
 					<option value="">-----</option>
 					<option value="false">Non-Foil</option>
 					<option value="true">Foil</option>
 				</select>
-				<div id="error-message-foil" style="color: red; display: none;">Please select an option from the dropdown menu.</div>
 
 			</div>
-            <!-- ********************************* QUANTITY  *************************************-->
+
+			<!-- ══════════════════════════════ QUANTITY ══════════════════════════════ -->
 			<div class="cardQuantityWrapper">
+
 				<div class="label-with-tooltip">
 					<label for="cardQuantity">Quantity</label>
 					<span class="tooltip-icon" onclick="openTooltip('tooltip-cardQuantity')">?</span>
 				</div>
 				<div class="tooltip-modal" id="tooltip-cardQuantity">
 					<div class="tooltip-content tooltip-content-box">
-						Enter the quantity of cards you want.
+						How many of this card do you have?
 					</div>
 				</div>
+
 				<input type="number" id="cardQuantity" name="cardQuantity" min="1" required>
-				<div class="error-message-quantity" style="color: red; display: none;">Invalid quantity, please try again.</div>
 			</div>
 
-			<!-- ********************************* Add To Tradein Button  *************************************-->
-            <div class="tradein-button">
-                <button id="add-to-tradein-button" type="button">Add to Trade-in</button> <!-- Add event listener to Javascript for this button's functionality! -->
-            </div>
-        </form>
-		<!-- ********************************* TradeIn List  *************************************-->
+			<!-- ═══════════════════════ ⌠Add to Trade-In⌡ Button ═══════════════════════ -->
+			<div class="tradein-button">
+				<button id="add-to-tradein-button" type="button">Add to Trade-in</button> <!-- Add event listener to JS for this button's functionality! -->
+			</div>
 
-        <div class="tradein-list-wrapper">
-            <!--Potentially rename this to container?-->
-            <div class="tradein-list">
-                <!--Potentially rename this to wrapper?-->
-                <ul>
-                    <!-- This is where the Javascript will append each new object created from the form -->
-                </ul>
-            </div>
-            <div class="tradein-total">
-                TOTAL: $<span id="total-price">0.00</span> <!-- #total-price will get updated by Javascript -->
-            </div>
-        </div>
-		<!-- ********************************* Confirm Tradein Button  *************************************-->
+		</form>
 
-        <div class="confirm-tradein-button">
-            <button id="confirm-tradein-button" type="button">Confirm Trade-In</button>
-        </div>
-    </div>
-</div>
+		<!-- ══════════════════════════════ Trade-In List ══════════════════════════════ -->
+		<!-- Wrapper for the list of cards that are being traded in. -->
+		<div class="tradein-list-wrapper">
 
+			<!-- This will be responsible for displaying all cards, and their details, inputted from the Trade-In form -->
+			<div class="tradein-list">
+				<ul>
+					<!-- This is where the Javascript will append each new object created from the form -->
+				</ul>
+			</div>
 
+			<div class="tradein-total">
+				TOTAL: $<span id="total-price">0.00</span>		<!-- #total-price will get updated by Javascript -->
+			</div>
+		</div>
+
+		<!-- ═════════════════════════ ⌠Confirm Trade-In⌡ Button ═════════════════════════ -->
+		<div class="confirm-tradein-button">
+			<button id="confirm-tradein-button" type="button">Confirm Trade-In</button>
+		</div>
+
+	</div>		<!-- Closing div for tradein-alpha-wrapper -->
+</div>		<!-- Closing div for tradein-bg-container -->
 
 
 @section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
 }
+
+<script src="~/js/site.js"></script>		<!-- This contains the JS code used for the modal tooltips -->
