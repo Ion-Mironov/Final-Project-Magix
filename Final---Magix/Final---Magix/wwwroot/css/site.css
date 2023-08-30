@@ -2,8 +2,8 @@
 	• Shared/_Layout.cshtml			← Sets design layout for all pages	►Lines 13-112
 	• Home/Privacy.cshtml			←									►Lines 115-119
 	• Home/Index.cshtml				← Home page							►Lines 122-252
-	• Inventory/Index.cshtml		← Browse inventory page				►Lines 255-300
-	• TradeIn/Index.cshtml			← Trade-in page						►Lines 303-508
+	• Inventory/Index.cshtml		← Browse inventory page				►Lines 255-303
+	• TradeIn/Index.cshtml			← Trade-in page						►Lines 306-503
 
 	NOTE: All pages are wrapped in a <div class="container"> tag, which is responsible for setting the content layout of the page. It also contains the background image of the page. All other elements are wrapped in a subsequent <div class="wrapper"> tag which handles the layout of the content within the page.
 */
