@@ -98,51 +98,48 @@ namespace Final___Magix.Controllers
 			return Json(new { matchingCardNames });
 		}
 
-		[HttpPost]
-		public IActionResult CreateTradeIn(object[] cards)
-		{
-			//convert array of card objects into the proper type to store in the tradein db
-			List<CardModel> _cards = new();
-			foreach (var obj in cards)
-			{
-				if (obj is CardModel cardModel)
-				{
-					_cards.Add(new CardModel
-					{
-						Id = cardModel.Id,
-						Name = cardModel.Name,
-						Condition = cardModel.Condition,
-						Set = cardModel.Set,
-						Foil = cardModel.Foil,
-						Quantity = cardModel.Quantity,
-						Price = cardModel.Price,
-					});
-				}
-			}
-
-
-
-			//try to add the instance of the tradein to the db
-			try
-			{
-				using (var connection = _dbContext.Database.GetDbConnection())
-				{
-					//Some wizardry... Don't ask.
-					connection.Open();
-					using (var cmd = connection.CreateCommand())
-					{
-						cmd.CommandText = "SET IDENTITY_INSERT TradeIns ON";
-						cmd.ExecuteNonQuery();
-					}
-					var totalTradeInEntries = _dbContext.TradeIns.Count();
-					if (totalTradeInEntries! >= 0) { totalTradeInEntries = 0; }
-					var tradeIn = new TradeInModel
-					{
-						Id = totalTradeInEntries + 1,
-						Cards = _cards
-                    };
-					_dbContext.TradeIns.Add(tradeIn);
-					_dbContext.SaveChanges();
+		//[HttpPost]
+		//public IActionResult CreateTradeIn(object[] cards)
+		//{
+		//	//convert array of card objects into the proper type to store in the tradein db
+		//	List<CardModel> _cards = new();
+		//	foreach (var obj in cards)
+		//	{
+		//		if (obj is CardModel cardModel)
+		//		{
+		//			_cards.Add(new CardModel
+		//			{
+		//				Id = cardModel.Id,
+		//				Name = cardModel.Name,
+		//				Condition = cardModel.Condition,
+		//				Set = cardModel.Set,
+		//				Foil = cardModel.Foil,
+		//				Quantity = cardModel.Quantity,
+		//				Price = cardModel.Price,
+		//			});
+		//		}
+		//	}
+		//	//try to add the instance of the tradein to the db
+		//	try
+		//	{
+		//		using (var connection = _dbContext.Database.GetDbConnection())
+		//		{
+		//			//Some wizardry... Don't ask.
+		//			connection.Open();
+		//			using (var cmd = connection.CreateCommand())
+		//			{
+		//				cmd.CommandText = "SET IDENTITY_INSERT TradeIns ON";
+		//				cmd.ExecuteNonQuery();
+		//			}
+		//			var totalTradeInEntries = _dbContext.TradeIns.Count();
+		//			if (totalTradeInEntries! >= 0) { totalTradeInEntries = 0; }
+		//			var tradeIn = new TradeInModel
+		//			{
+		//				Id = totalTradeInEntries + 1,
+		//				Cards = _cards
+  //                  };
+		//			_dbContext.TradeIns.Add(tradeIn);
+		//			_dbContext.SaveChanges();
 
 					using (var cmd = connection.CreateCommand())
 					{
@@ -176,5 +173,19 @@ namespace Final___Magix.Controllers
 			return RedirectToAction("Index", "StoreInventory"); // Redirect to store inventory page
 		}
 
+		//			using (var cmd = connection.CreateCommand())
+		//			{
+		//				cmd.CommandText = "SET IDENTITY_INSERT TradeIns OFF";
+		//				cmd.ExecuteNonQuery();
+		//			}
+		//		}
+		//		return RedirectToAction("Index");
+		//	}
+		//	catch (Exception ex)
+		//	{
+		//		//handle exceptions here
+		//		return RedirectToAction("Error", "Home");
+		//	}
+		//}
 	}
 }

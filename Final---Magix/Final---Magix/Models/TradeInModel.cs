@@ -3,6 +3,6 @@
 	public class TradeInModel
 		{
 		public int Id { get; set; }
-		public IEnumerable<CardModel>? Cards { get; set; }
+		public string? CardsXml { get; set; }
 		}
 	}
