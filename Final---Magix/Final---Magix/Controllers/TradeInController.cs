@@ -1,9 +1,5 @@
 ﻿using Final___Magix.DataContext;
-using Final___Magix.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
-using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Final___Magix.Controllers
 {
@@ -137,24 +133,42 @@ namespace Final___Magix.Controllers
 		//			{
 		//				Id = totalTradeInEntries + 1,
 		//				Cards = _cards
-  //                  };
+		//                  };
 		//			_dbContext.TradeIns.Add(tradeIn);
 		//			_dbContext.SaveChanges();
 
-					using (var cmd = connection.CreateCommand())
-					{
-						cmd.CommandText = "SET IDENTITY_INSERT TradeIns OFF";
-						cmd.ExecuteNonQuery();
-					}
-				}
-				return RedirectToAction("Index");
-			}
-			catch (Exception ex)
-			{
-				//handle exceptions here
-				return RedirectToAction("Error", "Home");
-			}
-		}
+		//					using (var cmd = connection.CreateCommand())
+		//					{
+		//						cmd.CommandText = "SET IDENTITY_INSERT TradeIns OFF";
+		//						cmd.ExecuteNonQuery();
+		//					}
+		//				}
+		//				return RedirectToAction("Index");
+		//			}
+		//			catch (Exception ex)
+		//			{
+		//	//handle exceptions here
+		//	return RedirectToAction("Error", "Home");
+		//}
+		//		}
+
+
+		//		}
+
+		//			using (var cmd = connection.CreateCommand())
+		//			{
+		//				cmd.CommandText = "SET IDENTITY_INSERT TradeIns OFF";
+		//				cmd.ExecuteNonQuery();
+		//			}
+		//		}
+		//		return RedirectToAction("Index");
+		//	}
+		//	catch (Exception ex)
+		//	{
+		//		//handle exceptions here
+		//		return RedirectToAction("Error", "Home");
+		//	}
+		//}
 
 		[HttpPost]
 		public IActionResult IncrementQuantity()
@@ -172,20 +186,5 @@ namespace Final___Magix.Controllers
 
 			return RedirectToAction("Index", "StoreInventory"); // Redirect to store inventory page
 		}
-
-		//			using (var cmd = connection.CreateCommand())
-		//			{
-		//				cmd.CommandText = "SET IDENTITY_INSERT TradeIns OFF";
-		//				cmd.ExecuteNonQuery();
-		//			}
-		//		}
-		//		return RedirectToAction("Index");
-		//	}
-		//	catch (Exception ex)
-		//	{
-		//		//handle exceptions here
-		//		return RedirectToAction("Error", "Home");
-		//	}
-		//}
 	}
 }
