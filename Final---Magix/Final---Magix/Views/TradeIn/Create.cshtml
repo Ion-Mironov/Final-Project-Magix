@@ -320,9 +320,11 @@
 		</div>
 
 		<!-- ═════════════════════════ ⌠Confirm Trade-In⌡ Button ═════════════════════════ -->
-		<div class="confirm-tradein-button">
-			<button id="confirm-tradein-button" type="submit">Confirm Trade-In</button>
-		</div>
+		<form method="post" action="@Url.Action("IncrementQuantity", "TradeIn")">
+			<div class="confirm-tradein-button">
+				<button id="confirm-tradein-button" type="submit">Confirm Trade-In</button>
+			</div>
+		</form>
 
 	</div>		<!-- Closing div for tradein-alpha-wrapper -->
 </div>		<!-- Closing div for tradein-bg-container -->

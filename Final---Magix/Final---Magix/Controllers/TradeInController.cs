@@ -181,7 +181,7 @@ namespace Final___Magix.Controllers
 			}
 
 
-			return RedirectToAction("Index", "StoreInventory"); // Redirect to store inventory page
+			return RedirectToAction("Index","Inventory"); // Redirect to store inventory page
 		}
 	}
 }
