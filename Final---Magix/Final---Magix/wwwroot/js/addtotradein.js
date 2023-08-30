@@ -51,7 +51,7 @@ function handleAddToTradeIn() {
 					cardFoil: cardFoil,
 					cardQuantity: cardQuantity,
 					cardPrice: match.price,
-					cardImage: match.ImageNormal
+					/*cardImage: match.ImageNormal*/
 				};
 			});
 
