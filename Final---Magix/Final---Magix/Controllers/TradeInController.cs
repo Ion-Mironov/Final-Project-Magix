@@ -99,7 +99,7 @@ namespace Final___Magix.Controllers
 				_dbContext.SaveChanges();
 				}
 
-			return RedirectToAction("Index", "StoreInventory");		// Redirect to store inventory page
+			return RedirectToAction("Index", "Inventory");		// Redirect to store inventory page
 			}
 
 		}   // Closing public class TradeInController : Controller
