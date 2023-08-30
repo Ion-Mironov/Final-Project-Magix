@@ -44,6 +44,7 @@ function handleAddToTradeIn() {
                     cardFoil: cardFoil,
                     cardQuantity: cardQuantity,
                     cardPrice: match.price,
+                    cardImage: match.ImageNormal
                 };
             });
             //Add cardmodels to tradeinobjects array

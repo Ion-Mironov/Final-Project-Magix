@@ -3,6 +3,7 @@ using Final___Magix.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Final___Magix.Controllers
 {
@@ -118,6 +119,9 @@ namespace Final___Magix.Controllers
 					});
 				}
 			}
+
+
+
 			//try to add the instance of the tradein to the db
 			try
 			{
@@ -154,5 +158,23 @@ namespace Final___Magix.Controllers
 				return RedirectToAction("Error", "Home");
 			}
 		}
+
+		[HttpPost]
+		public IActionResult IncrementQuantity()
+		{
+			var inventoryItem = _dbContext.StoreInventory.FirstOrDefault(cards => cards.Name == "Balthor the Defiled");
+			var inventoryItem1 = _dbContext.StoreInventory.FirstOrDefault(cards => cards.Name == "Herd Migration");
+
+			if (inventoryItem != null && inventoryItem1 != null)
+			{
+				inventoryItem.Quantity += 2;
+				inventoryItem1.Quantity += 3;
+				_dbContext.SaveChanges();
+			}
+
+
+			return RedirectToAction("Index", "StoreInventory"); // Redirect to store inventory page
+		}
+
 	}
 }
