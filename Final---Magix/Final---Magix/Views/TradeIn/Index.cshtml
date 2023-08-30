@@ -1,0 +1,337 @@
+﻿<!-- The below code is from the Development branch's TradeIn/Index.cshtml. It was used for comparison with this branch's TradeIn/Create.cshtml -->
+
+@* @model IEnumerable<Final___Magix.Models.TradeInModel>
+@{
+	ViewData["Title"] = "Trading In!";
+}
+
+<div class="tradein-bg-container">
+
+	<div class="tradein-alpha-wrapper">
+
+		<div class="tradein-greeting-text-image">
+			<img src="/Images/tradein_greeting.png" alt="Trade-In Greeting Text">
+		</div>
+
+		<!-- The 'form' element has its own Bootstrap template which causes styling conflicts. Giving it a class overrides its default template. -->
+		<form class="tradein-form-wrapper" method="post" asp-action="AddToTradeIn">
+
+			<!-- ══════════════════════════════ CARD NAME ══════════════════════════════ -->
+			<div class="cardNameWrapper">
+
+				<!-- <div> template for labels with modal tooltips -->
+				<div class="label-with-tooltip">
+					<label for="cardName">Card Name</label>
+					<span class="tooltip-icon" onclick="openTooltip('tooltip-cardName')">?</span>
+				</div>
+
+				<!-- Tooltip modal for the Card Name field; triggered on click. See /wwwroot/js/site.js for JavaScript code. -->
+				<div class="tooltip-modal" id="tooltip-cardName">
+
+					<!-- Content of the tooltip; styled and positioned as a tooltip box -->
+					<div class="tooltip-content tooltip-content-box">
+						Search by entering any word(s) found in the card title.<br>
+						Partial matches will also provide results.
+					</div>
+
+				</div>
+
+				<input type="text" id="cardName" name="cardName" required>
+			</div>
+			
+			<!-- ═══════════════════════════════ EDITION ═══════════════════════════════ -->
+			<div class="cardEditionWrapper">
+
+				<div class="label-with-tooltip">
+					<label for="cardEdition">Edition</label>
+					<span class="tooltip-icon" onclick="openTooltip('tooltip-cardEdition')">?</span>
+				</div>
+
+				<div class="tooltip-modal" id="tooltip-cardEdition">
+					<div class="tooltip-content tooltip-content-box">
+						Hope you like scrolling! This list contains every set in Magic: The Gathering history.
+					</div>
+				</div>
+
+				<select id="cardEdition" name="cardEdition" required>
+					<option value="">-----</option>
+					<option value="Adventures in the Forgotten Realms">Adventures in the Forgotten Realms</option>
+					<option value="Aether Revolt">Aether Revolt</option>
+					<option value="Alara Reborn">Alara Reborn</option>
+					<option value="Alliances">Alliances</option>
+					<option value="Amonkhet">Amonkhet</option>
+					<option value="Antiquities">Antiquities</option>
+					<option value="Apocalypse">Apocalypse</option>
+					<option value="Arabian Nights">Arabian Nights</option>
+					<option value="Archenemy">Archenemy</option>
+					<option value="Avacyn Restored">Avacyn Restored</option>
+					<option value="Battle for Baldur’s Gate">Battle for Baldur’s Gate</option>
+					<option value="Battle for Zendikar">Battle for Zendikar</option>
+					<option value="Betrayers of Kamigawa">Betrayers of Kamigawa</option>
+					<option value="Born of the Gods">Born of the Gods</option>
+					<option value="Champions of Kamigawa">Champions of Kamigawa</option>
+					<option value="Coldsnap">Coldsnap</option>
+					<option value="Commander 2013 Edition">Commander 2013 Edition</option>
+					<option value="Commander 2014">Commander 2014</option>
+					<option value="Commander 2015">Commander 2015</option>
+					<option value="Commander 2016">Commander 2016</option>
+					<option value="Commander Masters">Commander Masters</option>
+					<option value="Commander">Commander</option>
+					<option value="Commander's Arsenal">Commander's Arsenal</option>
+					<option value="Conflux">Conflux</option>
+					<option value="Conspiracy">Conspiracy</option>
+					<option value="Conspiracy: Take the Crown">Conspiracy: Take the Crown</option>
+					<option value="Core Set 2019">Core Set 2019</option>
+					<option value="Core Set 2020">Core Set 2020</option>
+					<option value="Core Set 2021">Core Set 2021</option>
+					<option value="Dark Ascension">Dark Ascension</option>
+					<option value="Darksteel">Darksteel</option>
+					<option value="Dissension">Dissension</option>
+					<option value="Dominaria Remastered">Dominaria Remastered</option>
+					<option value="Dominaria">Dominaria</option>
+					<option value="Dominaria: United">Dominaria: United</option>
+					<option value="Double Masters 2022">Double Masters 2022</option>
+					<option value="Double Masters">Double Masters</option>
+					<option value="Dragon's Maze">Dragon's Maze</option>
+					<option value="Dragons of Tarkir">Dragons of Tarkir</option>
+					<option value="Duel Decks: Ajani vs. Nicol Bolas">Duel Decks: Ajani vs. Nicol Bolas</option>
+					<option value="Duel Decks: Divine vs. Demonic">Duel Decks: Divine vs. Demonic</option>
+					<option value="Duel Decks: Elspeth vs. Tezzeret">Duel Decks: Elspeth vs. Tezzeret</option>
+					<option value="Duel Decks: Garruk vs. Liliana">Duel Decks: Garruk vs. Liliana</option>
+					<option value="Duel Decks: Heroes vs. Monsters">Duel Decks: Heroes vs. Monsters</option>
+					<option value="Duel Decks: Izzet vs. Golgari">Duel Decks: Izzet vs. Golgari</option>
+					<option value="Duel Decks: Jace vs. Chandra">Duel Decks: Jace vs. Chandra</option>
+					<option value="Duel Decks: Jace vs. Vraska">Duel Decks: Jace vs. Vraska</option>
+					<option value="Duel Decks: Knights vs. Dragons">Duel Decks: Knights vs. Dragons</option>
+					<option value="Duel Decks: Phyrexia vs. the Coalition">Duel Decks: Phyrexia vs. the Coalition</option>
+					<option value="Duel Decks: Sorin vs. Tibalt">Duel Decks: Sorin vs. Tibalt</option>
+					<option value="Duel Decks: Speed vs. Cunning">Duel Decks: Speed vs. Cunning</option>
+					<option value="Duel Decks: Venser vs. Koth">Duel Decks: Venser vs. Koth</option>
+					<option value="Eighth Edition">Eighth Edition</option>
+					<option value="Eldritch Moon">Eldritch Moon</option>
+					<option value="Eternal Masters">Eternal Masters</option>
+					<option value="Eventide">Eventide</option>
+					<option value="Exodus">Exodus</option>
+					<option value="Fallen Empires">Fallen Empires</option>
+					<option value="Fate Reforged">Fate Reforged</option>
+					<option value="Fifth Dawn">Fifth Dawn</option>
+					<option value="Fifth Edition">Fifth Edition</option>
+					<option value="Fourth Edition">Fourth Edition</option>
+					<option value="From the Vault: Annihilation">From the Vault: Annihilation</option>
+					<option value="From the Vault: Dragons">From the Vault: Dragons</option>
+					<option value="From the Vault: Exiled">From the Vault: Exiled</option>
+					<option value="From the Vault: Legends">From the Vault: Legends</option>
+					<option value="From the Vault: Realms">From the Vault: Realms</option>
+					<option value="From the Vault: Relics">From the Vault: Relics</option>
+					<option value="From the Vault: Twenty">From the Vault: Twenty</option>
+					<option value="Future Sight">Future Sight</option>
+					<option value="Game Night 2019">Game Night 2019</option>
+					<option value="Game Night">Game Night</option>
+					<option value="Gatecrash">Gatecrash</option>
+					<option value="Guildpact">Guildpact</option>
+					<option value="Guilds of Ravnica">Guilds of Ravnica</option>
+					<option value="Homelands">Homelands</option>
+					<option value="Hour of Devastation">Hour of Devastation</option>
+					<option value="Ice Age">Ice Age</option>
+					<option value="Iconic Masters">Iconic Masters</option>
+					<option value="Ikoria: Lair of Behemoths">Ikoria: Lair of Behemoths</option>
+					<option value="Innistrad">Innistrad</option>
+					<option value="Innistrad: Crimson Vow">Innistrad: Crimson Vow</option>
+					<option value="Innistrad: Midnight Hunt">Innistrad: Midnight Hunt</option>
+					<option value="Invasion">Invasion</option>
+					<option value="Ixalan">Ixalan</option>
+					<option value="Journey into Nyx">Journey into Nyx</option>
+					<option value="Judgment">Judgment</option>
+					<option value="Jumpstart 2022">Jumpstart 2022</option>
+					<option value="Jumpstart">Jumpstart</option>
+					<option value="Kaladesh Remastered">Kaladesh Remastered</option>
+					<option value="Kaladesh">Kaladesh</option>
+					<option value="Kaldheim">Kaldheim</option>
+					<option value="Kamigawa: Neon Dynasty">Kamigawa: Neon Dynasty</option>
+					<option value="Khans of Tarkir">Khans of Tarkir</option>
+					<option value="Legends">Legends</option>
+					<option value="Legions">Legions</option>
+					<option value="Limited Edition Alpha">Limited Edition Alpha</option>
+					<option value="Limited Edition Beta">Limited Edition Beta</option>
+					<option value="Lorwyn">Lorwyn</option>
+					<option value="Magic 2010">Magic 2010</option>
+					<option value="Magic 2011">Magic 2011</option>
+					<option value="Magic 2012">Magic 2012</option>
+					<option value="Magic 2013">Magic 2013</option>
+					<option value="Magic 2014">Magic 2014</option>
+					<option value="Magic 2015">Magic 2015</option>
+					<option value="Magic Origins">Magic Origins</option>
+					<option value="March of the Machine">March of the Machine</option>
+					<option value="March of the Machine: The Aftermath">March of the Machine: The Aftermath</option>
+					<option value="Masters 25">Masters 25</option>
+					<option value="Mercadian Masques">Mercadian Masques</option>
+					<option value="Mirage">Mirage</option>
+					<option value="Mirrodin Besieged">Mirrodin Besieged</option>
+					<option value="Modern Event Deck 2014">Modern Event Deck 2014</option>
+					<option value="Modern Horizons 2">Modern Horizons 2</option>
+					<option value="Modern Horizons">Modern Horizons</option>
+					<option value="Modern Masters 2015 Edition">Modern Masters 2015 Edition</option>
+					<option value="Modern Masters 2017 Edition">Modern Masters 2017 Edition</option>
+					<option value="Modern Masters">Modern Masters</option>
+					<option value="Morningtide">Morningtide</option>
+					<option value="MTG Lord of the Rings">MTG Lord of the Rings</option>
+					<option value="Nemesis">Nemesis</option>
+					<option value="New Phyrexia">New Phyrexia</option>
+					<option value="Ninth Edition">Ninth Edition</option>
+					<option value="Oath of the Gatewatch">Oath of the Gatewatch</option>
+					<option value="Odyssey">Odyssey</option>
+					<option value="Onslaught">Onslaught</option>
+					<option value="Phyrexia: All Will Be One">Phyrexia: All Will Be One</option>
+					<option value="Planar Chaos">Planar Chaos</option>
+					<option value="Planechase 2012 Edition">Planechase 2012 Edition</option>
+					<option value="Planechase">Planechase</option>
+					<option value="Planeshift">Planeshift</option>
+					<option value="Premium Deck Series: Fire and Lightning">Premium Deck Series: Fire and Lightning</option>
+					<option value="Premium Deck Series: Graveborn">Premium Deck Series: Graveborn</option>
+					<option value="Premium Deck Series: Slivers">Premium Deck Series: Slivers</option>
+					<option value="Prophecy">Prophecy</option>
+					<option value="Ravnica Allegiance">Ravnica Allegiance</option>
+					<option value="Ravnica: City of Guilds">Ravnica: City of Guilds</option>
+					<option value="Return to Ravnica">Return to Ravnica</option>
+					<option value="Revised Edition">Revised Edition</option>
+					<option value="Rise of the Eldrazi">Rise of the Eldrazi</option>
+					<option value="Rivals of Ixalan">Rivals of Ixalan</option>
+					<option value="Saviors of Kamigawa">Saviors of Kamigawa</option>
+					<option value="Scars of Mirrodin">Scars of Mirrodin</option>
+					<option value="Scourge">Scourge</option>
+					<option value="Seventh Edition">Seventh Edition</option>
+					<option value="Shadowmoor">Shadowmoor</option>
+					<option value="Shadows over Innistrad">Shadows over Innistrad</option>
+					<option value="Shards of Alara">Shards of Alara</option>
+					<option value="Sixth Edition">Sixth Edition</option>
+					<option value="Streets of New Capenna">Streets of New Capenna</option>
+					<option value="Strixhaven: School of Mages">Strixhaven: School of Mages</option>
+					<option value="Stronghold">Stronghold</option>
+					<option value="Tempest">Tempest</option>
+					<option value="Tenth Edition">Tenth Edition</option>
+					<option value="The Brothers’ War">The Brothers’ War</option>
+					<option value="The Dark">The Dark</option>
+					<option value="Theros Beyond Death">Theros Beyond Death</option>
+					<option value="Theros">Theros</option>
+					<option value="Throne of Eldraine">Throne of Eldraine</option>
+					<option value="Time Spiral Remastered">Time Spiral Remastered</option>
+					<option value="Time Spiral">Time Spiral</option>
+					<option value="Torment">Torment</option>
+					<option value="Ultimate Masters">Ultimate Masters</option>
+					<option value="Unfinity">Unfinity</option>
+					<option value="Unlimited Edition">Unlimited Edition</option>
+					<option value="Unsanctioned">Unsanctioned</option>
+					<option value="Unstable">Unstable</option>
+					<option value="Urza's Destiny">Urza's Destiny</option>
+					<option value="Urza's Legacy">Urza's Legacy</option>
+					<option value="Urza's Saga">Urza's Saga</option>
+					<option value="Visions">Visions</option>
+					<option value="War of the Spark">War of the Spark</option>
+					<option value="Weatherlight">Weatherlight</option>
+					<option value="Worldwake">Worldwake</option>
+					<option value="Zendikar Rising">Zendikar Rising</option>
+					<option value="Zendikar">Zendikar</option>
+				</select>
+
+			</div>
+
+			<!-- ════════════════════════════════ FOIL ════════════════════════════════ -->
+			<div class="cardFoilWrapper">
+
+				<div class="label-with-tooltip">
+					<label for="foil">Foil</label>
+					<span class="tooltip-icon" onclick="openTooltip('tooltip-foil')">?</span>
+				</div>
+				<div class="tooltip-modal" id="tooltip-foil">
+					<div class="tooltip-content tooltip-content-box">
+						Choose whether the card is Foil or not.
+					</div>
+				</div>
+
+				<select id="foil" name="foil">
+					<option value="">-----</option>
+					<option value="false">Non-Foil</option>
+					<option value="true">Foil</option>
+				</select>
+
+			</div>
+
+			<!-- ══════════════════════════════ QUANTITY ══════════════════════════════ -->
+			<div class="cardQuantityWrapper">
+
+				<div class="label-with-tooltip">
+					<label for="cardQuantity">Quantity</label>
+					<span class="tooltip-icon" onclick="openTooltip('tooltip-cardQuantity')">?</span>
+				</div>
+				<div class="tooltip-modal" id="tooltip-cardQuantity">
+					<div class="tooltip-content tooltip-content-box">
+						How many of this card do you have?
+					</div>
+				</div>
+
+			</div>
+
+			<!-- ══════════════════════════════ CONDITION ══════════════════════════════ -->
+			<div class="cardConditionWrapper">
+				<div class="label-with-tooltip">
+					<label for="cardCondition">Condition</label>
+					<span class="tooltip-icon" onclick="openTooltip('tooltip-cardCondition')">?</span>
+				</div>
+				<div class="tooltip-modal" id="tooltip-cardCondition">
+					<div class="tooltip-content tooltip-content-box">
+						Is it brand new? Or, does it look like it's been used as a snot-rag?<br>
+						Choose the condition of the card here.
+					</div>
+				</div>
+
+				<select id="cardCondition" name="cardCondition" required>
+					<option value="">-----</option>
+					<option value="NM">Near Mint (NM)</option>
+					<option value="LP">Lightly Played (LP)</option>
+					<option value="MP">Moderately Played (MP)</option>
+					<option value="HP">Heavily Played (HP)</option>
+					<option value="DM">Damaged (DM)</option>
+				</select>
+
+			</div>
+
+			<!-- ═══════════════════════ ⌠Add to Trade-In⌡ Button ═══════════════════════ -->
+			<div class="tradein-button">
+				<button type="submit">Add to Trade-in</button>
+			</div>
+
+		</form>
+
+		<!-- ══════════════════════════════ Trade-In List ══════════════════════════════ -->
+		<!-- Wrapper for the list of cards being traded in. -->
+		<div class="tradein-list-wrapper">
+
+			<!-- This will be responsible for displaying all cards, and their details, inputted from the Trade-In form -->
+			<ul class="tradein-list">
+				@foreach (var item in Model)
+				{
+					<!-- Actual card information -->
+					<li>
+						<div class="card-details">@item.CardName, @item.PrintType, @item.CardCondition</div>
+						<div class="qty">Qty</div>
+						<div class="price">Price</div>
+					</li>
+				}
+			</ul>
+
+			<div class="tradein-total">
+				TOTAL: $<span id="total-price">0.00</span> <!-- #total-price will get updated by Javascript -->
+			</div>
+		</div>
+
+		<!-- ═════════════════════════ ⌠Confirm Trade-In⌡ Button ═════════════════════════ -->
+		<div class="confirm-tradein-button">
+			<button type="submit">Confirm Trade-In</button>
+		</div>
+
+	</div>		<!-- Closing div for tradein-alpha-wrapper -->
+</div>		<!-- Closing div for tradein-bg-container -->
+
+
+<script src="~/js/site.js"></script>		<!-- This contains the JS code used for the modal tooltips -->
+ *@

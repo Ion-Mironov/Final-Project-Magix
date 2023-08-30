@@ -1,0 +1,111 @@
+﻿
+					<!---- ↓↓↓↓ TESTING CODE CHUNK ↓↓↓↓ ---->
+@* 
+@{
+	ViewData["Title"] = "Browse our wares!";
+}
+
+<div class="inventory-bg-container">
+
+	<!-- Inventory Greeting Text -->
+	<div class="inventory-greeting-text-image">
+		<img src="/Images/inventory_greeting.png" alt="Inventory Greeting Text">
+	</div>
+
+	<!-- Container for Inventory Display -->
+	<div class="inventory-alpha-wrapper">
+
+		<!-- Inventory Row 1 -->
+		<div class="inventory-row-wrapper">
+			<!-- Individual Inventory Cards (Cards 1-8) -->
+			<div class="inventory-cards"><img src="/Images/dog_placeholder.png" alt="Card 1"></div>
+			<div class="inventory-cards"><img src="/Images/dinosaur_placeholder.png" alt="Card 2"></div>
+			<div class="inventory-cards"><img src="/Images/dog_placeholder.png" alt="Card 3"></div>
+			<div class="inventory-cards"><img src="/Images/dinosaur_placeholder.png" alt="Card 4"></div>
+			<div class="inventory-cards"><img src="/Images/dog_placeholder.png" alt="Card 5"></div>
+			<div class="inventory-cards"><img src="/Images/dinosaur_placeholder.png" alt="Card 6"></div>
+			<div class="inventory-cards"><img src="/Images/dog_placeholder.png" alt="Card 7"></div>
+			<div class="inventory-cards"><img src="/Images/dinosaur_placeholder.png" alt="Card 8"></div>
+		</div>
+
+		<!-- Inventory Row 2 -->
+		<div class="inventory-row-wrapper">
+			<!-- Individual Inventory Cards (Cards 9-16) -->
+			<div class="inventory-cards"><img src="/Images/dog_placeholder.png" alt="Card 9"></div>
+			<div class="inventory-cards"><img src="/Images/dinosaur_placeholder.png" alt="Card 10"></div>
+			<div class="inventory-cards"><img src="/Images/dog_placeholder.png" alt="Card 11"></div>
+			<div class="inventory-cards"><img src="/Images/dinosaur_placeholder.png" alt="Card 12"></div>
+			<div class="inventory-cards"><img src="/Images/dog_placeholder.png" alt="Card 13"></div>
+			<div class="inventory-cards"><img src="/Images/dinosaur_placeholder.png" alt="Card 14"></div>
+			<div class="inventory-cards"><img src="/Images/dog_placeholder.png" alt="Card 15"></div>
+			<div class="inventory-cards"><img src="/Images/dinosaur_placeholder.png" alt="Card 16"></div>
+		</div>
+
+		<!-- Inventory Row 3 -->
+		<div class="inventory-row-wrapper">
+			<!-- Individual Inventory Cards (Cards 17-24) -->
+			<div class="inventory-cards"><img src="/Images/dog_placeholder.png" alt="Card 17"></div>
+			<div class="inventory-cards"><img src="/Images/dinosaur_placeholder.png" alt="Card 18"></div>
+			<div class="inventory-cards"><img src="/Images/dog_placeholder.png" alt="Card 19"></div>
+			<div class="inventory-cards"><img src="/Images/dinosaur_placeholder.png" alt="Card 20"></div>
+			<div class="inventory-cards"><img src="/Images/dog_placeholder.png" alt="Card 21"></div>
+			<div class="inventory-cards"><img src="/Images/dinosaur_placeholder.png" alt="Card 22"></div>
+			<div class="inventory-cards"><img src="/Images/dog_placeholder.png" alt="Card 23"></div>
+			<div class="inventory-cards"><img src="/Images/dinosaur_placeholder.png" alt="Card 24"></div>
+		</div>
+
+		<!-- Inventory Row 4 -->
+		<div class="inventory-row-wrapper">
+			<!-- Individual Inventory Cards (Cards 25-32) -->
+			<div class="inventory-cards"><img src="/Images/dog_placeholder.png" alt="Card 25"></div>
+			<div class="inventory-cards"><img src="/Images/dinosaur_placeholder.png" alt="Card 26"></div>
+			<div class="inventory-cards"><img src="/Images/dog_placeholder.png" alt="Card 27"></div>
+			<div class="inventory-cards"><img src="/Images/dinosaur_placeholder.png" alt="Card 28"></div>
+			<div class="inventory-cards"><img src="/Images/dog_placeholder.png" alt="Card 29"></div>
+			<div class="inventory-cards"><img src="/Images/dinosaur_placeholder.png" alt="Card 30"></div>
+			<div class="inventory-cards"><img src="/Images/dog_placeholder.png" alt="Card 31"></div>
+			<div class="inventory-cards"><img src="/Images/dinosaur_placeholder.png" alt="Card 32"></div>
+		</div>
+	</div>
+</div>
+ *@
+					<!---- ↑↑↑↑ TESTING CODE CHUNK ↑↑↑↑ ---->
+
+
+
+				<!---- ↓↓↓↓ ACTUAL PROJECT CODE CHUNK ↓↓↓↓ ---->
+
+<!-- @Model IEnumerable<Final___Magix.Models.Inventory> -->
+@{
+	ViewData["Title"] = "Browse our wares!";
+}
+
+<div class="inventory-bg-container">
+
+	<!-- Inventory Greeting Text -->
+	<div class="inventory-greeting-text-image">
+		<img src="/Images/inventory_greeting.png" alt="Inventory Greeting Text">
+	</div>
+
+	<!-- Container for Inventory Display -->
+	<div class="inventory-alpha-wrapper">
+		@for (var i = 0; i < Model.Count; i += 8)			// Iterate over the inventory list in chunks of 8
+		{
+			<div class="inventory-row-wrapper">
+			@for (var j = i; j < i + 8 && j < Model.Count; j++)
+			{
+				<div class="inventory-cards">
+					@* <img src="@Model[j].ImageSmall" alt="Small Image of Card @j"> *@
+					<img src="@Model[j].ImageNormal" alt="Normal Image of Card @j">
+					@* <img src="@Model[j].ImageLarge" alt="Large Image of Card @j"> *@
+					@* <img src="@Model[j].ImageBorderCrop" alt="Border Crop Image of Card @j"> *@
+					<p>Price: $@Model[j].Price</p>
+					<p>Stock: @Model[j].Quantity</p>
+				</div>
+			}
+			</div>
+		}
+	</div>
+</div>
+				<!---- ↑↑↑↑ ACTUAL PROJECT CODE CHUNK ↑↑↑↑ ---->
+ 
