@@ -1,4 +1,4 @@
-# C-Sharp-Final-Magix
+# C#/.NET Final Project: Magix
 Final Project focused on creating a card shop owner solution to automatically update stock databases when dealing with trade-ins.
 
 
