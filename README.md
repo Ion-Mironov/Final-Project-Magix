@@ -1,5 +1,5 @@
 # C#/.NET Final Project: Magix
-Final Project focused on creating a card shop owner solution to automatically update stock databases when dealing with trade-ins.
+Final project focused on creating a solution for a card shop owner to automatically update their stock databases when dealing with trade-ins.
 
 
 ## Final group project pitch:
