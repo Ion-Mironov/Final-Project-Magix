@@ -11,7 +11,7 @@ This is counter-productive, as it is easier to check the stock than to travel to
 
 To solve this, I would like to build a section of their website for them that allows employees to record a stack of cards on the new page, and as they add a card name, they are given a clickable list of potential cards to add. Once the card name is decided upon, the user can select the ***Condition***, ***Print***, ***Set***, and ***Foil/Non-foil*** details. The user would then click "**Add to Trade-in**", and the form would clear to accept the next card.
 
-As the list is populated, a running total of Market Value for the entire list would be pulled from the Scryfall.io API. We would then adapt the trade-in value of (cash) 50% or (store-credit) 65%. If the customer is okay with the terms, we would click a button to confirm the trade-in. This action would then push the obtained cards into the database, updating it in real-time, solving the issue of a not-up-to-date stock information for customers.
+As the list is populated, a running total of Market Value for the entire list would be pulled from the Scryfall.io API. We would then adapt the trade-in value of cash (50%) or store-credit (65%). If the customer is okay with the terms, we would click a button to confirm the trade-in. This action would then push the obtained cards into the database, updating it in real-time and solving the issue of not-up-to-date inventory stock information for customers.
 
 
 ### Features required:
